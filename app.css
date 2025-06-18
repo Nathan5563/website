@@ -1,0 +1,106 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+a:focus,
+a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.latex-light-auto {
+  background-color: #fffdf9 !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  gap: 40px;
+}
+
+.col-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+.contact-info a {
+  color: inherit;
+}
+
+.col-right {
+  width: 100%;
+}
+
+.profile-photo {
+  margin-top: 18%;
+}
+
+.profile-name {
+  margin-top: 25px !important;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: none;
+}
+
+.btn-light {
+  background-color: #fffdf9;
+  color: #494949;
+  border: 1px solid #494949;
+  transition: 0.15s ease-in background-color;
+}
+
+.btn-light:hover {
+  cursor: pointer;
+  background-color: #e8e5df;
+}
+
+.btn-dark {
+  background-color: #494949;
+  color: #fffdf9;
+  border: 1px solid #fffdf9;
+  transition: 0.15s ease-in background-color;
+}
+
+.btn-dark:hover {
+  cursor: pointer;
+  background-color: #5a5a5a;
+}
+
+#toggle-theme {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center !important;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    max-width: 80% !important;
+  }
+  .profile {
+    align-self: flex-start;
+  }
+}
