@@ -1,3 +1,14 @@
+:root {
+  --bg-light: #FDFDFF;
+  --color-light: #393D3F;
+  --bg-dark: #393D3F;
+  --color-dark: #FDFDFF;
+  --color-link-light: #cf4e47;
+  --color-link-dark: #e08f8b;
+  --color-link-hover-light: #7c2922;
+  --color-link-hover-dark: #fdc7c4;
+}
+
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
@@ -8,6 +19,15 @@ body {
   justify-content: center;
 }
 
+a {
+  color: var(--color-link) !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-link-hover) !important;
+}
+
 a:focus,
 a:active {
   outline: none;
@@ -15,7 +35,29 @@ a:active {
 }
 
 .latex-light-auto {
-  background-color: #fffdf9 !important;
+  background-color: var(--bg-light);
+  color: var(--color-light);
+}
+
+.latex-light-auto a {
+  color: var(--color-link-light) !important;
+}
+
+.latex-light-auto a:hover {
+  color: var(--color-link-hover-light) !important;
+}
+
+.latex-dark-auto {
+  background-color: var(--bg-dark);
+  color: var(--color-dark);
+}
+
+.latex-dark-auto a {
+  color: var(--color-link-dark) !important;
+}
+
+.latex-dark-auto a:hover {
+  color: var(--color-link-hover-dark) !important;
 }
 
 .container {
@@ -41,41 +83,45 @@ a:active {
 }
 
 .profile-photo {
-  margin-top: 18%;
+  margin-top: 50px;
 }
 
 .profile-name {
-  margin-top: 25px !important;
+  margin-top: 25px;
 }
 
 .btn {
-  border-radius: 5px;
+  border: none;
+  border-radius: 100%;
   padding: 10px;
   box-shadow: none;
 }
 
+.btn:active {
+  box-shadow: none;
+  outline: none;
+}
+
 .btn-light {
-  background-color: #fffdf9;
-  color: #494949;
-  border: 1px solid #494949;
+  background-color: var(--bg-light);
+  color: var(--color-light);
   transition: 0.15s ease-in background-color;
 }
 
 .btn-light:hover {
   cursor: pointer;
-  background-color: #e8e5df;
+  background-color: #dddcda;
 }
 
 .btn-dark {
-  background-color: #494949;
-  color: #fffdf9;
-  border: 1px solid #fffdf9;
+  background-color: var(--bg-dark);
+  color: var(--color-dark);
   transition: 0.15s ease-in background-color;
 }
 
 .btn-dark:hover {
   cursor: pointer;
-  background-color: #5a5a5a;
+  background-color: #54565a;
 }
 
 #toggle-theme {
