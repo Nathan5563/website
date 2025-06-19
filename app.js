@@ -19,10 +19,10 @@ if (savedBtnTheme) {
 }
 
 if (body.className === 'latex-light-auto') {
-    themeIcon.src = '../icons/moon.png';
+    themeIcon.src = 'icons/moon.png';
     themeIcon.alt = 'Dark mode';
 } else {
-    themeIcon.src = '../icons/sun.png';
+    themeIcon.src = 'icons/sun.png';
     themeIcon.alt = 'Light mode';
 }
 
@@ -32,10 +32,10 @@ toggleButton.addEventListener('click', () => {
     localStorage.setItem('theme', currentTheme);
 
     if (currentTheme === 'latex-light-auto') {
-        themeIcon.src = '../icons/moon.png';
+        themeIcon.src = 'icons/moon.png';
         themeIcon.alt = 'Dark mode';
     } else {
-        themeIcon.src = '../icons/sun.png';
+        themeIcon.src = 'icons/sun.png';
         themeIcon.alt = 'Light mode';
     }
 
