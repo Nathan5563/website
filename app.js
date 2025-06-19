@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 const toggleButton = document.querySelector('#toggle-theme');
-const themeIcon = document.getElementById('theme-icon');
+const themeIcon = document.querySelector('#theme-icon');
 
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
