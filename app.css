@@ -33,6 +33,7 @@
 /* Element styles */
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 0.975em;
 }
 body {
   display: flex;
@@ -55,7 +56,6 @@ a:active {
 /* Main container for all content */
 .container {
   display: flex;
-  gap: 40px;
 }
 /* Left column (profile and contact) styles */
 .col-left {
@@ -68,7 +68,9 @@ a:active {
   margin-top: 50px;
 }
 .profile-name {
-  margin-top: 25px;
+  font-size: 1.75em;
+  margin-top: 12.5px;
+  margin-bottom: 5px;
 }
 .contact-info a {
   color: inherit;
@@ -84,6 +86,7 @@ a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 0px;
   }
 }
 /* Two columns for desktop displays */
@@ -94,6 +97,7 @@ a:active {
   .container {
     width: 900px;
     flex-direction: row;
+    gap: 40px;
   }
   .profile {
     align-self: flex-start;
