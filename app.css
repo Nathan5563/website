@@ -34,6 +34,9 @@
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-size: 0.975em;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: manual;
 }
 body {
   display: flex;
