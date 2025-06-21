@@ -34,8 +34,6 @@
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-size: 0.975em;
-  word-break: normal;
-  overflow-wrap: normal;
   hyphens: manual;
 }
 body {
@@ -67,13 +65,14 @@ a:active {
   align-items: center;
   width: 400px;
 }
-.profile-photo {
-  margin-top: 50px;
-}
 .profile-name {
   font-size: 1.75em;
   margin-top: 12.5px;
   margin-bottom: 5px;
+}
+.contact-info {
+  margin: 0px !important;
+  padding: 0px !important;
 }
 .contact-info a {
   color: inherit;
@@ -85,11 +84,13 @@ a:active {
     flex-direction: column;
     align-items: center !important;
   }
+  .profile-photo {
+    margin-top: 20px;
+  }
   .contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 0px;
   }
 }
 /* Two columns for desktop displays */
@@ -104,6 +105,9 @@ a:active {
   }
   .profile {
     align-self: flex-start;
+  }
+  .profile-photo {
+    margin-top: 50px;
   }
 }
 /* Right column (main content) styles */
