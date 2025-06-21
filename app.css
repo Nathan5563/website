@@ -69,7 +69,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
+  width: 300px;
 }
 .profile-name {
   font-size: 1.75em;
@@ -91,8 +91,9 @@ hr {
     flex-direction: column;
     align-items: center !important;
   }
-  .profile-photo {
+  .profile-image {
     margin-top: 20px;
+    width: 75%;
   }
   .contact-info {
     display: flex;
@@ -114,7 +115,7 @@ hr {
   .profile {
     align-self: flex-start;
   }
-  .profile-photo {
+  .profile-image {
     margin-top: 50px;
   }
 }
@@ -149,7 +150,7 @@ hr {
   margin: 0px;
 }
 .more-projects {
-  margin: 10px 0px 0px 0px;
+  margin: 0px;
 }
 
 /* Theme toggling button */
