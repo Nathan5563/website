@@ -70,7 +70,7 @@ a:active {
   margin-top: 12.5px;
   margin-bottom: 5px;
 }
-.contact-info {
+.contact-info, .contact-info * {
   margin: 0px !important;
   padding: 0px !important;
 }
