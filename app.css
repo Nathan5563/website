@@ -4,9 +4,9 @@
   --color-light: #393d3f;
   --bg-dark: #393d3f;
   --color-dark: #fdfdff;
-  --color-link-light: #cf4e47;
+  --color-link-light: #ce645f;
   --color-link-dark: #e08f8b;
-  --color-link-hover-light: #7c2922;
+  --color-link-hover-light: #81403a;
   --color-link-hover-dark: #fdc7c4;
 }
 .latex-light-auto {
@@ -53,11 +53,17 @@ a:active {
   outline: none;
   box-shadow: none;
 }
+hr {
+  border: none;
+  height: 0.5px;
+  background-color: currentColor;
+}
 
 /* Main container for all content */
 .container {
   display: flex;
 }
+
 /* Left column (profile and contact) styles */
 .col-left {
   display: flex;
@@ -77,6 +83,7 @@ a:active {
 .contact-info a {
   color: inherit;
 }
+
 /* One column for tablet and mobile displays */
 @media (max-width: 900px) {
   .container {
@@ -93,6 +100,7 @@ a:active {
     align-items: center;
   }
 }
+
 /* Two columns for desktop displays */
 @media (min-width: 900px) {
   body {
@@ -110,10 +118,40 @@ a:active {
     margin-top: 50px;
   }
 }
+
 /* Right column (main content) styles */
 .col-right {
   width: 100%;
 }
+
+/* Card styles */
+.top-card {
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  margin-top: 30px;
+}
+
+/* Project styles */
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0px;
+}
+.project-title {
+  margin: 0px;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.project-desc {
+  margin: 0px;
+}
+.more-projects {
+  margin: 10px 0px 0px 0px;
+}
+
 /* Theme toggling button */
 .btn {
   border: none;
