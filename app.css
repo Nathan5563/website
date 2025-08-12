@@ -99,6 +99,9 @@ hr {
 
 /* One column for tablet and mobile displays */
 @media (max-width: 900px) {
+  * {
+    font-size: 0.9em;
+  }
   .container {
     width: 90vw !important;
     flex-direction: column;

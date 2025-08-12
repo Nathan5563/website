@@ -84,6 +84,66 @@ header {
   color: var(--color-link-hover-light) !important;
 }
 
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.project {
+  border: 2px solid;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.project img {
+  width: 420px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+}
+.project:hover img {
+  filter: blur(0px);
+}
+.project-title-overlay {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 700;
+  pointer-events: none;
+}
+.project-title-overlay mark {
+  width: 1000px;
+  font-weight: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  padding: 8px 16px;
+  transform: skew(-12deg);
+  display: inline-block;
+}
+.latex-light-auto .project {
+  border-color: var(--color-link-light);
+  background-color: #fafafa;
+}
+.latex-light-auto .project-title-overlay mark {
+  background-color: var(--color-link-light);
+  color: white;
+}
+.latex-dark-auto .project {
+  border-color: var(--color-link-dark);
+  background-color: #444648;
+}
+.latex-dark-auto .project-title-overlay mark {
+  background-color: var(--color-link-dark);
+  color: var(--bg-dark);
+}
+
 /* Theme toggling button */
 .btn {
   position: fixed !important;
