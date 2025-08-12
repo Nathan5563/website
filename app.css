@@ -31,9 +31,9 @@
 }
 
 /* Element styles */
-* {
+*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-size: 0.975em;
+  font-size: 0.975em !important;
   hyphens: manual;
 }
 body {
@@ -229,9 +229,9 @@ hr {
 }
 .skill-tag {
   display: inline-block;
-  padding: 3px 8px;
+  padding: 1px 6px;
   border-radius: 12px;
-  font-size: 0.8em;
+  font-size: 0.7em !important;
   font-weight: 500;
   border: 1px solid;
   transition: all 0.15s ease;
@@ -261,6 +261,36 @@ hr {
 }
 .more-projects {
   margin: 0px;
+}
+
+/* Class list */
+.classes:last-child {
+  margin-bottom: 0;
+}
+.class-heading {
+  margin: 15px 0 10px 0;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: currentColor;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+.latex-light-auto .class-heading {
+  border-bottom-color: #e0e0e0;
+}
+.latex-dark-auto .class-heading {
+  border-bottom-color: #555;
+}
+.class-list {
+  padding-left: 20px;
+  gap: 2px;
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+}
+.class-list li {
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* Theme toggling button */
