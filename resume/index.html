@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume | Nathan Abebe</title>
+    <link rel="icon" type="image/png" href="../icons/favicon.png" />
+    <link rel="stylesheet" href="resume.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-left">
+          <a href="../index.html" class="back-link">← Back to Home</a>
+          <h1>Resume</h1>
+        </div>
+      </header>
+
+      <div class="resume-container">
+        <div id="loading" class="loading">
+          <div class="spinner"></div>
+          <p>Loading resume...</p>
+        </div>
+
+        <div id="error-message" class="error hidden">
+          <p>Unable to load resume. Please try again later.</p>
+          <button onclick="loadResume()">Retry</button>
+        </div>
+
+        <iframe
+          id="resume-frame"
+          src=""
+          width="100%"
+          height="800px"
+          style="border: none; display: none"
+          sandbox="allow-same-origin allow-scripts allow-forms"
+          allow="fullscreen"
+        >
+        </iframe>
+
+        <div class="download-section">
+          <button
+            id="download-btn"
+            class="download-btn"
+            type="button"
+            disabled
+            aria-disabled="true"
+            title="Download PDF"
+          >
+            Download PDF
+          </button>
+        </div>
+      </div>
+
+      <div class="info-panel">
+        <h3>Auto-Update Information</h3>
+        <p>
+          This page automatically checks for updates every hour from the
+          <a
+            href="https://github.com/Nathan5563/Resume"
+            target="_blank"
+            rel="noopener"
+            >GitHub repository containing my resume</a
+          >.
+        </p>
+        <div class="last-updated">
+          <strong>Last checked:</strong> <span id="last-checked">Never</span>
+        </div>
+        <div class="commit-info">
+          <strong>Latest commit:</strong>
+          <span id="latest-commit">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <button id="toggle-theme" class="btn">
+      <img width="35px" id="theme-icon" />
+    </button>
+
+    <script src="resume.js"></script>
+  </body>
+</html>

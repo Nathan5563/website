@@ -53,13 +53,21 @@ a:active {
   outline: none;
   box-shadow: none;
 }
+ul {
+  margin: 5px;
+}
+code {
+  font-family: "Courier New", Courier, monospace !important;
+  font-weight: 600;
+  margin: 0px 2px;
+}
 hr {
   border: none;
   height: 0.5px;
   background-color: currentColor;
 }
 
-/* Main container for all content */
+/* Main containert */
 .container {
   display: flex;
 }
@@ -76,7 +84,8 @@ hr {
   margin-top: 12.5px;
   margin-bottom: 5px;
 }
-.contact-info, .contact-info * {
+.contact-info,
+.contact-info * {
   margin: 0px !important;
   padding: 0px !important;
 }
@@ -93,12 +102,15 @@ hr {
   }
   .profile-image {
     margin-top: 20px;
-    width: 75%;
+    width: 65%;
   }
   .contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .col-right {
+    margin-top: 30px !important;
   }
 }
 
@@ -112,11 +124,22 @@ hr {
     flex-direction: row;
     gap: 40px;
   }
+  .col-left {
+    position: fixed;
+    top: 35px;
+    left: calc(50% - 450px + 0px);
+  }
+  .col-right {
+    margin-left: 300px;
+    margin-top: 55px !important;
+  }
   .profile {
     align-self: flex-start;
   }
   .profile-image {
     margin-top: 50px;
+    width: 65%;
+    align-self: flex-start;
   }
 }
 
@@ -138,13 +161,17 @@ hr {
 .project {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   margin: 15px 0px;
 }
 .project-title {
   margin: 0px;
   font-size: 1.25em;
   font-weight: 600;
+}
+.project-subtitle {
+  margin: 0px;
+  font-size: 1em;
+  font-weight: 300;
 }
 .project-desc {
   margin: 0px;
@@ -153,8 +180,15 @@ hr {
   margin: 0px;
 }
 
+/* Class styles */
+.class-list {
+  margin: 0px;
+  font-size: 1.25em;
+}
+
 /* Theme toggling button */
 .btn {
+  position: fixed !important;
   border: none;
   border-radius: 100%;
   padding: 10px;

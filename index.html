@@ -6,7 +6,7 @@
     <title>Nathan Abebe</title>
     <meta
       name="description"
-      content="I'm a sophomore at Yale interested in robust, low-latency systems. Recently in distributed FPGA management, avionics and control, and console emulation."
+      content="I'm a sophomore at Yale interested in robust, low-latency systems. Distributed FPGA management, rocket avionics and control, real-time graphics."
     />
     <script type="application/ld+json">
       {
@@ -26,63 +26,78 @@
         },
         "sameAs": [
           "https://github.com/nathanabebe",
-          "https://linkedin.com/in/nathanabebe"
+          "https://linkedin.com/in/nathan5563"
         ]
       }
     </script>
     <meta property="og:title" content="Nathan Abebe" />
     <meta
       property="og:description"
-      content="I'm a sophomore at Yale interested in robust, low-latency systems. Recently in distributed FPGA management, avionics and control, and console emulation."
+      content="I'm a sophomore at Yale interested in robust, low-latency systems. Distributed FPGA management, rocket avionics and control, real-time graphics."
     />
     <meta property="og:url" content="https://nathanabebe.com" />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/profile-image.jpg" />
+    <meta
+      property="og:image:alt"
+      content="Nathan Abebe, Computer Science and Electrical Engineering student at Yale"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nathanabebe.com/" />
     <link rel="icon" type="image/png" href="icons/favicon.png" />
     <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
     <div class="container">
+      <!-- Personal Profile -->
       <div class="col-left">
         <img
           src="images/profile-image.jpg"
-          alt="Nathan Abebe"
+          alt="Nathan Abebe, Computer Science and Electrical Engineering student at Yale"
           class="profile-image"
         />
         <div class="profile">
           <h1 class="profile-name">Nathan Abebe</h1>
-
           <address class="contact-info">
+            <!-- Addresses -->
             <span itemprop="streetAddress">51 Prospect St.</span><br />
             <span itemprop="emailAddress"
               >nathan [dot] abebe [at] yale [dot] edu</span
             ><br />
-            <span
-              ><a
+
+            <!-- Social media -->
+            <div>
+              <a
                 href="https://github.com/Nathan5563"
                 target="_blank"
                 rel="noopener"
+                >GitHub</a
               >
-                GitHub
-              </a>
-              &nbsp;|<span style="display: inline-block; width: 5px"></span>
+              •
               <a
                 href="https://linkedin.com/in/nathan5563"
                 target="_blank"
                 rel="noopener"
+                >LinkedIn</a
               >
-                LinkedIn
-              </a></span
-            ><br />
-            <a href="blog/index.html">Blog</a>
+            </div>
+
+            <!-- Subdomains -->
+            <div>
+              <a href="resume/index.html">Resume</a> •
+              <a href="projects/index.html">Projects</a> •
+              <a href="blog/index.html">Blog</a> •
+              <a href="gallery/index.html">Gallery</a>
+            </div>
           </address>
         </div>
       </div>
+
+      <!-- Main Content -->
       <div class="col-right">
+        <!-- Section: About -->
         <div class="top-card">
-          <h2 class="card-title" style="margin-top: 47.5px !important">
-            About
-          </h2>
           <img
             src="images/collage.jpg"
             alt="Collage of FPGAs, console games, and circuitry"
@@ -100,28 +115,43 @@
             <strong>scalable architectures</strong>.
           </p>
         </div>
+
+        <!-- Section: Recent News -->
         <div class="top-card">
-          <h2 class="card-title">Selected Projects</h2>
-          <div class="project" style="margin-top: 20px !important">
-            <h3 class="project-title">
-              <a href="#" target="_blank" rel="noopener">
-                Distributed FPGA Bitstream Manager
-              </a>
-            </h3>
-            <p class="project-desc">
-              A PetaLinux-based system using FPGA Manager and FUSE to remotely
-              load and manage bitstreams on Xilinx Versal and UltraScale+ boards
-              over a network. Uses SD card partitioning with a golden image to
-              enable remote configuration.
-            </p>
-          </div>
-          <span><hr /></span>
+          <h2 class="card-title">Recent News</h2>
+          <!-- TODO: Add recent news content -->
+        </div>
+
+        <!-- Section: Selected Publications and Projects -->
+        <div class="top-card">
+          <h2 class="card-title">Selected Publications and Projects</h2>
+          <!-- TODO: Add skill tags for each entry somehow -->
           <div class="project">
             <h3 class="project-title">
-              <a href="#" target="_blank" rel="noopener">
-                Project Liquid - Flight Computer
+              <a href="#" rel="noopener">
+                Distributed FPGA Management System
+                <!-- TODO: Find better name for fpgafs -->
               </a>
             </h3>
+            <h4 class="project-subtitle">
+              Jun 2025 &ndash; Present | skill_tag_1, skill_tag_2, skill_tag_3,
+              skill_tag_4
+            </h4>
+          </div>
+          <span><hr /></span>
+
+          <!-- Project: PLIQ Flight Computer -->
+          <div class="project">
+            <h3 class="project-title">
+              <a href="#" rel="noopener">
+                Project Liquid Flight Computer
+                <!-- TODO: Find better name for flight computer -->
+              </a>
+            </h3>
+            <h4 class="project-subtitle">
+              Aug 2025 &ndash; Present | skill_tag_1, skill_tag_2, skill_tag_3,
+              skill_tag_4
+            </h4>
             <p class="project-desc">
               Engineered a flight computer with firmware for a Teensy 4.1-based
               flight computer and sensor data from IMU, GPS, etc transmitted
@@ -130,25 +160,40 @@
             </p>
           </div>
           <span><hr /></span>
-          <div class="project">
+
+          <!-- Project: GRAPH .obj Parser-->
+          <div class="project" style="margin-top: 20px !important">
             <h3 class="project-title">
-              <a href="#" target="_blank" rel="noopener">
-                Project Liquid - Electrical Ground Support Equipment
+              <a href="#" rel="noopener">
+                Wavefront (.obj) File Parser
+                <!-- TODO: Find better name for parser -->
               </a>
             </h3>
+            <h4 class="project-subtitle">
+              Jul 2025 &ndash; Present | skill_tag_1, skill_tag_2, skill_tag_3,
+              skill_tag_4
+            </h4>
             <p class="project-desc">
-              Developed a ground support system for a liquid-fuel rocket,
-              including an Electron-based UI for monitoring and controlling
-              pressure and temperature during fuel loading and unloading.
+              A high-performance Wavefront (.obj) file parser leveraging
+              multithreading and SIMD instructions for rapid geometry
+              processing. Designed for scalability and efficiency in 3D
+              rendering pipelines, it achieves 7x performance over industry
+              standard <code>tinyobjloader</code>.
             </p>
           </div>
           <span><hr /></span>
+
+          <!-- Project: NES Emulator -->
           <div class="project">
             <h3 class="project-title">
-              <a href="" target="_blank" rel="noopener">
-                Cycle-Accurate NES Emulator
+              <a href="#" rel="noopener">
+                nnes: A Cycle-Accurate NES Emulator
               </a>
             </h3>
+            <h4 class="project-subtitle">
+              Mar 2025 &ndash; Present | skill_tag_1, skill_tag_2, skill_tag_3,
+              skill_tag_4
+            </h4>
             <p class="project-desc">
               A NES emulator achieving perfect cycle accuracy for Mapper 0
               titles like Super Mario Bros. and Donkey Kong. Emulated all
@@ -159,13 +204,50 @@
 
           <div class="more-projects"><a href="#">See more...</a></div>
         </div>
+
+        <!-- Section: Relevant Courses -->
         <div class="top-card">
-          <h2 class="card-title">Courses and Teaching</h2>
-          <p>Under construction.</p>
-        </div>
-        <div class="top-card">
-          <h2 class="card-title">Other Important Information</h2>
-          <p>Under construction.</p>
+          <h2 class="card-title">Relevant Coursework</h2>
+
+          <!-- TA'd Classes -->
+          <h3 class="class-list">As a teaching assistant:</h3>
+          <ul>
+            <li>
+              CPSC 3230 - Introduction to Systems Programming and Computer
+              Organization
+            </li>
+            <!-- TODO: Add TA'd course info -->
+          </ul>
+
+          <!-- Taken Classes -->
+          <h3 class="class-list">As a student:</h3>
+          <ul>
+            <!-- TODO: Add metadata tags for each course somehow -->
+            <li>ECE 8880 - FPGA-Based Accelerator Design and Implementation</li>
+            <!-- Graduate, Ongoing -->
+            <li>CPSC 5330 - Computer Networks</li>
+            <!-- Graduate, Ongoing -->
+            <li>CPSC 5230 - Design and Implementation of Operating Systems</li>
+            <!-- Graduate, Ongoing -->
+            <li>ECE 4250 - Introduction to VLSI System Design</li>
+            <!-- Ongoing -->
+            <li>CPSC 4791 - Building Game Engines</li>
+            <!-- Ongoing -->
+            <li>CPSC 3650 - Algorithms</li>
+            <!-- Ongoing -->
+            <li>MATH 2410 - Probability Theory</li>
+            <!-- Ongoing -->
+            <li>MATH 2250 - Linear Algebra</li>
+            <!-- Ongoing -->
+            <li>
+              CPSC 323 - Introduction to Systems Programming and Computer
+              Organization
+            </li>
+            <li>CPSC 223 - Data Structures and Programming Techniques</li>
+            <li>MATH 244 - Discrete Mathematics</li>
+            <li>EENG 200 - Introduction to Electronics</li>
+            <li>MATH 120 - Calculus of Functions of Several Variables</li>
+          </ul>
         </div>
       </div>
     </div>
