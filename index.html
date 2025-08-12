@@ -15,17 +15,30 @@
         "name": "Nathan Abebe",
         "url": "https://nathanabebe.com",
         "email": "mailto:nathan.abebe@yale.edu",
-        "telephone": "+1-203-994-2951",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "51 Prospect St",
-          "addressLocality": "New Haven",
-          "addressRegion": "CT",
-          "postalCode": "06511",
-          "addressCountry": "US"
+        "jobTitle": "Computer Science and Electrical Engineering Student",
+        "worksFor": {
+          "@type": "EducationalOrganization",
+          "name": "Yale University"
         },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Yale University"
+        },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Bachelor of Science in Computer Science and Electrical Engineering",
+          "educationalLevel": "Undergraduate"
+        },
+        "knowsAbout": [
+          "Computer Science",
+          "Electrical Engineering",
+          "FPGA Development",
+          "Embedded Systems",
+          "Low-latency Systems",
+          "Distributed Systems"
+        ],
         "sameAs": [
-          "https://github.com/nathanabebe",
+          "https://github.com/Nathan5563",
           "https://linkedin.com/in/nathan5563"
         ]
       }
@@ -40,7 +53,7 @@
     <meta property="og:image" content="images/profile-image.jpg" />
     <meta
       property="og:image:alt"
-      content="Nathan Abebe, Computer Science and Electrical Engineering student at Yale"
+      content="Nathan Abebe, Computer Science and Electrical Engineering at Yale"
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://nathanabebe.com/" />
@@ -61,7 +74,8 @@
           <h1 class="profile-name">Nathan Abebe</h1>
           <address class="contact-info">
             <!-- Addresses -->
-            <span itemprop="streetAddress">51 Prospect St., New Haven, CT</span><br />
+            <span itemprop="streetAddress">51 Prospect St., New Haven, CT</span
+            ><br />
             <span itemprop="emailAddress"
               >nathan [dot] abebe [at] yale [dot] edu</span
             ><br />
@@ -119,39 +133,96 @@
         <!-- Section: Recent News -->
         <div class="top-card">
           <h2 class="card-title">Recent News</h2>
-          <!-- TODO: Add recent news content -->
+          <div class="news-year">
+            <h3 class="news-year-heading">2025</h3>
+            <ul class="news-list">
+              <li>
+                Started as a Teaching Assistant for CPSC 3230 (Systems
+                Programming and Computer Organization).
+              </li>
+              <li>
+                Participated in ATC/OSDI '25 (USENIX Symposium on Operating
+                Systems) and QEC '25 (Quantum Error Correction) research
+                conferences.
+              </li>
+              <li>
+                Joined the
+                <a href="https://yecl.org" target="_blank" rel="noopener"
+                  >Yale Efficient Computing Lab</a
+                >
+                to work on large-scale FPGA management systems, advised by Prof.
+                Lin Zhong.
+              </li>
+            </ul>
+          </div>
+          <div class="news-year">
+            <h3 class="news-year-heading">2024</h3>
+            <ul class="news-list">
+              <li>
+                Joined
+                <a
+                  href="https://yaleaerospace.org/main/project-liquid"
+                  target="_blank"
+                  rel="noopener"
+                  >Yale Project Liquid</a
+                >
+                to work on real-time flight computer systems and electrical
+                ground support equipment for liquid rockets.
+              </li>
+              <li>
+                Completed coursework in data structures, discrete mathematics,
+                and electronics.
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Section: Selected Publications and Projects -->
+        <!-- Section: Selected Projects -->
         <div class="top-card">
-          <h2 class="card-title">Selected Publications and Projects</h2>
-          <!-- TODO: Add skill tags for each entry somehow -->
+          <h2 class="card-title">Selected Projects</h2>
           <div class="project">
-            <h3 class="project-title">
-              <a href="#" rel="noopener">
-                Distributed FPGA Management System
-                <!-- TODO: Find better name for fpgafs -->
-              </a>
-            </h3>
-            <h4 class="project-subtitle">
-              Jun 2025 &ndash; Present | skill_tag_1, skill_tag_2, skill_tag_3,
-              skill_tag_4
-            </h4>
+            <div class="project-header">
+              <h3 class="project-title">
+                <a href="#" rel="noopener">
+                  Distributed FPGA Management System
+                  <!-- TODO: Find better name for fpgafs -->
+                </a>
+              </h3>
+              <h4 class="project-subtitle">Jun 2025 &ndash; Present</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">C (Programming Language)</span>
+              <span class="skill-tag">Linux Kernel</span>
+              <span class="skill-tag">Distributed Systems</span>
+              <span class="skill-tag">SystemVerilog</span>
+            </div>
+            <p class="project-desc">
+              Developed a distributed system for managing FPGA resources across
+              multiple nodes. Designed a custom Linux kernel module for
+              efficient, parallel communication between the server and various
+              FPGA nodes. Tested management software with production-grade
+              quantum error code decoders.
+            </p>
           </div>
           <span><hr /></span>
 
           <!-- Project: PLIQ Flight Computer -->
           <div class="project">
-            <h3 class="project-title">
-              <a href="#" rel="noopener">
-                Project Liquid Flight Computer
-                <!-- TODO: Find better name for flight computer -->
-              </a>
-            </h3>
-            <h4 class="project-subtitle">
-              Aug 2025 &ndash; Present | skill_tag_1, skill_tag_2, skill_tag_3,
-              skill_tag_4
-            </h4>
+            <div class="project-header">
+              <h3 class="project-title">
+                <a href="#" rel="noopener">
+                  Project Liquid Flight Computer
+                  <!-- TODO: Find better name for flight computer -->
+                </a>
+              </h3>
+              <h4 class="project-subtitle">Aug 2025 &ndash; Present</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Rust (Programming Language)</span>
+              <span class="skill-tag">Embedded Systems</span>
+              <span class="skill-tag">Sensor Integration</span>
+              <span class="skill-tag">RF Communication</span>
+            </div>
             <p class="project-desc">
               Engineered a flight computer with firmware for a Teensy 4.1-based
               flight computer and sensor data from IMU, GPS, etc transmitted
@@ -163,37 +234,47 @@
 
           <!-- Project: GRAPH .obj Parser-->
           <div class="project" style="margin-top: 20px !important">
-            <h3 class="project-title">
-              <a href="#" rel="noopener">
-                Wavefront (.obj) File Parser
-                <!-- TODO: Find better name for parser -->
-              </a>
-            </h3>
-            <h4 class="project-subtitle">
-              Jul 2025 &ndash; Present | skill_tag_1, skill_tag_2, skill_tag_3,
-              skill_tag_4
-            </h4>
+            <div class="project-header">
+              <h3 class="project-title">
+                <a href="#" rel="noopener">
+                  Wavefront (.obj) File Parser
+                  <!-- TODO: Find better name for parser -->
+                </a>
+              </h3>
+              <h4 class="project-subtitle">Jul 2025 &ndash; Present</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">C++ (Programming Language)</span>
+              <span class="skill-tag">SIMD</span>
+              <span class="skill-tag">Multithreading</span>
+              <span class="skill-tag">Performance Optimization</span>
+            </div>
             <p class="project-desc">
               A high-performance Wavefront (.obj) file parser leveraging
               multithreading and SIMD instructions for rapid geometry
               processing. Designed for scalability and efficiency in 3D
               rendering pipelines, it achieves 7x performance over industry
-              standard <code>tinyobjloader</code>.
+              standard tinyobjloader.
             </p>
           </div>
           <span><hr /></span>
 
           <!-- Project: NES Emulator -->
           <div class="project">
-            <h3 class="project-title">
-              <a href="#" rel="noopener">
-                nnes: A Cycle-Accurate NES Emulator
-              </a>
-            </h3>
-            <h4 class="project-subtitle">
-              Mar 2025 &ndash; Present | skill_tag_1, skill_tag_2, skill_tag_3,
-              skill_tag_4
-            </h4>
+            <div class="project-header">
+              <h3 class="project-title">
+                <a href="#" rel="noopener">
+                  nnes: Cycle-Accurate NES Emulation
+                </a>
+              </h3>
+              <h4 class="project-subtitle">Mar 2025 &ndash; Present</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Rust (Programming Language)</span>
+              <span class="skill-tag">SDL2</span>
+              <span class="skill-tag">6502 Assembly</span>
+              <span class="skill-tag">Console Emulation</span>
+            </div>
             <p class="project-desc">
               A NES emulator achieving perfect cycle accuracy for Mapper 0
               titles like Super Mario Bros. and Donkey Kong. Emulated all
@@ -202,7 +283,9 @@
             </p>
           </div>
 
-          <div class="more-projects"><a href="#">See more...</a></div>
+          <div class="more-projects">
+            <a href="projects/index.html">See more...</a>
+          </div>
         </div>
 
         <!-- Section: Relevant Courses -->
@@ -210,44 +293,73 @@
           <h2 class="card-title">Relevant Coursework</h2>
 
           <!-- TA'd Classes -->
-          <h3 class="class-list">As a teaching assistant:</h3>
-          <ul>
-            <li>
-              CPSC 3230 - Introduction to Systems Programming and Computer
-              Organization
-            </li>
-            <!-- TODO: Add TA'd course info -->
-          </ul>
+          <div class="news-year">
+            <h3 class="news-year-heading">As a teaching assistant:</h3>
+            <ul class="news-list">
+              <li>
+                <b>CPSC 323</b> &ndash; Systems Programming and Computer
+                Organization
+                <span class="skill-tag">Ongoing</span>
+              </li>
+              <!-- TODO: Add TA'd course info -->
+            </ul>
+          </div>
 
           <!-- Taken Classes -->
-          <h3 class="class-list">As a student:</h3>
-          <ul>
-            <!-- TODO: Add metadata tags for each course somehow -->
-            <li>ECE 8880 - FPGA-Based Accelerator Design and Implementation</li>
-            <!-- Graduate, Ongoing -->
-            <li>CPSC 5330 - Computer Networks</li>
-            <!-- Graduate, Ongoing -->
-            <li>CPSC 5230 - Design and Implementation of Operating Systems</li>
-            <!-- Graduate, Ongoing -->
-            <li>ECE 4250 - Introduction to VLSI System Design</li>
-            <!-- Ongoing -->
-            <li>CPSC 4791 - Building Game Engines</li>
-            <!-- Ongoing -->
-            <li>CPSC 3650 - Algorithms</li>
-            <!-- Ongoing -->
-            <li>MATH 2410 - Probability Theory</li>
-            <!-- Ongoing -->
-            <li>MATH 2250 - Linear Algebra</li>
-            <!-- Ongoing -->
-            <li>
-              CPSC 323 - Introduction to Systems Programming and Computer
-              Organization
-            </li>
-            <li>CPSC 223 - Data Structures and Programming Techniques</li>
-            <li>MATH 244 - Discrete Mathematics</li>
-            <li>EENG 200 - Introduction to Electronics</li>
-            <li>MATH 120 - Calculus of Functions of Several Variables</li>
-          </ul>
+          <div class="news-year">
+            <h3 class="news-year-heading">As a student:</h3>
+            <ul class="news-list">
+              <li>
+                <b>ECE 8880</b> &mdash; FPGA-Based Accelerator Design and
+                Implementation <span class="skill-tag">Graduate</span>
+                <span class="skill-tag">Ongoing</span>
+              </li>
+              <li>
+                <b>CPSC 5330</b> &mdash; Computer Networks
+                <span class="skill-tag">Graduate</span>
+                <span class="skill-tag">Ongoing</span>
+              </li>
+              <li>
+                <b>CPSC 5230</b> &mdash; Design and Implementation of Operating
+                Systems <span class="skill-tag">Graduate</span>
+                <span class="skill-tag">Ongoing</span>
+              </li>
+              <li>
+                <b>ECE 4250</b> &mdash; VLSI System Design
+                <span class="skill-tag">Ongoing</span>
+              </li>
+              <li>
+                <b>CPSC 4791</b> &mdash; Building Game Engines
+                <span class="skill-tag">Ongoing</span>
+              </li>
+              <li>
+                <b>CPSC 3650</b> &mdash; Algorithms
+                <span class="skill-tag">Ongoing</span>
+              </li>
+              <li>
+                <b>MATH 2410</b> &mdash; Probability Theory
+                <span class="skill-tag">Ongoing</span>
+              </li>
+              <li>
+                <b>MATH 2250</b> &mdash; Linear Algebra
+                <span class="skill-tag">Ongoing</span>
+              </li>
+              <li>
+                <b>CPSC 323</b> &mdash; Systems Programming and Computer
+                Organization
+              </li>
+              <li>
+                <b>CPSC 223</b> &mdash; Data Structures and Programming
+                Techniques
+              </li>
+              <li><b>MATH 244</b> &mdash; Discrete Mathematics</li>
+              <li><b>EENG 200</b> &mdash; Introduction to Electronics</li>
+              <li>
+                <b>MATH 120</b> &mdash; Calculus of Functions of Several
+                Variables
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

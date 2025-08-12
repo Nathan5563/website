@@ -1,0 +1,122 @@
+/* Colors and themes */
+:root {
+  --bg-light: #fdfdff;
+  --color-light: #393d3f;
+  --bg-dark: #393d3f;
+  --color-dark: #fdfdff;
+  --color-link-light: #ce645f;
+  --color-link-dark: #e08f8b;
+  --color-link-hover-light: #81403a;
+  --color-link-hover-dark: #fdc7c4;
+}
+
+/* Theme classes */
+.latex-light-auto {
+  background-color: var(--bg-light);
+  color: var(--color-light);
+}
+.latex-light-auto a {
+  color: var(--color-link-light) !important;
+}
+.latex-light-auto a:hover {
+  color: var(--color-link-hover-light) !important;
+}
+.latex-dark-auto {
+  background-color: var(--bg-dark);
+  color: var(--color-dark);
+}
+.latex-dark-auto a {
+  color: var(--color-link-dark) !important;
+}
+.latex-dark-auto a:hover {
+  color: var(--color-link-hover-dark) !important;
+}
+
+/* Base reset + typography */
+*:not(h1) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 0.975em;
+  hyphens: manual;
+}
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  margin: 0px;
+}
+body {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 1.6;
+}
+
+/* Container to match homepage */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Header layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.back-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-link-light) !important;
+}
+.back-link:hover {
+  color: var(--color-link-hover-light) !important;
+}
+
+/* Theme toggling button */
+.btn {
+  position: fixed !important;
+  border: none;
+  border-radius: 100%;
+  padding: 10px;
+  box-shadow: none;
+  height: 55px;
+}
+.btn:active {
+  box-shadow: none;
+  outline: none;
+}
+.btn-light {
+  background-color: var(--bg-light);
+  color: var(--color-light);
+  transition: 0.15s ease-in background-color;
+}
+.btn-light:hover {
+  cursor: pointer;
+  background-color: #dddcda;
+}
+.btn-dark {
+  background-color: var(--bg-dark);
+  color: var(--color-dark);
+  transition: 0.15s ease-in background-color;
+}
+.btn-dark:hover {
+  cursor: pointer;
+  background-color: #54565a;
+}
+#toggle-theme {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
