@@ -84,12 +84,15 @@ hr {
   font-size: 1.75em;
   margin-top: 12.5px;
   margin-bottom: 5px;
+  width: 250px;
 }
 .profile-image {
   width: 250px;
 }
 .contact-info,
 .contact-info * {
+  width: 250px;
+  text-align: center;
   margin: 0px !important;
   padding: 0px !important;
 }
