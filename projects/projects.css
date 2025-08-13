@@ -102,11 +102,7 @@ header {
   object-fit: cover;
   object-position: center;
   display: block;
-  filter: blur(3px);
   transition: filter 0.3s ease;
-}
-.project:hover img {
-  filter: blur(0px);
 }
 .project-title-overlay {
   position: absolute;
@@ -132,7 +128,7 @@ header {
   background-color: #fafafa;
 }
 .latex-light-auto .project-title-overlay mark {
-  background-color: var(--color-link-light);
+  background-color: rgba(206, 100, 95, 0.85);
   color: white;
 }
 .latex-dark-auto .project {
@@ -140,7 +136,7 @@ header {
   background-color: #444648;
 }
 .latex-dark-auto .project-title-overlay mark {
-  background-color: var(--color-link-dark);
+  background-color: rgba(224, 143, 139, 0.85);
   color: var(--bg-dark);
 }
 
