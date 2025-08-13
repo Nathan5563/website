@@ -1,7 +1,6 @@
 const body = document.querySelector("body");
 const toggleButton = document.querySelector("#toggle-theme");
 const themeIcon = document.querySelector("#theme-icon");
-const aboutImage = document.querySelector(".about-image");
 const profileImage = document.querySelector(".profile-image");
 
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -12,9 +11,6 @@ function updateTheme(theme) {
       themeIcon.src = "icons/moon.png";
       themeIcon.alt = "Dark mode";
     }
-    if (aboutImage) {
-      aboutImage.style.border = "2px solid var(--color-link-light)";
-    }
     if (profileImage) {
       profileImage.style.border = "2px solid var(--color-link-light)";
     }
@@ -22,9 +18,6 @@ function updateTheme(theme) {
     if (themeIcon) {
       themeIcon.src = "icons/sun.png";
       themeIcon.alt = "Light mode";
-    }
-    if (aboutImage) {
-      aboutImage.style.border = "2px solid var(--color-link-dark)";
     }
     if (profileImage) {
       profileImage.style.border = "2px solid var(--color-link-dark)";
