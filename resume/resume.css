@@ -18,8 +18,10 @@
 .latex-light-auto a {
   color: var(--color-link-light) !important;
 }
-.latex-light-auto a:hover {
-  color: var(--color-link-hover-light) !important;
+@media (hover: hover) and (pointer: fine) {
+  .latex-light-auto a:hover {
+    color: var(--color-link-hover-light) !important;
+  }
 }
 .latex-dark-auto {
   background-color: var(--bg-dark);
@@ -28,8 +30,10 @@
 .latex-dark-auto a {
   color: var(--color-link-dark) !important;
 }
-.latex-dark-auto a:hover {
-  color: var(--color-link-hover-dark) !important;
+@media (hover: hover) and (pointer: fine) {
+  .latex-dark-auto a:hover {
+    color: var(--color-link-hover-dark) !important;
+  }
 }
 
 /* Base reset + typography */
@@ -80,8 +84,10 @@ header {
   font-weight: 500;
   color: var(--color-link-light) !important;
 }
-.back-link:hover {
-  color: var(--color-link-hover-light) !important;
+@media (hover: hover) and (pointer: fine) {
+  .back-link:hover {
+    color: var(--color-link-hover-light) !important;
+  }
 }
 
 /* Loading + spinner */
@@ -119,8 +125,10 @@ header {
   border: none;
   border-radius: 5px;
 }
-.error button:hover {
-  background: #c82333;
+@media (hover: hover) and (pointer: fine) {
+  .error button:hover {
+    background: #c82333;
+  }
 }
 .hidden {
   display: none !important;
@@ -147,20 +155,24 @@ header {
   background: var(--color-link-light);
   color: var(--bg-light);
   border: none;
-  padding: 8px 15px;
+  padding: 16px 30px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9em;
-  transition: background-color 0.3s, transform 0.1s;
+  transition: background-color 0.2s, transform 0.2s ease;
   font-weight: 500;
   display: inline-block;
   text-decoration: none;
-  min-height: 40px; /* Better touch target */
+  min-height: 40px;
+  font-size: 1.25em;
 }
 
 /* Hover (light theme) */
-.download-btn:hover {
-  background: var(--color-link-hover-light);
+@media (hover: hover) and (pointer: fine) {
+  .download-btn:hover {
+    background: var(--color-link-hover-light);
+    transform: translateY(-2px);
+  }
 }
 
 /* Active state for better mobile feedback */
@@ -217,18 +229,22 @@ header {
   color: var(--color-light);
   transition: 0.15s ease-in background-color;
 }
-.btn-light:hover {
-  cursor: pointer;
-  background-color: #dddcda;
+@media (hover: hover) and (pointer: fine) {
+  .btn-light:hover {
+    cursor: pointer;
+    background-color: #dddcda;
+  }
 }
 .btn-dark {
   background-color: var(--bg-dark);
   color: var(--color-dark);
   transition: 0.15s ease-in background-color;
 }
-.btn-dark:hover {
-  cursor: pointer;
-  background-color: #54565a;
+@media (hover: hover) and (pointer: fine) {
+  .btn-dark:hover {
+    cursor: pointer;
+    background-color: #54565a;
+  }
 }
 #toggle-theme {
   position: absolute;
@@ -240,8 +256,10 @@ header {
 .latex-dark-auto .back-link {
   color: var(--color-link-dark) !important;
 }
-.latex-dark-auto .back-link:hover {
-  color: var(--color-link-hover-dark) !important;
+@media (hover: hover) and (pointer: fine) {
+  .latex-dark-auto .back-link:hover {
+    color: var(--color-link-hover-dark) !important;
+  }
 }
 .latex-dark-auto .spinner {
   border-color: rgba(253, 253, 255, 0.2);
@@ -251,8 +269,11 @@ header {
   background: var(--color-link-dark);
   color: var(--color-dark);
 }
-.latex-dark-auto .download-btn:hover {
-  background: var(--color-link-hover-dark);
+@media (hover: hover) and (pointer: fine) {
+  .latex-dark-auto .download-btn:hover {
+    background: var(--color-link-hover-dark);
+    transform: translateY(-2px);
+  }
 }
 
 /* Responsive tweaks */

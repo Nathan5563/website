@@ -18,8 +18,10 @@
 .latex-light-auto a {
   color: var(--color-link-light) !important;
 }
-.latex-light-auto a:hover {
-  color: var(--color-link-hover-light) !important;
+@media (hover: hover) and (pointer: fine) {
+  .latex-light-auto a:hover {
+    color: var(--color-link-hover-light) !important;
+  }
 }
 .latex-dark-auto {
   background-color: var(--bg-dark);
@@ -28,8 +30,10 @@
 .latex-dark-auto a {
   color: var(--color-link-dark) !important;
 }
-.latex-dark-auto a:hover {
-  color: var(--color-link-hover-dark) !important;
+@media (hover: hover) and (pointer: fine) {
+  .latex-dark-auto a:hover {
+    color: var(--color-link-hover-dark) !important;
+  }
 }
 
 /* Base reset + typography */
@@ -80,29 +84,58 @@ header {
   font-weight: 500;
   color: var(--color-link-light) !important;
 }
-.back-link:hover {
-  color: var(--color-link-hover-light) !important;
+@media (hover: hover) and (pointer: fine) {
+  .back-link:hover {
+    color: var(--color-link-hover-light) !important;
+  }
 }
 
 /* Projects */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  /* Default: 1 column for small screens */
+  grid-template-columns: 1fr;
+}
+
+/* Medium screens (tablets/normal PC screens): 2 columns */
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens (very large screens): 3 columns */
+@media (min-width: 1200px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .project {
   border: 2px solid;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) {
+  .project:hover {
+    transform: translateY(-4px);
+  }
 }
 .project img {
-  width: 420px;
+  width: 100%;
   height: 300px;
   object-fit: cover;
   object-position: center;
   display: block;
-  transition: filter 0.3s ease;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .project:hover img {
+    transform: scale(1.05);
+  }
 }
 .project-title-overlay {
   position: absolute;
@@ -158,18 +191,22 @@ header {
   color: var(--color-light);
   transition: 0.15s ease-in background-color;
 }
-.btn-light:hover {
-  cursor: pointer;
-  background-color: #dddcda;
+@media (hover: hover) and (pointer: fine) {
+  .btn-light:hover {
+    cursor: pointer;
+    background-color: #dddcda;
+  }
 }
 .btn-dark {
   background-color: var(--bg-dark);
   color: var(--color-dark);
   transition: 0.15s ease-in background-color;
 }
-.btn-dark:hover {
-  cursor: pointer;
-  background-color: #54565a;
+@media (hover: hover) and (pointer: fine) {
+  .btn-dark:hover {
+    cursor: pointer;
+    background-color: #54565a;
+  }
 }
 #toggle-theme {
   position: absolute;
