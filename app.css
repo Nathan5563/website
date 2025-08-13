@@ -267,7 +267,7 @@ hr {
 /* Two columns for desktop displays */
 @media (min-width: 950px) {
   body {
-    max-width: 850px !important;
+    max-width: 1000px !important;
   }
   .container {
     width: 900px;
