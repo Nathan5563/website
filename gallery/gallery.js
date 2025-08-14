@@ -55,3 +55,47 @@ if (toggleButton) {
     localStorage.setItem("btn-theme", buttonTheme);
   });
 }
+
+// Gallery lightbox functionality
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+// Add click event to all photo items
+document.querySelectorAll(".photo-item").forEach(item => {
+  item.addEventListener("click", () => {
+    const img = item.querySelector("img");
+    const location = item.querySelector(".location-tag")?.textContent || "";
+    
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = location ? `${img.alt} - ${location}` : img.alt || "";
+    lightbox.style.display = "block";
+    
+    // Prevent body scroll when lightbox is open
+    document.body.style.overflow = "hidden";
+  });
+});
+
+// Close lightbox when clicking the close button
+lightboxClose.addEventListener("click", closeLightbox);
+
+// Close lightbox when clicking outside the image
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+// Close lightbox with escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && lightbox.style.display === "block") {
+    closeLightbox();
+  }
+});
+
+function closeLightbox() {
+  lightbox.style.display = "none";
+  document.body.style.overflow = "auto";
+}

@@ -66,13 +66,71 @@
         <div class="header-left">
           <a href="../index.html" class="back-link">← Back to Home</a>
           <h1>Gallery</h1>
+          <p class="gallery-description">
+            Some of my favorite shots, captured on a Canon EOS Rebel T7 with the EF-S
+            18-55mm IS II lens.
+          </p>
         </div>
       </header>
+
+      <div class="gallery-grid">
+        <div class="photo-item">
+          <img src="https://placehold.co/800x600/4a90e2/ffffff" alt="" />
+          <div class="location-tag">Yosemite, CA</div>
+        </div>
+
+        <div class="photo-item">
+          <img src="https://placehold.co/600x800/7b68ee/ffffff" alt="" />
+          <div class="location-tag">New Haven, CT</div>
+        </div>
+
+        <div class="photo-item">
+          <img src="https://placehold.co/900x600/50c878/ffffff" alt="" />
+          <div class="location-tag">Vermont</div>
+        </div>
+
+        <div class="photo-item">
+          <img src="https://placehold.co/600x600/ff6b6b/ffffff" alt="" />
+          <div class="location-tag">NYC</div>
+        </div>
+
+        <div class="photo-item">
+          <img src="https://placehold.co/700x500/ffa500/ffffff" alt="" />
+          <div class="location-tag">Boston, MA</div>
+        </div>
+
+        <div class="photo-item">
+          <img src="https://placehold.co/500x700/9370db/ffffff" alt="" />
+          <div class="location-tag">Cape Cod</div>
+        </div>
+
+        <div class="photo-item">
+          <img src="https://placehold.co/800x500/20b2aa/ffffff" alt="" />
+          <div class="location-tag">Providence, RI</div>
+        </div>
+
+        <div class="photo-item">
+          <img src="https://placehold.co/600x900/dc143c/ffffff" alt="" />
+          <div class="location-tag">Maine</div>
+        </div>
+
+        <div class="photo-item">
+          <img src="https://placehold.co/750x550/32cd32/ffffff" alt="" />
+          <div class="location-tag">Yellowstone</div>
+        </div>
+      </div>
     </div>
 
     <button id="toggle-theme" class="btn">
       <img width="35px" id="theme-icon" />
     </button>
+
+    <!-- Lightbox modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" class="lightbox-content" />
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
 
     <script src="gallery.js"></script>
   </body>
