@@ -111,6 +111,13 @@ header {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Responsive margin adjustments to match resume.css */
+@media (max-width: 949px) {
+  body {
+    margin-top: 20px;
+  }
+}
 .project {
   border: 2px solid;
   border-radius: 8px;

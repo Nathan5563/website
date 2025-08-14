@@ -358,3 +358,9 @@ header {
     margin-top: 30px;
   }
 }
+
+@media (max-width: 949px) {
+  body {
+    margin-top: 20px;
+  }
+}

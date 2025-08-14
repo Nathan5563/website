@@ -77,7 +77,7 @@ header {
 .header-left {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 .back-link {
   text-decoration: none;
@@ -324,7 +324,7 @@ header {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 949px) {
   body {
     margin-top: 20px;
   }

@@ -120,3 +120,10 @@ header {
   top: 10px;
   right: 10px;
 }
+
+/* Responsive margin adjustments to match resume.css */
+@media (max-width: 949px) {
+  body {
+    margin-top: 20px;
+  }
+}
