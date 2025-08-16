@@ -1,0 +1,274 @@
+/* Colors and themes */
+:root {
+  --bg-light: #fdfdff;
+  --color-light: #1c1c1d;
+  --bg-dark: #393d3f;
+  --color-dark: #fdfdff;
+  --color-link-light: #ce645f;
+  --color-link-dark: #e08f8b;
+  --color-link-hover-light: #81403a;
+  --color-link-hover-dark: #fdc7c4;
+}
+
+/* Theme classes */
+.latex-light-auto {
+  background-color: var(--bg-light);
+  color: var(--color-light);
+}
+.latex-light-auto a {
+  color: var(--color-link-light) !important;
+}
+.latex-light-auto a:hover {
+  color: var(--color-link-hover-light) !important;
+}
+.latex-dark-auto {
+  background-color: var(--bg-dark);
+  color: var(--color-dark);
+}
+.latex-dark-auto a {
+  color: var(--color-link-dark) !important;
+}
+.latex-dark-auto a:hover {
+  color: var(--color-link-hover-dark) !important;
+}
+
+/* Base reset + typography */
+*:not(h1) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 0.975em;
+  hyphens: manual;
+}
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  margin: 0px;
+}
+body {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 1.6;
+}
+
+/* Container to match homepage */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Header layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.back-link {
+  text-decoration: none;
+  font-weight: 500;
+  width: fit-content;
+}
+.latex-light-auto .back-link {
+  color: var(--color-link-light) !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  .latex-light-auto .back-link:hover {
+    color: var(--color-link-hover-light) !important;
+  }
+}
+.latex-dark-auto .back-link {
+  color: var(--color-link-dark) !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  .latex-dark-auto .back-link:hover {
+    color: var(--color-link-hover-dark) !important;
+  }
+}
+
+/* Content styles */
+.collapsible-content {
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.collapsible-content.collapsed {
+  max-height: 0;
+}
+.collapsible-content > * {
+  flex-shrink: 0;
+}
+.blog-subtitle {
+  font-size: 1.25em;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-left: 25px;
+  transition: color 0.2s ease;
+}
+.blog-subtitle:not(:first-of-type) {
+  margin-top: 20px;
+}
+.latex-light-auto .blog-subtitle:hover {
+  color: var(--color-link-hover-light);
+}
+.latex-dark-auto .blog-subtitle:hover {
+  color: var(--color-link-hover-dark);
+}
+.blog-subtitle::before {
+  content: "▼";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9em;
+  transition: transform 0.2s ease;
+  color: var(--color-link-light);
+  font-weight: bold;
+  width: 20px;
+  text-align: center;
+}
+.latex-dark-auto .blog-subtitle::before {
+  color: var(--color-link-dark);
+}
+.blog-subtitle.collapsed::before {
+  transform: translateY(-50%) rotate(-90deg);
+}
+.blog-paragraph {
+  padding: 10px 0px;
+}
+.image-container {
+  width: fit-content;
+  background-color: var(--bg-light);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.latex-light-auto .image-container {
+  border: 2px solid var(--color-link-light);
+}
+.latex-dark-auto .image-container {
+  border: 2px solid var(--color-link-dark);
+}
+.image-caption {
+  font-size: 0.9em;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.4;
+  color: var(--color-light);
+}
+.image-caption b {
+  font-style: normal;
+}
+.image-caption .source {
+  font-weight: 500;
+  font-style: normal;
+}
+.image-caption .source a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  color: var(--color-link-light) !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  .image-caption .source a:hover {
+    border-bottom: 1px solid;
+    color: var(--color-link-hover-light) !important;
+  }
+}
+.blog-ordered-list {
+  margin-left: 40px;
+}
+code {
+  display: block;
+  background-color: #f8f8f8;
+  margin: 20px 0px;
+  padding: 0px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-family: "Consolas", "Monaco", "Courier New", monospace !important;
+  font-size: 0.9em;
+  line-height: 1.5;
+  white-space: pre;
+  overflow-x: auto;
+  color: #333;
+}
+.latex-dark-auto code {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  color: #e2e8f0;
+}
+math {
+  font-family: "Computer Modern", "Latin Modern Math", "TeX Gyre Termes Math",
+    "Times New Roman", serif !important;
+  font-style: normal;
+  font-size: 1.25em;
+  font-weight: normal;
+}
+
+/* Theme toggling button */
+.btn {
+  position: fixed !important;
+  border: none;
+  border-radius: 100%;
+  padding: 10px;
+  box-shadow: none;
+  height: 55px;
+}
+.btn:active {
+  box-shadow: none;
+  outline: none;
+}
+.btn-light {
+  background-color: var(--bg-light);
+  color: var(--color-light);
+  transition: 0.15s ease-in background-color;
+}
+.btn-light:hover {
+  cursor: pointer;
+  background-color: #dddcda;
+}
+.btn-dark {
+  background-color: var(--bg-dark);
+  color: var(--color-dark);
+  transition: 0.15s ease-in background-color;
+}
+.btn-dark:hover {
+  cursor: pointer;
+  background-color: #54565a;
+}
+#toggle-theme {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 949px) {
+  body {
+    margin-top: 20px;
+  }
+}

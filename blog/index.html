@@ -50,11 +50,6 @@
     />
     <meta property="og:url" content="https://nathanabebe.com/blog/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="../images/profile-image.jpg" />
-    <meta
-      property="og:image:alt"
-      content="Nathan Abebe, Computer Science and Electrical Engineering at Yale"
-    />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://nathanabebe.com/blog/" />
     <link rel="icon" type="image/png" href="../icons/favicon.png" />
@@ -66,17 +61,11 @@
         <div class="header-left">
           <a href="../index.html" class="back-link">← Back to Home</a>
           <h1>Blog</h1>
-          <p class="blog-subtitle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-            quidem autem earum aspernatur omnis atque nulla porro incidunt
-            itaque dolorem? Accusantium tempore aperiam officiis magnam
-            recusandae eos vero voluptas inventore.
-          </p>
-          <p class="blog-subtitle">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-            quidem, tempora, error hic totam libero fugit, incidunt vero dicta
-            ea expedita aliquid illo rerum. Iure nostrum cumque omnis laudantium
-            impedit!
+          <p>
+            Welcome to my technical blog where I share insights on various
+            problems I face in my projects and research. Here you'll find deep
+            dives into topics like emulation, performance optimization, FPGA
+            architectures, and low-level programming techniques.
           </p>
         </div>
       </header>
@@ -86,10 +75,7 @@
         <h2 class="section-title">Recent Posts</h2>
 
         <!-- Blog Post: 6502 Architecture and Interrupts -->
-        <a
-          href="#"
-          class="blog-post-link"
-        >
+        <!-- <a href="6502_architecture_and_interrupts.html" class="blog-post-link">
           <article class="blog-post">
             <div class="post-header">
               <h3 class="post-title">
@@ -118,10 +104,10 @@
               <span class="status-badge coming-soon">Coming Soon</span>
             </div>
           </article>
-        </a>
+        </a> -->
 
         <!-- Blog Post: 6502 Bus Abstraction -->
-        <a href="#" class="blog-post-link">
+        <!-- <a href="6502_bus_abstraction.html" class="blog-post-link">
           <article class="blog-post">
             <div class="post-header">
               <h3 class="post-title">
@@ -150,21 +136,18 @@
               <span class="status-badge coming-soon">Coming Soon</span>
             </div>
           </article>
-        </a>
+        </a> -->
 
         <!-- Blog Post: 6502 Instruction Lookup -->
         <a
-          href="#"
+          href="2025/08/16/optimizing_6502_instruction_fetches.html"
           class="blog-post-link"
         >
           <article class="blog-post">
             <div class="post-header">
-              <h3 class="post-title">
-                Optimizing 6502 Instruction Lookup Tables
-              </h3>
+              <h3 class="post-title">Optimizing 6502 Instruction Fetches</h3>
               <div class="post-meta">
-                <span class="post-date">Coming Soon</span>
-                <span class="read-time">• 6 min read</span>
+                <span class="post-date">August 16, 2025 • 6 min read</span>
               </div>
             </div>
             <div class="post-tags">
@@ -173,17 +156,12 @@
               <span class="tag">Data Structures</span>
             </div>
             <p class="post-excerpt">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
-              corrupti repellendus fugit, vero corporis obcaecati temporibus
-              perferendis ea eligendi labore aperiam voluptatibus eum debitis
-              ratione id ad aliquid? Eligendi, esse! Laudantium placeat ipsam ea
-              maxime aspernatur, autem, assumenda quos molestias modi sit id
-              minima molestiae nulla? Quidem libero molestias accusantium rem
-              nostrum odio aliquid alias optio cupiditate ad. Nesciunt, officia!
+              A series of implementations of 6502 CPU instruction fetches for
+              cycle-accurate NES emulation. Starting from a naive switch
+              statement approach, I explore map-based lookup tables and
+              eventually settle on a clean array-based solution that achieves
+              constant time performance without conditionals.
             </p>
-            <div class="post-status">
-              <span class="status-badge coming-soon">Coming Soon</span>
-            </div>
           </article>
         </a>
       </div>

@@ -1,7 +1,7 @@
 /* Colors and themes */
 :root {
   --bg-light: #fdfdff;
-  --color-light: #393d3f;
+  --color-light: #1C1C1D;
   --bg-dark: #393d3f;
   --color-dark: #fdfdff;
   --color-link-light: #ce645f;
@@ -95,16 +95,10 @@ header {
     color: var(--color-link-hover-dark) !important;
   }
 }
-.blog-subtitle {
-  margin: 10px 0 0 0;
-  font-size: 1.1em;
-  color: currentColor;
-  opacity: 0.8;
-}
 
 /* Section titles */
 .section-title {
-  margin: 30px 0 20px 0;
+  margin: 10px 0 20px 0;
   font-size: 1.5em;
   font-weight: 600;
   color: currentColor;
@@ -153,11 +147,11 @@ header {
   }
   .latex-light-auto .blog-post:hover {
     border-color: var(--color-link-hover-light);
-    background-color: #f0f0f0;
+    background-color: rgba(206, 100, 95, 0.1);
   }
   .latex-dark-auto .blog-post:hover {
     border-color: var(--color-link-hover-dark);
-    background-color: #505256;
+    background-color: rgba(224, 143, 139, 0.1);
   }
 }
 
@@ -194,9 +188,6 @@ header {
 }
 .post-date {
   font-weight: 500;
-}
-.read-time {
-  font-weight: 400;
 }
 
 /* Post tags */

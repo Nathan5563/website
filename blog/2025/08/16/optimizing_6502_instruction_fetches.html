@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimizing 6502 Instruction Fetches</title>
+    <meta
+      name="description"
+      content="Implementing a series of optimizations for 6502 CPU instruction fetches, from a giant switch statement to lookup tables."
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nathan Abebe",
+        "url": "https://nathanabebe.com",
+        "email": "mailto:nathan.abebe@yale.edu",
+        "jobTitle": "Computer Science and Electrical Engineering Student",
+        "worksFor": {
+          "@type": "EducationalOrganization",
+          "name": "Yale University"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Yale University"
+        },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Bachelor of Science in Computer Science and Electrical Engineering",
+          "educationalLevel": "Undergraduate"
+        },
+        "knowsAbout": [
+          "Computer Science",
+          "Electrical Engineering",
+          "FPGA Development",
+          "Embedded Systems",
+          "Low-latency Systems",
+          "Distributed Systems"
+        ],
+        "sameAs": [
+          "https://github.com/Nathan5563",
+          "https://linkedin.com/in/nathan5563"
+        ]
+      }
+    </script>
+    <meta property="og:title" content="Blog | Nathan Abebe" />
+    <meta
+      property="og:description"
+      content="Implementing a series of optimizations for 6502 CPU instruction fetches, from a giant switch statement to lookup tables."
+    />
+    <meta
+      property="og:url"
+      content="https://nathanabebe.com/blog/2025/08/16/optimizing_6502_instruction_fetches"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://nathanabebe.com/blog/2025/08/16/optimizing_6502_instruction_fetches"
+    />
+    <link rel="icon" type="image/png" href="../../../../icons/favicon.png" />
+    <link rel="stylesheet" href="../../../blogpost.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-left">
+          <a href="../../../index.html" class="back-link">← Back to Blog</a>
+          <h1>Optimizing 6502 Instruction Fetches</h1>
+        </div>
+      </header>
+      <h2 class="blog-subtitle" data-section="background">
+        Background on Emulation Performance
+      </h2>
+      <div class="collapsible-content" id="background-content">
+        <p class="blog-paragraph">
+          Emulation&mdash;the complete simulation of a digital circuit using
+          software&mdash;is known to run exponentially slower compared to the
+          circuit it emulates. This is because of the huge abstraction layer
+          between the emulator and the hardware of your computer, so you have to
+          jump through many hoops to implement behavior that is trivial to do
+          directly with hardware.
+        </p>
+        <p class="blog-paragraph">
+          For example, modern CPUs implement
+          <a
+            href="https://en.wikipedia.org/wiki/Instruction_pipelining"
+            target="_blank"
+            >instruction pipelining</a
+          >
+          when executing an instruction, which is a way of running other
+          instructions in parts of the CPU that aren't being utilized by the
+          current instruction. This looks something like the following:
+        </p>
+        <div class="image-container">
+          <img
+            src="../../../../images/cpu_pipeline.png"
+            alt="CPU instruction pipelining illustration. Source: Wikipedia"
+            width="300px"
+          />
+          <div class="image-caption">
+            <b>Figure 1.</b> CPU instruction pipelining illustration.
+            <span class="source"
+              >Source:
+              <a
+                href="https://en.wikipedia.org/wiki/Instruction_pipelining"
+                target="_blank"
+                >Wikipedia</a
+              ></span
+            >
+          </div>
+        </div>
+        <p class="blog-paragraph">
+          The first instruction is initially at the fetch stage, and all other
+          instructions are waiting. Then, once the first instruction goes to the
+          decode stage, the next instruction can go to the fetch stage as it is
+          currently unoccupied. The remaining instructions run similarly,
+          significantly reducing execution time. The reason this works is that
+          CPU instructions are fairly standardized. They all follow a sequence
+          of simple, standalone instructions that can be completed in a certain
+          number of clock cycles, and different parts of a CPU are optimized to
+          handle these operations:
+        </p>
+        <ol class="blog-ordered-list">
+          <li>Fetch - Get the next instruction byte from memory</li>
+          <li>Decode - Figure out what instruction this byte corresponds to</li>
+          <li>Execute - Execute the required instruction</li>
+          <li>
+            (Optional) Write-back - Write the result of the execution to memory
+          </li>
+        </ol>
+        <p class="blog-paragraph">
+          This behavior is baked into the hardware, so there is no need to
+          program or configure it. When emulating, however, all of these
+          optimizations relating to instruction execution are left to the
+          developer. For the 6502 CPU (the CPU found inside the Nintendo
+          Entertainment System, or NES), however, such optimizations aren't even
+          necessary&mdash;emulating the 6502's ~2 Mhz clock would be a breeze
+          for any modern computer running at several gigahertz.
+        </p>
+        <p class="blog-paragraph">
+          Regardless, I wanted
+          <a
+            href="https://github.com/Nathan5563/nnes"
+            target="_blank"
+            rel="noopener"
+            >my NES emulator</a
+          >
+          to be able to run on slower chips and microcontrollers. Moreover, I
+          wanted my emulator to be cycle accurate. This just means that the
+          emulator simulates every clock cycle of the given circuit faithfully,
+          as it would've ran in hardware. For example, to add two numbers, you
+          would need the following (rough) steps on any CPU, where each one
+          would take a single clock cycle:
+        </p>
+        <ol class="blog-ordered-list">
+          <li>Get the first number</li>
+          <li>Get the second number</li>
+          <li>Add the two numbers</li>
+          <li>Store the result</li>
+        </ol>
+        <p class="blog-paragraph">
+          You can easily spend one false clock cycle to execute this entire
+          instruction since, again, modern computers are very fast, then waste
+          the following three cycles to match up with the hardware. The downside
+          of this is that
+          <a
+            href="https://www.nesdev.org/wiki/Tricky-to-emulate_games"
+            target="_blank"
+            rel="noopener"
+            >some games built for the NES depend on per-cycle behavior</a
+          >, so you would not be able to play them bug-free.
+        </p>
+        <p class="blog-paragraph">
+          Cycle accuracy makes emulation even more expensive, so optimizations
+          became necessary for my emulator. This article describes some of the
+          steps I took to optimize the instruction fetch and decode stages of my
+          NES emulator's 6502 CPU while maintaining cycle accuracy.
+        </p>
+      </div>
+
+      <h2 class="blog-subtitle" data-section="naive">
+        Attempt #1. Naive Approach: One Giant Switch Statement™
+      </h2>
+      <div class="collapsible-content" id="naive-content">
+        <p class="blog-paragraph">
+          My first implementation of the 6502 CPU used the naive approach I
+          learned about and used in
+          <a
+            href="https://github.com/Nathan5563/chip-8"
+            target="_blank"
+            rel="noopener"
+            >my CHIP-8 emulator</a
+          >: one giant switch statement. It worked by reading an instruction
+          opcode (the byte of data that corresponds to some instruction) from a
+          ROM file, passing that into a switch statement, then handling what
+          each instruction should do for each valid case.
+        </p>
+        <!-- prettier-ignore -->
+        <code>
+// fetch -> decode sequence
+let opcode: u8 = self.mem_read(self.pc);
+match(opcode)
+{
+    0x00 => {},
+    0x01 => {},
+    0x02 => {},
+    .
+    .
+    .
+    0xFF => {},
+}
+        </code>
+        <p class="blog-paragraph">
+          This has a number of issues, the most obvious being that it is
+          terribly complicated code, especially if I wanted to apply the same
+          idea for an even larger CPU like any x86 processor with several
+          thousand instructions. Besides qualitative gripes, however, a switch
+          statement is a conditional expression, and conditional expressions can
+          be slow due to
+          <a
+            href="https://en.wikipedia.org/wiki/Branch_predictor"
+            target="_blank"
+            rel="noopener"
+            >branch prediction</a
+          >, even if this approach technically has an <math>O(1)</math> worst
+          case time complexity. Thus, any changes should attempt to keep the
+          code clean while avoiding conditionals for speedup.
+        </p>
+      </div>
+
+      <h2 class="blog-subtitle" data-section="map">
+        Attempt #2. Map-based Lookup Tables: Dissapointing Results
+      </h2>
+      <div class="collapsible-content" id="map-content">
+        <p class="blog-paragraph">
+          My next attempt was a map-based lookup table. Opcodes are fetched from
+          memory and decoded into an instruction, so it only makes sense to
+          consider a mapping of opcode to instruction handler functions. The
+          approach was to first write out functions implementing the opcodes,
+          then perform a single
+          <math>O(n)</math> operation to construct the map at runtime, where
+          <math>n</math> is the number of opcodes. To avoid conditionals, this
+          required writing out an array of instructions.
+        </p>
+        <!-- prettier-ignore -->
+        <code>
+// Addressing mode functions
+fn addr_abs(subcycle: u8) -> bool {}
+fn addr_rel(subcycle: u8) -> bool {}
+.
+.
+.
+fn addr_iny(subcycle: u8) -> bool {}
+
+// Instruction implementation functions
+fn bpl(subcycle: u8) -> bool {}
+fn jmp(subcycle: u8) -> bool {}
+.
+.
+.
+fn and(subcycle: u8) -> bool {}
+
+// Map building
+struct Instruction
+{
+    opcode: u8,
+    addressing_mode: fn(subcycle: u8) -> bool,
+    instruction_handler: fn(subcycle: u8) -> bool
+}
+
+let instructions: [Instruction; 256] = [
+  Instruction {
+    opcode: 0x10,
+    addressing_mode: addr_rel,
+    instruction_handler: bpl,
+  },
+  Instruction {
+    opcode: 0x4C,
+    addressing_mode: addr_abs,
+    instruction_handler: jmp,
+  },
+  .
+  .
+  .
+  Instruction {
+    opcode: 0x31,
+    addressing_mode: addr_iny,
+    instruction_handler: and,
+  },
+];
+
+use std::collections::HashMap;
+let mut opcode_instruction_map: HashMap&lt;u8, Instruction&gt; = HashMap::new();
+for instruction in instructions:
+{
+    opcode_instruction_map.insert(instruction.opcode, instruction);
+}
+        </code>
+        <p class="blog-paragraph">
+          Then, for the replacement of the previous switch statement,
+        </p>
+        <!-- prettier-ignore -->
+        <code>
+// fetch -> decode sequence
+let opcode: u8 = self.mem_read(self.pc);
+let instruction: Option&lt;&Instruction&gt; = opcode_instruction_map.get(opcode);
+        </code>
+        <p class="blog-paragraph">
+          Each instruction fetch now runs in <math>O(1)</math> average time, but
+          has a worst case complexity of <math>O(n)</math> where
+          <math>n</math> is the number of opcodes. This is due to how hash map
+          implementations work, as collisions between keys increase the lookup
+          time. I hoped this approach would be better since the nature of the
+          fetch-decode sequence implies a map-based implementation, but the time
+          complexity is worse than the switch statement in the worst case and
+          there is still a hidden conditional in the map implementation to check
+          for the required key.
+        </p>
+      </div>
+
+      <h2 class="blog-subtitle" data-section="list">
+        Attempt #3. List-based Lookup Tables: Final Version?
+      </h2>
+      <div class="collapsible-content" id="list-content">
+        <p class="blog-paragraph">
+          I got the idea for the (potentially final) implementation while going
+          through my map-based implementation. While building the opcode array,
+          it hit me that the instruction opcode being a single byte limited it
+          to 256 possibilities. Thus, it suffices to store all instructions in a
+          256-entry array and use the opcode to index into it! Not all of the
+          256 instructions are officially defined, the missing ones labeled
+          <a
+            href="https://www.nesdev.org/wiki/CPU_unofficial_opcodes"
+            target="_blank"
+            rel="noopener"
+            >illegal opcodes</a
+          >. However, some NES games do use these opcodes, so you may implement
+          them or leave that entry of the array as a None type. That way, you
+          can have an opcode to instruction mapping implicitly, without
+          incurring the overhead of a hash map.
+        </p>
+        <!-- prettier-ignore -->
+        <code>
+// List building
+let instructions: [Option&lt;Instruction&gt;; 256] = [
+  Some(Instruction {
+    opcode: 0x00,
+    addressing_mode: addr_imp,
+    instruction_handler: brk,
+  }),
+  Some(Instruction {
+    opcode: 0x01,
+    addressing_mode: addr_inx,
+    instruction_handler: ora,
+  }),
+  .
+  .
+  .
+  // Example of an illegal opcode
+  Some(Instruction {
+    opcode: 0xFF,
+    addressing_mode: addr_abx,
+    instruction_handler: isc,
+  }),
+];
+        </code>
+        <p class="blog-paragraph">
+          Then, for the replacement of the map-based fetch,
+        </p>
+        <!-- prettier-ignore -->
+        <code>
+let opcode: u8 = self.mem_read(self.pc);
+let instruction: Option&lt;Instruction&gt; = instructions[opcode];
+      </code>
+        <p class="blog-paragraph">
+          This implementation is the cleanest in my opinion, requiring only the
+          definitions of modular instruction handler functions and building an
+          array of those instructions. While writing out the array is somewhat
+          tedious, it can be programmatically generated due to the similarities
+          shared by the instructions subcycles. Moreover, indexing into an array
+          is an
+          <math>O(1)</math> time operation, and there are no conditionals
+          anywhere.
+        </p>
+      </div>
+
+      <h2 class="blog-subtitle" data-section="conclusion">
+        Conclusion and Future Ideas
+      </h2>
+      <div class="collapsible-content" id="conclusion-content">
+        <p class="blog-paragraph">
+          I am happy with attempt 3 and will probably stop here, but for
+          processors with more instructions than the 6502, it would be
+          interesting to look into the programmatic generation of instructions,
+          perhaps even at runtime (see
+          <a
+            href="https://blog.scottlogic.com/2020/08/26/codegen-6502-webassembly.html"
+            target="_blank"
+            rel="noopener"
+            >here</a
+          >
+          for a discussion). The CPU of my emulator is more than fast enough for
+          now, and I can actually read the code without scanning through
+          hundreds of lines of switch cases. Any further optimizations should be
+          concerned with the
+          <a
+            href="https://www.nesdev.org/wiki/PPU_rendering"
+            target="_blank"
+            rel="noopener"
+            >PPU's rendering pipeline</a
+          >, the more complex side of NES emulation.
+        </p>
+        <p class="blog-paragraph">
+          That's all for this article, but be sure to check out my other posts
+          for interesting reads on emulation, performance optimizations, and
+          system design.
+        </p>
+      </div>
+    </div>
+
+    <button id="toggle-theme" class="btn">
+      <img width="35px" id="theme-icon" />
+    </button>
+
+    <script src="../../../blogpost.js"></script>
+  </body>
+</html>
