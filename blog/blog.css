@@ -18,8 +18,10 @@
 .latex-light-auto a {
   color: var(--color-link-light) !important;
 }
-.latex-light-auto a:hover {
-  color: var(--color-link-hover-light) !important;
+@media (hover: hover) and (pointer: fine) {
+  .latex-light-auto a:hover {
+    color: var(--color-link-hover-light) !important;
+  }
 }
 .latex-dark-auto {
   background-color: var(--bg-dark);
@@ -28,8 +30,10 @@
 .latex-dark-auto a {
   color: var(--color-link-dark) !important;
 }
-.latex-dark-auto a:hover {
-  color: var(--color-link-hover-dark) !important;
+@media (hover: hover) and (pointer: fine) {
+  .latex-dark-auto a:hover {
+    color: var(--color-link-hover-dark) !important;
+  }
 }
 
 /* Base reset + typography */
@@ -291,18 +295,22 @@ header {
   color: var(--color-light);
   transition: 0.15s ease-in background-color;
 }
-.btn-light:hover {
-  cursor: pointer;
-  background-color: #dddcda;
+@media (hover: hover) and (pointer: fine) {
+  .btn-light:hover {
+    cursor: pointer;
+    background-color: #dddcda;
+  }
 }
 .btn-dark {
   background-color: var(--bg-dark);
   color: var(--color-dark);
   transition: 0.15s ease-in background-color;
 }
-.btn-dark:hover {
-  cursor: pointer;
-  background-color: #54565a;
+@media (hover: hover) and (pointer: fine) {
+  .btn-dark:hover {
+    cursor: pointer;
+    background-color: #54565a;
+  }
 }
 #toggle-theme {
   position: absolute;

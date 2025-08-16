@@ -193,8 +193,10 @@ header {
   background: var(--color-link-dark);
   color: var(--bg-dark) !important;
 }
-.latex-dark-auto .download-btn:hover {
-  background: var(--color-link-hover-dark);
+@media (hover: hover) and (pointer: fine) {
+  .latex-dark-auto .download-btn:hover {
+    background: var(--color-link-hover-dark);
+  }
 }
 
 /* Info panel */
