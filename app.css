@@ -258,6 +258,10 @@ hr {
 .class-list li b {
   font-weight: 600;
 }
+.class-list .course-code {
+  font-family: monospace !important;
+  font-size: 1.2em !important;
+}
 
 /* One column for tablet and mobile displays */
 @media (max-width: 949px) {
