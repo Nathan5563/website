@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function inverseLerp</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function inverseLerp</h1><p>Linear interpolation factor between two values.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">float</span> <span class="pln">inverseLerp</span><span class="pun">(</span>
+			<br/>&nbsp;&nbsp;<span class="typ">float</span> <span class="pln">a</span><span class="pun">,</span>
+			<br/>&nbsp;&nbsp;<span class="typ">float</span> <span class="pln">b</span><span class="pun">,</span>
+			<br/>&nbsp;&nbsp;<span class="typ">float</span> <span class="pln">value</span>
+			<br/>
+			<span class="pun">)</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section></section>
+<section><h2>Parameters</h2>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="a">a</td><td> Start value</td></tr>
+<tr><td id="b">b</td><td> End value</td></tr>
+<tr><td id="value">value</td><td> The value to find the factor for, must be in [a, b]</td></tr>
+</table>
+</section>
+<section><h2>Returns</h2>
+<p>The interpolation factor in [0.0, 1.0]
+</p>
+</section>
+<section><h2>Example</h2>
+<p>Test degrees to radians conversion.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/degToRad.html"></span><span class="pln">degToRad</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"0 degrees should be 0 radians"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/degToRad.html"></span><span class="pln">degToRad</span></a><span class="pun">(</span><span class="lit">90.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)(</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0f</span><span class="pun">)), </span><span class="str">"90 degrees should be PI/2 radians"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/degToRad.html"></span><span class="pln">degToRad</span></a><span class="pun">(</span><span class="lit">180.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)</span><span class="pln">PI</span><span class="pun">), </span><span class="str">"180 degrees should be PI radians"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/degToRad.html"></span><span class="pln">degToRad</span></a><span class="pun">(</span><span class="lit">360.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)(</span><span class="lit">2.0f </span><span class="pun">* </span><span class="pln">PI</span><span class="pun">)), </span><span class="str">"360 degrees should be 2PI radians"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test radians to degrees conversion.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/radToDeg.html"></span><span class="pln">radToDeg</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"0 radians should be 0 degrees"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/radToDeg.html"></span><span class="pln">radToDeg</span></a><span class="pun">(</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">90.0f</span><span class="pun">), </span><span class="str">"PI/2 radians should be 90 degrees"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/radToDeg.html"></span><span class="pln">radToDeg</span></a><span class="pun">(</span><span class="pln">PI</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">180.0f</span><span class="pun">), </span><span class="str">"PI radians should be 180 degrees"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/radToDeg.html"></span><span class="pln">radToDeg</span></a><span class="pun">(</span><span class="lit">2.0f </span><span class="pun">* </span><span class="pln">PI</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">360.0f</span><span class="pun">), </span><span class="str">"2PI radians should be 360 degrees"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test round-trip conversion between degrees and radians.
+</p>
+<pre class="code"><code class="lang-d"><span class="typ">float </span><span class="pln">angle </span><span class="pun">= </span><span class="lit">45.0f</span><span class="pun">;
+</span><span class="typ">float </span><span class="pln">converted </span><span class="pun">= <a href="../../../quark/common/utils/radToDeg.html"></span><span class="pln">radToDeg</span></a><span class="pun">(<a href="../../../quark/common/utils/degToRad.html"></span><span class="pln">degToRad</span></a><span class="pun">(</span><span class="pln">angle</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">converted<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">angle</span><span class="pun">), </span><span class="str">"Round-trip conversion should preserve angle"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test normalizeAngle with positive angles.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/normalizeAngle.html"></span><span class="pln">normalizeAngle</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"0 should normalize to 0"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/normalizeAngle.html"></span><span class="pln">normalizeAngle</span></a><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)</span><span class="pln">PI</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)</span><span class="pln">PI</span><span class="pun">), </span><span class="str">"PI should normalize to PI"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/normalizeAngle.html"></span><span class="pln">normalizeAngle</span></a><span class="pun">(</span><span class="lit">2.0f </span><span class="pun">* </span><span class="pln">PI</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"2PI should normalize to 0"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test normalizeAngle with angles greater than 2PI.
+</p>
+<pre class="code"><code class="lang-d"><span class="typ">float </span><span class="pln">angle </span><span class="pun">= </span><span class="lit">3.0f </span><span class="pun">* </span><span class="pln">PI</span><span class="pun">;
+</span><span class="typ">float </span><span class="pln">normalized </span><span class="pun">= <a href="../../../quark/common/utils/normalizeAngle.html"></span><span class="pln">normalizeAngle</span></a><span class="pun">(</span><span class="pln">angle</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">normalized<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)</span><span class="pln">PI</span><span class="pun">), </span><span class="str">"3PI should normalize to PI"</span><span class="pun">);
+
+</span><span class="pln">angle </span><span class="pun">= </span><span class="lit">5.0f </span><span class="pun">* </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)</span><span class="pln">PI</span><span class="pun">;
+</span><span class="pln">normalized </span><span class="pun">= <a href="../../../quark/common/utils/normalizeAngle.html"></span><span class="pln">normalizeAngle</span></a><span class="pun">(</span><span class="pln">angle</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">normalized<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)</span><span class="pln">PI</span><span class="pun">), </span><span class="str">"5PI should normalize to PI"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test normalizeAngle with negative angles.
+</p>
+<pre class="code"><code class="lang-d"><span class="typ">float </span><span class="pln">angle </span><span class="pun">= -</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0f</span><span class="pun">;
+</span><span class="typ">float </span><span class="pln">normalized </span><span class="pun">= <a href="../../../quark/common/utils/normalizeAngle.html"></span><span class="pln">normalizeAngle</span></a><span class="pun">(</span><span class="pln">angle</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">normalized<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)(</span><span class="lit">3.0f </span><span class="pun">* </span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0f</span><span class="pun">)), </span><span class="str">"-PI/2 should normalize to 3PI/2"</span><span class="pun">);
+
+</span><span class="pln">angle </span><span class="pun">= -</span><span class="lit">2.0f </span><span class="pun">* </span><span class="pln">PI</span><span class="pun">;
+</span><span class="pln">normalized </span><span class="pun">= <a href="../../../quark/common/utils/normalizeAngle.html"></span><span class="pln">normalizeAngle</span></a><span class="pun">(</span><span class="pln">angle</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">normalized<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"-2PI should normalize to 0"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test lerp at extremes.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/lerp.html"></span><span class="pln">lerp</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"Lerp at t=0 should return start value"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/lerp.html"></span><span class="pln">lerp</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">1.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">), </span><span class="str">"Lerp at t=1 should return end value"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test lerp at midpoint.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/lerp.html"></span><span class="pln">lerp</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">0.5f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">), </span><span class="str">"Lerp at t=0.5 should return midpoint"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/lerp.html"></span><span class="pln">lerp</span></a><span class="pun">(-</span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">0.5f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"Lerp of [-5, 5] at t=0.5 should be 0"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test lerp with various interpolation values.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/lerp.html"></span><span class="pln">lerp</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">100.0f</span><span class="pun">, </span><span class="lit">0.25f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">25.0f</span><span class="pun">), </span><span class="str">"Lerp at t=0.25 should be 25"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/lerp.html"></span><span class="pln">lerp</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">100.0f</span><span class="pun">, </span><span class="lit">0.75f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">75.0f</span><span class="pun">), </span><span class="str">"Lerp at t=0.75 should be 75"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test lerp clamps values outside [0, 1].
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/lerp.html"></span><span class="pln">lerp</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, -</span><span class="lit">0.5f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"Lerp with t&lt;0 should clamp to start value"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/lerp.html"></span><span class="pln">lerp</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">1.5f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">), </span><span class="str">"Lerp with t&gt;1 should clamp to end value"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test inverseLerp at extremes.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inverseLerp</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"Inverse lerp at start should be 0"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inverseLerp</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">), </span><span class="str">"Inverse lerp at end should be 1"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test inverseLerp at midpoint.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inverseLerp</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">5.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.5f</span><span class="pun">), </span><span class="str">"Inverse lerp at midpoint should be 0.5"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inverseLerp</span><span class="pun">(-</span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.5f</span><span class="pun">),
+    </span><span class="str">"Inverse lerp of [-10, 10] at 0 should be 0.5"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test inverseLerp with various values.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inverseLerp</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">100.0f</span><span class="pun">, </span><span class="lit">25.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.25f</span><span class="pun">),
+    </span><span class="str">"Inverse lerp of 25 in [0, 100] should be 0.25"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inverseLerp</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">100.0f</span><span class="pun">, </span><span class="lit">75.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.75f</span><span class="pun">),
+    </span><span class="str">"Inverse lerp of 75 in [0, 100] should be 0.75"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test inverseLerp clamps values outside range.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inverseLerp</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, -</span><span class="lit">5.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">),
+    </span><span class="str">"Inverse lerp with value&lt;start should clamp to 0"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inverseLerp</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">15.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">),
+    </span><span class="str">"Inverse lerp with value&gt;end should clamp to 1"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test inverseLerp when start equals end.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inverseLerp</span><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">5.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">),
+    </span><span class="str">"Inverse lerp when start==end should return 0"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test lerp and inverseLerp are inverse operations.
+</p>
+<pre class="code"><code class="lang-d"><span class="typ">float <a href="../../../quark/common/utils/inverseLerp.html#a"></span><span class="pln">a</span></a><span class="pln"> </span><span class="pun">= </span><span class="lit">10.0f</span><span class="pun">;
+</span><span class="typ">float <a href="../../../quark/common/utils/inverseLerp.html#b"></span><span class="pln">b</span></a><span class="pln"> </span><span class="pun">= </span><span class="lit">50.0f</span><span class="pun">;
+</span><span class="typ">float </span><span class="pln">t </span><span class="pun">= </span><span class="lit">0.3f</span><span class="pun">;
+
+</span><span class="typ">float <a href="../../../quark/common/utils/inverseLerp.html#value"></span><span class="pln">value</span></a><span class="pln"> </span><span class="pun">= <a href="../../../quark/common/utils/lerp.html"></span><span class="pln">lerp</span></a><span class="pun">(<a href="../../../quark/common/utils/inverseLerp.html#a"></span><span class="pln">a</span></a><span class="pun">, <a href="../../../quark/common/utils/inverseLerp.html#b"></span><span class="pln">b</span></a><span class="pun">, </span><span class="pln">t</span><span class="pun">);
+</span><span class="typ">float </span><span class="pln">recoveredT </span><span class="pun">= </span><span class="pln">inverseLerp</span><span class="pun">(<a href="../../../quark/common/utils/inverseLerp.html#a"></span><span class="pln">a</span></a><span class="pun">, <a href="../../../quark/common/utils/inverseLerp.html#b"></span><span class="pln">b</span></a><span class="pun">, <a href="../../../quark/common/utils/inverseLerp.html#value"></span><span class="pln">value</span></a><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">recoveredT<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">t</span><span class="pun">), </span><span class="str">"inverseLerp(lerp(a, b, t)) should equal t"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test negative angle normalization edge case.
+</p>
+<pre class="code"><code class="lang-d"><span class="typ">float </span><span class="pln">angle </span><span class="pun">= -</span><span class="lit">0.1f</span><span class="pun">;
+</span><span class="typ">float </span><span class="pln">normalized </span><span class="pun">= <a href="../../../quark/common/utils/normalizeAngle.html"></span><span class="pln">normalizeAngle</span></a><span class="pun">(</span><span class="pln">angle</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">normalized </span><span class="pun">&gt;= </span><span class="lit">0.0f </span><span class="pun">&amp;&amp; </span><span class="pln">normalized </span><span class="pun">&lt; </span><span class="lit">2.0f </span><span class="pun">* </span><span class="pln">PI</span><span class="pun">,
+    </span><span class="str">"Normalized angle should be in [0, 2PI)"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test lerp with negative values.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/lerp.html"></span><span class="pln">lerp</span></a><span class="pun">(-</span><span class="lit">10.0f</span><span class="pun">, -</span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">0.5f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(-</span><span class="lit">7.5f</span><span class="pun">),
+    </span><span class="str">"Lerp with negative values should work correctly"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test degToRad with negative angles.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/degToRad.html"></span><span class="pln">degToRad</span></a><span class="pun">(-</span><span class="lit">90.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)(-</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0f</span><span class="pun">)), </span><span class="str">"-90 degrees should be -PI/2 radians"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/degToRad.html"></span><span class="pln">degToRad</span></a><span class="pun">(-</span><span class="lit">180.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)(-</span><span class="pln">PI</span><span class="pun">)), </span><span class="str">"-180 degrees should be -PI radians"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test radToDeg with negative angles.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/radToDeg.html"></span><span class="pln">radToDeg</span></a><span class="pun">(-</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0f</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(-</span><span class="lit">90.0f</span><span class="pun">), </span><span class="str">"-PI/2 radians should be -90 degrees"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(<a href="../../../quark/common/utils/radToDeg.html"></span><span class="pln">radToDeg</span></a><span class="pun">(-</span><span class="pln">PI</span><span class="pun">)<a href="../../../quark/common/utils/fequals.html"></span><wbr/><span class="pun">.</span><span class="pln">fequals</span></a><span class="pun">(-</span><span class="lit">180.0f</span><span class="pun">), </span><span class="str">"-PI radians should be -180 degrees"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

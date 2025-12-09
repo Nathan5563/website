@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class RigidbodyComponent</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class RigidbodyComponent</h1><p>Component that gives an entity physical behavior.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">RigidbodyComponent</span><br>&nbsp;&nbsp;: <a href="../../../quark/core/component/Component.html"><span class="typ">Component</span></a><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>The Rigidbody component handles velocity, acceleration, mass, and force
+ accumulation. It integrates these properties to update the entity's
+ TransformComponent.
+</p>
+</section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.this.html" class="public">
+								<code>this</code>
+							</a>
+							<span class="tableEntryAnnotation">(mass)</span>
+						</td>
+						<td>Creates a new Rigidbody component.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._acceleration.html" class="private"><code>_acceleration</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._angularDrag.html" class="private"><code>_angularDrag</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._angularVelocity.html" class="private"><code>_angularVelocity</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._bounciness.html" class="private"><code>_bounciness</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._forceAccumulator.html" class="private"><code>_forceAccumulator</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._inverseMass.html" class="private"><code>_inverseMass</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._isKinematic.html" class="private"><code>_isKinematic</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._linearDrag.html" class="private"><code>_linearDrag</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._mass.html" class="private"><code>_mass</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._transform.html" class="private"><code>_transform</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/components/transform/TransformComponent.html"><span class="typ">TransformComponent</span></a></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._useGravity.html" class="private"><code>_useGravity</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent._velocity.html" class="private"><code>_velocity</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component._active.html" class="private inherited"><code>_active</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component._id.html" class="private inherited"><code>_id</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component._nextId.html" class="private inherited"><code>_nextId</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">shared</span><span class="pun">(</span><span class="typ">ulong</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component._owner.html" class="private inherited"><code>_owner</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/core/entity/Entity.html"><span class="typ">Entity</span></a></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.bounciness.html" class="public property"><code>bounciness</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the bounciness (restitution) of this body. Higher values make
+ the object more bouncy.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.bounciness.html" class="public property"><code>bounciness</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the bounciness (restitution) of this body.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.drag.html" class="public property"><code>drag</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the linear drag coefficient.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.drag.html" class="public property"><code>drag</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the linear drag coefficient.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.inverseMass.html" class="public property"><code>inverseMass</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the inverse mass (1/mass). Useful for physics calculations where
+ infinite mass (0 inverse mass) represents static objects.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.isKinematic.html" class="public property"><code>isKinematic</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Gets whether this body is kinematic. Kinematic bodies are not affected
+ by forces or gravity but can affect other bodies.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.isKinematic.html" class="public property"><code>isKinematic</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Sets whether this body is kinematic.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.mass.html" class="public property"><code>mass</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the mass of the body.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.mass.html" class="public property"><code>mass</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the mass of the body. Recalculates inverse mass.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.useGravity.html" class="public property"><code>useGravity</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Gets whether gravity is applied to this body.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.useGravity.html" class="public property"><code>useGravity</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Sets whether gravity is applied to this body.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.velocity.html" class="public property"><code>velocity</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td>Gets the current velocity.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.velocity.html" class="public property"><code>velocity</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td>Sets the current velocity.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.active.html" class="public inherited property"><code>active</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Gets whether this component is active.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.active.html" class="public inherited property"><code>active</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Sets whether this component is active.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.id.html" class="public inherited property"><code>id</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td>Gets the unique ID of this component.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.owner.html" class="public inherited property"><code>owner</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/core/entity/Entity.html"><span class="typ">Entity</span></a></code></td><td>Gets the entity that owns this component.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.owner.html" class="public inherited property"><code>owner</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/core/entity/Entity.html"><span class="typ">Entity</span></a></code></td><td>Sets the owner entity of this component.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.addForce.html" class="public">
+								<code>addForce</code>
+							</a>
+							<span class="tableEntryAnnotation">(force)</span>
+						</td>
+						<td>Applies a force to the body. The force is accumulated and applied during
+ the next integration step.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.clearForces.html" class="public">
+								<code>clearForces</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Clears all accumulated forces.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.integrate.html" class="public">
+								<code>integrate</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td>Integrates the physics state for the given time step. Updates velocity
+ based on forces and gravity, then updates position.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/rigidbody/RigidbodyComponent.onInit.html" class="public">
+								<code>onInit</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Initializes the component by fetching the TransformComponent.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.onExit.html" class="public inherited">
+								<code>onExit</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Called when the component is destroyed. Override this to
+ clean up resources.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.onStart.html" class="public inherited">
+								<code>onStart</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Called on the first frame the component is active. Override
+ this to perform initialization that depends on other components.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.postRender.html" class="public inherited">
+								<code>postRender</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Called every frame after the canvas is rendered. Override
+ this for logic that needs to run after rendering.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.postUpdate.html" class="public inherited">
+								<code>postUpdate</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td>Called every frame after physics updates. Override this
+ for logic that needs to run after physics.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.preRender.html" class="public inherited">
+								<code>preRender</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Called every frame before the canvas is rendered. Override
+ this for logic that needs to run before rendering.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.preUpdate.html" class="public inherited">
+								<code>preUpdate</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td>Called every frame before physics updates. Override this
+ for logic that needs to run before physics.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.~this.html" class="public inherited">
+								<code>~this</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

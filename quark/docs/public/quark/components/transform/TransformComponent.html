@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class TransformComponent</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class TransformComponent</h1><p>Component that defines an entity's position, rotation, and scale in 2D space.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">TransformComponent</span><br>&nbsp;&nbsp;: <a href="../../../quark/core/component/Component.html"><span class="typ">Component</span></a><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>The Transform component is the fundamental building block for positioning entities
+ in the scene, providing position, rotation, and scaling, along with associated
+ methods.
+</p>
+</section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.this.html" class="public">
+								<code>this</code>
+							</a>
+							<span class="tableEntryAnnotation">(position, rotation, scale, size)</span>
+						</td>
+						<td>Creates a new Transform component (defaults to position(0,0),
+ rotation(0), scale(1,1), size(32,32)).
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent._position.html" class="private"><code>_position</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent._rotation.html" class="private"><code>_rotation</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent._scale.html" class="private"><code>_scale</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent._size.html" class="private"><code>_size</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component._active.html" class="private inherited"><code>_active</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component._id.html" class="private inherited"><code>_id</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component._nextId.html" class="private inherited"><code>_nextId</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">shared</span><span class="pun">(</span><span class="typ">ulong</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component._owner.html" class="private inherited"><code>_owner</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/core/entity/Entity.html"><span class="typ">Entity</span></a></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.h.html" class="public property"><code>h</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the height of the transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.h.html" class="public property"><code>h</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the height of the transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.position.html" class="public property"><code>position</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td>Gets the position of the transform in world space.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.position.html" class="public property"><code>position</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td>Sets the position of the transform in world space.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.rotation.html" class="public property"><code>rotation</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the rotation angle in radians.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.rotation.html" class="public property"><code>rotation</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the rotation angle in radians.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.scale.html" class="public property"><code>scale</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td>Gets the scale of the transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.scale.html" class="public property"><code>scale</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td>Sets the scale of the transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.scale.html" class="public property"><code>scale</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the scale of the transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.size.html" class="public property"><code>size</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td>Gets the size of the transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.size.html" class="public property"><code>size</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td>Sets the size of the transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.sx.html" class="public property"><code>sx</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the x scale factor.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.sx.html" class="public property"><code>sx</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the x scale factor.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.sy.html" class="public property"><code>sy</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the y scale factor.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.sy.html" class="public property"><code>sy</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the y scale factor.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.w.html" class="public property"><code>w</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the width of the transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.w.html" class="public property"><code>w</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the width of the transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.x.html" class="public property"><code>x</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the x coordinate of the position.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.x.html" class="public property"><code>x</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the x coordinate of the position.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.y.html" class="public property"><code>y</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Gets the y coordinate of the position.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.y.html" class="public property"><code>y</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">float</span></code></td><td>Sets the y coordinate of the position.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.active.html" class="public inherited property"><code>active</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Gets whether this component is active.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.active.html" class="public inherited property"><code>active</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Sets whether this component is active.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.id.html" class="public inherited property"><code>id</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td>Gets the unique ID of this component.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.owner.html" class="public inherited property"><code>owner</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/core/entity/Entity.html"><span class="typ">Entity</span></a></code></td><td>Gets the entity that owns this component.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.owner.html" class="public inherited property"><code>owner</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/core/entity/Entity.html"><span class="typ">Entity</span></a></code></td><td>Sets the owner entity of this component.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.directionTo.html" class="public">
+								<code>directionTo</code>
+							</a>
+							<span class="tableEntryAnnotation">(target)</span>
+						</td>
+						<td>Gets the direction vector from this transform to a target position.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.directionTo.html" class="public">
+								<code>directionTo</code>
+							</a>
+							<span class="tableEntryAnnotation">(other)</span>
+						</td>
+						<td>Gets the direction vector from this transform to another transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.distanceTo.html" class="public">
+								<code>distanceTo</code>
+							</a>
+							<span class="tableEntryAnnotation">(other)</span>
+						</td>
+						<td>Calculates the distance from this transform to another position.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.distanceTo.html" class="public">
+								<code>distanceTo</code>
+							</a>
+							<span class="tableEntryAnnotation">(other)</span>
+						</td>
+						<td>Calculates the distance from this transform to another transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.frect.html" class="public">
+								<code>frect</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Creates an SDL_FRect with this transform at the center.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.localToWorldDirection.html" class="public">
+								<code>localToWorldDirection</code>
+							</a>
+							<span class="tableEntryAnnotation">(localDirection)</span>
+						</td>
+						<td>Transforms a direction from local space to world space.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.localToWorldPoint.html" class="public">
+								<code>localToWorldPoint</code>
+							</a>
+							<span class="tableEntryAnnotation">(localPoint)</span>
+						</td>
+						<td>Transforms a point from local space to world space.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.lookAt.html" class="public">
+								<code>lookAt</code>
+							</a>
+							<span class="tableEntryAnnotation">(target)</span>
+						</td>
+						<td>Rotates the transform to face a target position.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.reset.html" class="public">
+								<code>reset</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Resets the transform to default values.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.rotate.html" class="public">
+								<code>rotate</code>
+							</a>
+							<span class="tableEntryAnnotation">(angle)</span>
+						</td>
+						<td>Rotates the transform by the specified angle.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.rotationMatrix.html" class="public">
+								<code>rotationMatrix</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Gets the rotation matrix for this transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.scaleMatrix.html" class="public">
+								<code>scaleMatrix</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Gets the scale matrix for this transform.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.transformMatrix.html" class="public">
+								<code>transformMatrix</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Gets the complete transformation matrix (scale then rotation).
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.translate.html" class="public">
+								<code>translate</code>
+							</a>
+							<span class="tableEntryAnnotation">(offset)</span>
+						</td>
+						<td>Moves the transform by the specified offset.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.translate.html" class="public">
+								<code>translate</code>
+							</a>
+							<span class="tableEntryAnnotation">(x, y)</span>
+						</td>
+						<td>Moves the transform by the specified x and y offsets.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.worldToLocalDirection.html" class="public">
+								<code>worldToLocalDirection</code>
+							</a>
+							<span class="tableEntryAnnotation">(worldDirection)</span>
+						</td>
+						<td>Transforms a direction from world space to local space.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/components/transform/TransformComponent.worldToLocalPoint.html" class="public">
+								<code>worldToLocalPoint</code>
+							</a>
+							<span class="tableEntryAnnotation">(worldPoint)</span>
+						</td>
+						<td>Transforms a point from world space to local space.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.onExit.html" class="public inherited">
+								<code>onExit</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Called when the component is destroyed. Override this to
+ clean up resources.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.onInit.html" class="public inherited">
+								<code>onInit</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Called when the component is first added to an entity.
+ Override this to initialize the component.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.onStart.html" class="public inherited">
+								<code>onStart</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Called on the first frame the component is active. Override
+ this to perform initialization that depends on other components.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.postRender.html" class="public inherited">
+								<code>postRender</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Called every frame after the canvas is rendered. Override
+ this for logic that needs to run after rendering.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.postUpdate.html" class="public inherited">
+								<code>postUpdate</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td>Called every frame after physics updates. Override this
+ for logic that needs to run after physics.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.preRender.html" class="public inherited">
+								<code>preRender</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Called every frame before the canvas is rendered. Override
+ this for logic that needs to run before rendering.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.preUpdate.html" class="public inherited">
+								<code>preUpdate</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td>Called every frame before physics updates. Override this
+ for logic that needs to run before physics.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/component/Component.~this.html" class="public inherited">
+								<code>~this</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section><section><h2>Example</h2>
+<p>Test basic transform creation and default values.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">),
+    </span><span class="str">"Default position should be (0, 0)"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"Default rotation should be 0"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">),
+    </span><span class="str">"Default scale should be (1, 1)"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">size<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">32.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">size<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">32.0f</span><span class="pun">),
+    </span><span class="str">"Default size should be (32, 32)"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test transform with custom position.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="typ">Vec2f </span><span class="pln">pos </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">20.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">(</span><span class="pln">pos</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">20.0f</span><span class="pun">),
+    </span><span class="str">"Position should be set correctly"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test position property setters and getters.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">x </span><span class="pun">= </span><span class="lit">5.0f</span><span class="pun">;
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">y </span><span class="pun">= </span><span class="lit">10.0f</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">), </span><span class="str">"x coordinate should be 5"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">), </span><span class="str">"y coordinate should be 10"</span><span class="pun">);
+
+</span><span class="typ">Vec2f </span><span class="pln">newPos </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">15.0f</span><span class="pun">, </span><span class="lit">25.0f</span><span class="pun">);
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position </span><span class="pun">= </span><span class="pln">newPos</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">15.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">25.0f</span><span class="pun">),
+    </span><span class="str">"Position should be updated"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test rotation in radians.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation </span><span class="pun">= </span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0f</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)(</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0f</span><span class="pun">)), </span><span class="str">"Rotation should be PI/2"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test rotation normalization.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation </span><span class="pun">= </span><span class="lit">3.0f </span><span class="pun">* </span><span class="pln">PI</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)</span><span class="pln">PI</span><span class="pun">), </span><span class="str">"3π should normalize to PI"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scale properties.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">sx </span><span class="pun">= </span><span class="lit">2.0f</span><span class="pun">;
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">sy </span><span class="pun">= </span><span class="lit">3.0f</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">sx<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">), </span><span class="str">"Scale x should be 2"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">sy<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">), </span><span class="str">"Scale y should be 3"</span><span class="pun">);
+
+</span><span class="typ">Vec2f </span><span class="pln">newScale </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">, </span><span class="lit">5.0f</span><span class="pun">);
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale </span><span class="pun">= </span><span class="pln">newScale</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">),
+    </span><span class="str">"Scale should be updated"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test size properties.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">w </span><span class="pun">= </span><span class="lit">64.0f</span><span class="pun">;
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">h </span><span class="pun">= </span><span class="lit">48.0f</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">w<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">64.0f</span><span class="pun">), </span><span class="str">"Width should be 64"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">h<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">48.0f</span><span class="pun">), </span><span class="str">"Height should be 48"</span><span class="pun">);
+
+</span><span class="typ">Vec2f </span><span class="pln">newSize </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">100.0f</span><span class="pun">, </span><span class="lit">80.0f</span><span class="pun">);
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">size </span><span class="pun">= </span><span class="pln">newSize</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">size<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">100.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">size<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">80.0f</span><span class="pun">),
+    </span><span class="str">"Size should be updated"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test translate method with Vec2f.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="typ">Vec2f </span><span class="pln">offset </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">);
+
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">translate</span><span class="pun">(</span><span class="pln">offset</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">),
+    </span><span class="str">"Position should be translated"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test translate method with separate x and y.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">translate</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">7.0f</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">7.0f</span><span class="pun">),
+    </span><span class="str">"Position should be translated"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test rotate method.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotate</span><span class="pun">(</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">4.0f</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)(</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">4.0f</span><span class="pun">)), </span><span class="str">"Rotation should be PI/4"</span><span class="pun">);
+
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotate</span><span class="pun">(</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)(</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0f</span><span class="pun">)), </span><span class="str">"Rotation should be PI/2"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scale method with Vec2f.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="typ">Vec2f </span><span class="pln">factor </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">, </span><span class="lit">3.0f</span><span class="pun">);
+
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale</span><span class="pun">(</span><span class="pln">factor</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">),
+    </span><span class="str">"Scale should be multiplied"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scale method with uniform factor.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">),
+    </span><span class="str">"Uniform scale should be applied"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test lookAt method.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">math </span><span class="pun">: </span><span class="pln">atan2</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="typ">Vec2f </span><span class="pln">target </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">);
+
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">lookAt</span><span class="pun">(</span><span class="pln">target</span><span class="pun">);
+
+</span><span class="typ">float </span><span class="pln">expectedAngle </span><span class="pun">= </span><span class="pln">atan2</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">expectedAngle</span><span class="pun">), </span><span class="str">"Should rotate to face target"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test distance calculation.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform1 </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="kwd">auto </span><span class="pln">transform2 </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+
+</span><span class="typ">Vec2f </span><span class="pln">pos2 </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="pln">transform2<wbr/></span><span class="pun">.</span><span class="pln">position </span><span class="pun">= </span><span class="pln">pos2</span><span class="pun">;
+
+</span><span class="typ">float </span><span class="pln">dist </span><span class="pun">= </span><span class="pln">transform1<wbr/></span><span class="pun">.</span><span class="pln">distanceTo</span><span class="pun">(</span><span class="pln">transform2</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dist<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">), </span><span class="str">"Distance should be 5"</span><span class="pun">);
+
+</span><span class="pln">dist </span><span class="pun">= </span><span class="pln">transform1<wbr/></span><span class="pun">.</span><span class="pln">distanceTo</span><span class="pun">(</span><span class="pln">pos2</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dist<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">), </span><span class="str">"Distance to position should be 5"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test direction calculation.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform1 </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="typ">Vec2f </span><span class="pln">target </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">dir </span><span class="pun">= </span><span class="pln">transform1<wbr/></span><span class="pun">.</span><span class="pln">directionTo</span><span class="pun">(</span><span class="pln">target</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dir<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">dir<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">),
+    </span><span class="str">"Direction should be normalized (1, 0)"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test reset method.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">20.0f</span><span class="pun">);
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation </span><span class="pun">= </span><span class="pln">PI</span><span class="pun">;
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">, </span><span class="lit">3.0f</span><span class="pun">);
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">size </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">64.0f</span><span class="pun">, </span><span class="lit">48.0f</span><span class="pun">);
+
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">reset</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">),
+    </span><span class="str">"Position should be reset to (0, 0)"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"Rotation should be reset to 0"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">),
+    </span><span class="str">"Scale should be reset to (1, 1)"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">size<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">32.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">size<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">32.0f</span><span class="pun">),
+    </span><span class="str">"Size should be reset to (32, 32)"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test localToWorldPoint.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">, </span><span class="lit">10.0f</span><span class="pun">);
+
+</span><span class="typ">Vec2f </span><span class="pln">localPoint </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+</span><span class="typ">Vec2f </span><span class="pln">worldPoint </span><span class="pun">= </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">localToWorldPoint</span><span class="pun">(</span><span class="pln">localPoint</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">worldPoint<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">15.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">worldPoint<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">),
+    </span><span class="str">"Local point should be transformed to world space"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test rotation matrix generation.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotation </span><span class="pun">= </span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0f</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">rotMat </span><span class="pun">= </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">rotationMatrix</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rotMat<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">rotMat<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(-</span><span class="lit">1.0f</span><span class="pun">),
+    </span><span class="str">"Rotation matrix should be correct"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scale matrix generation.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scale </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">, </span><span class="lit">3.0f</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">scaleMat </span><span class="pun">= </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">scaleMatrix</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">scaleMat<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">scaleMat<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">),
+    </span><span class="str">"Scale matrix should be correct"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test frect method.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../../quark/common/utils.html"></span><span class="pln">quark<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="pln">utils</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">fequals</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">transform </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">TransformComponent</span><span class="pun">();
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">position </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">100.0f</span><span class="pun">, </span><span class="lit">200.0f</span><span class="pun">);
+
+</span><span class="com">// Test with default size (32x32)
+</span><span class="kwd">auto </span><span class="pln">rect </span><span class="pun">= </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">frect</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rect<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">84.0f</span><span class="pun">), </span><span class="str">"Default rect x should be position.x - width/2"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rect<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">184.0f</span><span class="pun">), </span><span class="str">"Default rect y should be position.y - height/2"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rect<wbr/></span><span class="pun">.</span><span class="pln">w<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">32.0f</span><span class="pun">), </span><span class="str">"Default rect width should be 32"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rect<wbr/></span><span class="pun">.</span><span class="pln">h<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">32.0f</span><span class="pun">), </span><span class="str">"Default rect height should be 32"</span><span class="pun">);
+
+</span><span class="com">// Test with custom size
+</span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">size </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">64.0f</span><span class="pun">, </span><span class="lit">48.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">customRect </span><span class="pun">= </span><span class="pln">transform<wbr/></span><span class="pun">.</span><span class="pln">frect</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">customRect<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">68.0f</span><span class="pun">), </span><span class="str">"Custom rect x should be position.x - width/2"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">customRect<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">176.0f</span><span class="pun">), </span><span class="str">"Custom rect y should be position.y - height/2"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">customRect<wbr/></span><span class="pun">.</span><span class="pln">w<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">64.0f</span><span class="pun">), </span><span class="str">"Custom rect width should be 64"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">customRect<wbr/></span><span class="pun">.</span><span class="pln">h<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">48.0f</span><span class="pun">), </span><span class="str">"Custom rect height should be 48"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

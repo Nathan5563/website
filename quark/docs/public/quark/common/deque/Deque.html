@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class Deque</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class Deque</h1><p>Double-ended queue implementation using a doubly-linked list.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">Deque</span>(T)<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>A deque allows efficient insertion and removal at both ends of the collection.
+ This implementation provides O(1) operations for push/pop at front and back.
+</p>
+</section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.this.html" class="public">
+								<code>this</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Creates an empty deque.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.mHead.html" class="public"><code>mHead</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/deque/ListNode.html"><span class="typ">ListNode</span></a>!T</code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.mSize.html" class="public"><code>mSize</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.mTail.html" class="public"><code>mTail</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/deque/ListNode.html"><span class="typ">ListNode</span></a>!T</code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.at.html" class="public">
+								<code>at</code>
+							</a>
+							<span class="tableEntryAnnotation">(pos)</span>
+						</td>
+						<td>Retrieves a reference to the element at the specified position.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.back.html" class="public">
+								<code>back</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Retrieves a reference to the element at the back of the deque.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.dup.html" class="public">
+								<code>dup</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Creates a deep copy of this deque.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.front.html" class="public">
+								<code>front</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Retrieves a reference to the element at the front of the deque.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.popBack.html" class="public">
+								<code>popBack</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Removes and returns the element from the back of the deque.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.popFront.html" class="public">
+								<code>popFront</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Removes and returns the element from the front of the deque.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.pushBack.html" class="public">
+								<code>pushBack</code>
+							</a>
+							<span class="tableEntryAnnotation">(x)</span>
+						</td>
+						<td>Adds an element to the back of the deque.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.pushFront.html" class="public">
+								<code>pushFront</code>
+							</a>
+							<span class="tableEntryAnnotation">(x)</span>
+						</td>
+						<td>Adds an element to the front of the deque.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/deque/Deque.size.html" class="public">
+								<code>size</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Gets the number of elements currently in the deque.
+</td>
+					</tr>
+				</table>
+			</section><section><h2>Parameters</h2>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="T">T</td><td> The type of elements stored in the deque</td></tr>
+</table>
+</section>
+<section><h2>Example</h2>
+<p>Basic functionality test for push/pop operations.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!(</span><span class="typ">int</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushFront</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">element </span><span class="pun">= </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">element </span><span class="pun">== </span><span class="lit">1</span><span class="pun">, </span><span class="str">"First element pushed should be at the front"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test the functionality of the dup method (deep copy).
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!(</span><span class="typ">int</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushFront</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">myCopyDeque </span><span class="pun">= </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">dup</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myCopyDeque<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">() == </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">(), </span><span class="str">"Both elements should be the same if a deep copy was made"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(&amp;</span><span class="pln">myCopyDeque </span><span class="pun">!= &amp;</span><span class="pln">myDeque</span><span class="pun">,
+    </span><span class="str">"Both objects should be at different addresses if deep copy was performed"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test empty deque properties and error handling.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!</span><span class="typ">int</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="lit">0</span><span class="pun">, </span><span class="str">"New deque should be empty"</span><span class="pun">);
+
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">();
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popBack</span><span class="pun">();
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test single element push/pop operations at the front.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!</span><span class="typ">int</span><span class="pun">;
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushFront</span><span class="pun">(</span><span class="lit">42</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="lit">1</span><span class="pun">, </span><span class="str">"Deque should have 1 element after pushFront"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">() == </span><span class="lit">42 </span><span class="pun">&amp;&amp; </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">back</span><span class="pun">() == </span><span class="lit">42</span><span class="pun">, </span><span class="str">"Single element should be both front and back"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">val </span><span class="pun">= </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">val </span><span class="pun">== </span><span class="lit">42 </span><span class="pun">&amp;&amp; </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Popped value should be 42 and deque should be empty"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test single element push/pop operations at the back.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!</span><span class="typ">int</span><span class="pun">;
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="lit">99</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="lit">1</span><span class="pun">, </span><span class="str">"Deque should have 1 element after pushBack"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">() == </span><span class="lit">99 </span><span class="pun">&amp;&amp; </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">back</span><span class="pun">() == </span><span class="lit">99</span><span class="pun">, </span><span class="str">"Single element should be both front and back"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">val </span><span class="pun">= </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popBack</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">val </span><span class="pun">== </span><span class="lit">99 </span><span class="pun">&amp;&amp; </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Popped value should be 99 and deque should be empty"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test pushing and popping from different directions using floating-point data.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!(</span><span class="typ">float</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushFront</span><span class="pun">(</span><span class="lit">3.141592</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="lit">2.718281</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">() != </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">back</span><span class="pun">(), </span><span class="str">"Front and back should be different with 2 elements"</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">() == </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">back</span><span class="pun">(), </span><span class="str">"Front and back should be same with 1 element"</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Deque should be empty after removing all elements"</span><span class="pun">);
+
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">();
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">back</span><span class="pun">();
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test pushing multiple elements from front and back, verify ordering.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!</span><span class="typ">int</span><span class="pun">;
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushFront</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="lit">2</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushFront</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="lit">3</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="lit">4</span><span class="pun">, </span><span class="str">"Deque should have 4 elements after all pushes"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">() == </span><span class="lit">0 </span><span class="pun">&amp;&amp; </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">back</span><span class="pun">() == </span><span class="lit">3</span><span class="pun">, </span><span class="str">"Front should be 0 and back should be 3"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">at</span><span class="pun">(</span><span class="lit">1</span><span class="pun">) == </span><span class="lit">1 </span><span class="pun">&amp;&amp; </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">at</span><span class="pun">(</span><span class="lit">2</span><span class="pun">) == </span><span class="lit">2</span><span class="pun">, </span><span class="str">"Middle elements should be 1 and 2"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test pop sequence to verify correct FIFO/LIFO ordering.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!</span><span class="typ">string</span><span class="pun">;
+
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">conv </span><span class="pun">: </span><span class="pln">to</span><span class="pun">;
+
+</span><span class="kwd">foreach </span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0 </span><span class="pun">.. </span><span class="lit">5</span><span class="pun">)
+{
+    </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="pln">to</span><span class="pun">!</span><span class="typ">string</span><span class="pun">(</span><span class="pln">i</span><span class="pun">));
+}
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">() == </span><span class="str">"0"</span><span class="pun">, </span><span class="str">"First pop should return '0'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popBack</span><span class="pun">() == </span><span class="str">"4"</span><span class="pun">, </span><span class="str">"Back pop should return '4'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">() == </span><span class="str">"1"</span><span class="pun">, </span><span class="str">"Second front pop should return '1'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popBack</span><span class="pun">() == </span><span class="str">"3"</span><span class="pun">, </span><span class="str">"Second back pop should return '3'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">() == </span><span class="str">"2"</span><span class="pun">, </span><span class="str">"Final pop should return '2'"</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Deque should be empty after all pops"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test deep copy integrity by ensuring modifications don't affect original.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!</span><span class="typ">int</span><span class="pun">;
+</span><span class="kwd">foreach </span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">1 </span><span class="pun">.. </span><span class="lit">4</span><span class="pun">)
+{
+    </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);
+}
+
+</span><span class="kwd">auto </span><span class="pln">myDequeCopy </span><span class="pun">= </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">dup</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDequeCopy<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">(), </span><span class="str">"Copy should have same size as original"</span><span class="pun">);
+
+</span><span class="kwd">foreach </span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0 </span><span class="pun">.. </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">())
+{
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">at</span><span class="pun">(</span><span class="pln">i</span><span class="pun">) == </span><span class="pln">myDequeCopy<wbr/></span><span class="pun">.</span><span class="pln">at</span><span class="pun">(</span><span class="pln">i</span><span class="pun">), </span><span class="str">"Elements should match at each position"</span><span class="pun">);
+}
+
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">at</span><span class="pun">(</span><span class="lit">0</span><span class="pun">) = </span><span class="lit">99</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDequeCopy<wbr/></span><span class="pun">.</span><span class="pln">at</span><span class="pun">(</span><span class="lit">0</span><span class="pun">) != </span><span class="lit">99</span><span class="pun">, </span><span class="str">"Modifying original should not affect copy"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test that reference returns allow modification of elements in-place.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!</span><span class="typ">int</span><span class="pun">;
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="lit">5</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="lit">6</span><span class="pun">);
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="lit">7</span><span class="pun">);
+
+</span><span class="kwd">ref </span><span class="pln">x </span><span class="pun">= </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">at</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);
+</span><span class="pln">x </span><span class="pun">= </span><span class="lit">66</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">at</span><span class="pun">(</span><span class="lit">1</span><span class="pun">) == </span><span class="lit">66</span><span class="pun">, </span><span class="str">"Reference modification should change the actual value"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test doubly-linked list structure integrity by verifying prev/next pointers.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!</span><span class="typ">int</span><span class="pun">;
+</span><span class="kwd">foreach </span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0 </span><span class="pun">.. </span><span class="lit">5</span><span class="pun">)
+{
+    </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);
+}
+</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushFront</span><span class="pun">(</span><span class="lit">99</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">node </span><span class="pun">= </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">mHead</span><span class="pun">;
+<a href="../../../quark/common/deque/ListNode.html"></span><span class="typ">ListNode</span></a><span class="pun">!</span><span class="typ">int </span><span class="pln">prev </span><span class="pun">= </span><span class="kwd">null</span><span class="pun">;
+</span><span class="pln">size_t count </span><span class="pun">= </span><span class="lit">0</span><span class="pun">;
+</span><span class="kwd">while </span><span class="pun">(</span><span class="pln">node </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">)
+{
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">node<wbr/></span><span class="pun">.</span><span class="pln">mPrev </span><span class="pun">== </span><span class="pln">prev</span><span class="pun">, </span><span class="str">"Previous pointer should be correct"</span><span class="pun">);
+    </span><span class="pln">prev </span><span class="pun">= </span><span class="pln">node</span><span class="pun">;
+    </span><span class="pln">node </span><span class="pun">= </span><span class="pln">node<wbr/></span><span class="pun">.</span><span class="pln">mNext</span><span class="pun">;
+    </span><span class="pln">count</span><span class="pun">++;
+}
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">count </span><span class="pun">== </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">(), </span><span class="str">"Node count should match deque size"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Performance test with a large number of elements.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">myDeque </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Deque</span><span class="pun">!</span><span class="typ">int</span><span class="pun">;
+</span><span class="kwd">foreach </span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0 </span><span class="pun">.. </span><span class="lit">1000</span><span class="pun">)
+{
+    </span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">pushBack</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);
+}
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="lit">1000</span><span class="pun">, </span><span class="str">"Should have 1000 elements after push operations"</span><span class="pun">);
+</span><span class="kwd">foreach </span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0 </span><span class="pun">.. </span><span class="lit">500</span><span class="pun">)
+{
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">() == </span><span class="pln">i</span><span class="pun">, </span><span class="str">"Front pops should return values in order"</span><span class="pun">);
+}
+
+</span><span class="kwd">foreach_reverse </span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">500 </span><span class="pun">.. </span><span class="lit">1000</span><span class="pun">)
+{
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">popBack</span><span class="pun">() == </span><span class="pln">i</span><span class="pun">, </span><span class="str">"Back pops should return values in reverse order"</span><span class="pun">);
+}
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myDeque<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">() == </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Deque should be empty after all pops"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

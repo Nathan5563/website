@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct Mat2</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct Mat2</h1><p>Generic 2x2 matrix struct supporting both integer and floating-point types.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">Mat2</span>(T)
+			<br/>
+			&nbsp;&nbsp;
+			<br/>
+			<span class="kwd">if</span> <span class="pun">(</span><span class="kwd">__traits</span><span class="pun">(</span><span class="pln">isIntegral</span><span class="pun">, </span><span class="pln">T</span><span class="pun">) || </span><span class="kwd">__traits</span><span class="pun">(</span><span class="pln">isFloating</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">);</span>
+					</div>
+				</code>
+			</div>
+			<section></section>
+
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.elem.html" class="public"><code>elem</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.m00.html" class="public"><code>m00</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.m01.html" class="public"><code>m01</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.m10.html" class="public"><code>m10</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.m11.html" class="public"><code>m11</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.determinant.html" class="public">
+								<code>determinant</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Calculates the determinant of the matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.identity.html" class="public">
+								<code>identity</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Creates an identity matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.inverse.html" class="public">
+								<code>inverse</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Returns the inverse of the matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.opBinary.html" class="public">
+								<code>opBinary</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Binary matrix operations.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.opBinary.html" class="public">
+								<code>opBinary</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Binary scalar operations.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.opBinary.html" class="public">
+								<code>opBinary</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Matrix-vector multiplication.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.opIndex.html" class="public">
+								<code>opIndex</code>
+							</a>
+							<span class="tableEntryAnnotation">(row)</span>
+						</td>
+						<td>Array-style access to matrix rows.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.opOpAssign.html" class="public">
+								<code>opOpAssign</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Assignment matrix operations.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.opOpAssign.html" class="public">
+								<code>opOpAssign</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Assignment scalar operations.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.opUnary.html" class="public">
+								<code>opUnary</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Unary operations on the matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.rotation.html" class="public">
+								<code>rotation</code>
+							</a>
+							<span class="tableEntryAnnotation">(angle)</span>
+						</td>
+						<td>Creates a rotation matrix for the given angle.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.scale.html" class="public">
+								<code>scale</code>
+							</a>
+							<span class="tableEntryAnnotation">(sx, sy)</span>
+						</td>
+						<td>Creates a scaling matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/matrix/Mat2.transpose.html" class="public">
+								<code>transpose</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Returns the transpose of the matrix.
+</td>
+					</tr>
+				</table>
+			</section><section><h2>Parameters</h2>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="T">T</td><td> The numeric type for matrix components (must be integral or floating-point)</td></tr>
+</table>
+</section>
+<section><h2>Supports</h2>
+<p>- Elements m00, m01, m10, and m11
+ - Array of 2 arrays of 2 elements each where the first array is the first row
+</p>
+</section>
+<section><h2>Example</h2>
+<p>Test identity matrix creation and properties.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">id </span><span class="pun">= </span><span class="typ">Mat2f<wbr/></span><span class="pun">.</span><span class="pln">identity</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">id<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">id<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">), </span><span class="str">"Identity diagonal should be 1"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">id<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">id<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">), </span><span class="str">"Identity off-diagonal should be 0"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test matrix addition operation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+<a href="../../../quark/common/matrix/Mat2f.html"></span><span class="typ">Mat2f</span></a><span class="pln"> b </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">5</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">6</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">7</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">8</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">c </span><span class="pun">= </span><span class="pln">a </span><span class="pun">+ </span><span class="pln">b</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">6.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">8.0f</span><span class="pun">), </span><span class="str">"First row addition should be correct"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">12.0f</span><span class="pun">), </span><span class="str">"Second row addition should be correct"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test matrix subtraction operation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">5</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">6</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">7</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">8</span><span class="pun">};
+<a href="../../../quark/common/matrix/Mat2f.html"></span><span class="typ">Mat2f</span></a><span class="pln"> b </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">c </span><span class="pun">= </span><span class="pln">a </span><span class="pun">- </span><span class="pln">b</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"First row subtraction should be correct"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Second row subtraction should be correct"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test matrix multiplication operation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+<a href="../../../quark/common/matrix/Mat2f.html"></span><span class="typ">Mat2f</span></a><span class="pln"> b </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">0</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">c </span><span class="pun">= </span><span class="pln">a </span><span class="pun">* </span><span class="pln">b</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"First row of matrix product should be [4, 4]"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">8.0f</span><span class="pun">), </span><span class="str">"Second row of matrix product should be [10, 8]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test identity matrix is multiplicative identity.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">7</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">5</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">id </span><span class="pun">= </span><span class="typ">Mat2f<wbr/></span><span class="pun">.</span><span class="pln">identity</span><span class="pun">();
+</span><span class="kwd">auto </span><span class="pln">result </span><span class="pun">= </span><span class="pln">a </span><span class="pun">* </span><span class="pln">id</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">result<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m00</span><span class="pun">) &amp;&amp; </span><span class="pln">result<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m01</span><span class="pun">),
+    </span><span class="str">"Matrix times identity should equal original matrix"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">result<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m10</span><span class="pun">) &amp;&amp; </span><span class="pln">result<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m11</span><span class="pun">),
+    </span><span class="str">"Matrix times identity should equal original matrix"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scalar multiplication operation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">b </span><span class="pun">= </span><span class="pln">a </span><span class="pun">* </span><span class="lit">2.0</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Scalar multiplication should scale first row"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">6.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">8.0f</span><span class="pun">), </span><span class="str">"Scalar multiplication should scale second row"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scalar division operation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">6</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">8</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">b </span><span class="pun">= </span><span class="pln">a </span><span class="pun">/ </span><span class="lit">2.0</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">), </span><span class="str">"Scalar division should scale first row"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Scalar division should scale second row"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test division by zero protection.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="kwd">auto </span><span class="pln">b </span><span class="pun">= </span><span class="pln">a </span><span class="pun">/ </span><span class="lit">0.0</span><span class="pun">;
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test unary negation operation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: -</span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: -</span><span class="lit">4</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">b </span><span class="pun">= -</span><span class="pln">a</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(-</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">), </span><span class="str">"Negation should flip signs of first row"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(-</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Negation should flip signs of second row"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test determinant calculation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">det </span><span class="pun">= </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">determinant</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">det<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(-</span><span class="lit">2.0</span><span class="pun">), </span><span class="str">"Determinant of [[1,2],[3,4]] should be -2"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test determinant of identity matrix.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">id </span><span class="pun">= </span><span class="typ">Mat2f<wbr/></span><span class="pun">.</span><span class="pln">identity</span><span class="pun">();
+</span><span class="kwd">auto </span><span class="pln">det </span><span class="pun">= </span><span class="pln">id<wbr/></span><span class="pun">.</span><span class="pln">determinant</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">det<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0</span><span class="pun">), </span><span class="str">"Determinant of identity matrix should be 1"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test transpose operation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">b </span><span class="pun">= </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">transpose</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">), </span><span class="str">"First row of transpose should be [1, 3]"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Second row of transpose should be [2, 4]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test transpose is involutive (transposing twice gives original).
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">5</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">b </span><span class="pun">= </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">transpose</span><span class="pun">()<wbr/>.</span><span class="pln">transpose</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m00</span><span class="pun">) &amp;&amp; </span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m01</span><span class="pun">),
+    </span><span class="str">"Double transpose should return original matrix"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m10</span><span class="pun">) &amp;&amp; </span><span class="pln">b<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m11</span><span class="pun">),
+    </span><span class="str">"Double transpose should return original matrix"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test matrix inverse calculation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">7</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">6</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">ainv </span><span class="pun">= </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">inverse</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ainv<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.6f</span><span class="pun">) &amp;&amp; </span><span class="pln">ainv<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(-</span><span class="lit">0.7f</span><span class="pun">),
+    </span><span class="str">"First row of inverse should be [0.6, -0.7]"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ainv<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(-</span><span class="lit">0.2f</span><span class="pun">) &amp;&amp; </span><span class="pln">ainv<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.4f</span><span class="pun">),
+    </span><span class="str">"Second row of inverse should be [-0.2, 0.4]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test inverse times original gives identity.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">7</span><span class="pun">};
+</span><span class="kwd">auto </span><span class="pln">ainv </span><span class="pun">= </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">inverse</span><span class="pun">();
+</span><span class="kwd">auto </span><span class="pln">product </span><span class="pun">= </span><span class="pln">a </span><span class="pun">* </span><span class="pln">ainv</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">product<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">product<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">),
+    </span><span class="str">"Matrix times its inverse should be identity"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">product<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">product<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">),
+    </span><span class="str">"Matrix times its inverse should be identity"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test inverse of singular matrix fails.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="kwd">auto </span><span class="pln">ainv </span><span class="pun">= </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">inverse</span><span class="pun">();
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test rotation matrix creation.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">math </span><span class="pun">: </span><span class="pln">PI</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">rot90 </span><span class="pun">= </span><span class="typ">Mat2f<wbr/></span><span class="pun">.</span><span class="pln">rotation</span><span class="pun">(</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rot90<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">rot90<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(-</span><span class="lit">1.0f</span><span class="pun">),
+    </span><span class="str">"90 degree rotation should have first row [0, -1]"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rot90<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">rot90<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">),
+    </span><span class="str">"90 degree rotation should have second row [1, 0]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test rotation matrix rotates vector correctly.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">math </span><span class="pun">: </span><span class="pln">PI</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">rot90 </span><span class="pun">= </span><span class="typ">Mat2f<wbr/></span><span class="pun">.</span><span class="pln">rotation</span><span class="pun">(</span><span class="pln">PI </span><span class="pun">/ </span><span class="lit">2.0</span><span class="pun">);
+</span><span class="typ">Vec2f </span><span class="pln">v </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">1</span><span class="pun">, </span><span class="lit">0</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">rotated </span><span class="pun">= </span><span class="pln">rot90 </span><span class="pun">* </span><span class="pln">v</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rotated<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">rotated<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">),
+    </span><span class="str">"Rotating [1,0] by 90 degrees should give [0,1]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scale matrix creation.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../../quark/common/matrix/Mat2.scale.html"></span><span class="pln">scale</span></a><span class="pln"> </span><span class="pun">= </span><span class="typ">Mat2f<wbr/></span><span class="pun">.</span><span class="pln">scale</span><span class="pun">(</span><span class="lit">2.0</span><span class="pun">, </span><span class="lit">3.0</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">),
+    </span><span class="str">"Scale matrix should have first row [sx, 0]"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">scale<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">),
+    </span><span class="str">"Scale matrix should have second row [0, sy]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scale matrix scales vector correctly.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../../quark/common/matrix/Mat2.scale.html"></span><span class="pln">scale</span></a><span class="pln"> </span><span class="pun">= </span><span class="typ">Mat2f<wbr/></span><span class="pun">.</span><span class="pln">scale</span><span class="pun">(</span><span class="lit">2.0</span><span class="pun">, </span><span class="lit">3.0</span><span class="pun">);
+</span><span class="typ">Vec2f </span><span class="pln">v </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">4</span><span class="pun">, </span><span class="lit">5</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">scaled </span><span class="pun">= <a href="../../../quark/common/matrix/Mat2.scale.html"></span><span class="pln">scale</span></a><span class="pln"> </span><span class="pun">* </span><span class="pln">v</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">scaled<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">8.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">scaled<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">15.0f</span><span class="pun">),
+    </span><span class="str">"Scaling [4,5] by [2,3] should give [8,15]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test matrix-vector multiplication.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+</span><span class="typ">Vec2f </span><span class="pln">v </span><span class="pun">= </span><span class="typ">Vec2f</span><span class="pun">(</span><span class="lit">5</span><span class="pun">, </span><span class="lit">6</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">result </span><span class="pun">= </span><span class="pln">a </span><span class="pun">* </span><span class="pln">v</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">result<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">17.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">result<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">39.0f</span><span class="pun">),
+    </span><span class="str">"Matrix-vector product should be [17, 39]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test addition assignment operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+<a href="../../../quark/common/matrix/Mat2f.html"></span><span class="typ">Mat2f</span></a><span class="pln"> b </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">5</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">6</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">7</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">8</span><span class="pun">};
+</span><span class="pln">a </span><span class="pun">+= </span><span class="pln">b</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">6.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">8.0f</span><span class="pun">), </span><span class="str">"Addition assignment should modify first row"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">12.0f</span><span class="pun">), </span><span class="str">"Addition assignment should modify second row"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test subtraction assignment operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">5</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">6</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">7</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">8</span><span class="pun">};
+<a href="../../../quark/common/matrix/Mat2f.html"></span><span class="typ">Mat2f</span></a><span class="pln"> b </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+</span><span class="pln">a </span><span class="pun">-= </span><span class="pln">b</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Subtraction assignment should modify first row"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Subtraction assignment should modify second row"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test multiplication assignment operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+<a href="../../../quark/common/matrix/Mat2f.html"></span><span class="typ">Mat2f</span></a><span class="pln"> b </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">0</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">};
+</span><span class="pln">a </span><span class="pun">*= </span><span class="pln">b</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Multiplication assignment should modify first row"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">10.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">8.0f</span><span class="pun">), </span><span class="str">"Multiplication assignment should modify second row"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scalar multiplication assignment operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+</span><span class="pln">a </span><span class="pun">*= </span><span class="lit">3.0</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">6.0f</span><span class="pun">), </span><span class="str">"Scalar multiplication assignment should scale first row"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">9.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">12.0f</span><span class="pun">), </span><span class="str">"Scalar multiplication assignment should scale second row"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scalar division assignment operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">6</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">8</span><span class="pun">};
+</span><span class="pln">a </span><span class="pun">/= </span><span class="lit">2.0</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m01<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">), </span><span class="str">"Scalar division assignment should scale first row"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m10<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Scalar division assignment should scale second row"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test array-style access to matrix rows.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">), </span><span class="str">"First row access should work"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">][</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">][</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Second row access should work"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test array-style modification of matrix elements.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+</span><span class="pln">a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="lit">0</span><span class="pun">] = </span><span class="lit">99</span><span class="pun">;
+</span><span class="pln">a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">][</span><span class="lit">1</span><span class="pun">] = </span><span class="lit">88</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m00<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">99.0f</span><span class="pun">), </span><span class="str">"Modified element should be 99"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">a<wbr/></span><span class="pun">.</span><span class="pln">m11<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">88.0f</span><span class="pun">), </span><span class="str">"Modified element should be 88"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Determinant properties test
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/matrix/Mat2f.html"><span class="typ">Mat2f</span></a><span class="pln"> a </span><span class="pun">= {<a href="../../../quark/common/matrix/Mat2.m00.html"></span><span class="pln">m00</span></a><span class="pun">: </span><span class="lit">1</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m01.html"></span><span class="pln">m01</span></a><span class="pun">: </span><span class="lit">2</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m10.html"></span><span class="pln">m10</span></a><span class="pun">: </span><span class="lit">3</span><span class="pun">, <a href="../../../quark/common/matrix/Mat2.m11.html"></span><span class="pln">m11</span></a><span class="pun">: </span><span class="lit">4</span><span class="pun">};
+<a href="../../../quark/common/matrix/Mat2f.html"></span><span class="typ">Mat2f</span></a><span class="pln"> result </span><span class="pun">= </span><span class="typ">Mat2f<wbr/></span><span class="pun">.</span><span class="pln">identity</span><span class="pun">();
+
+</span><span class="kwd">foreach </span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0 </span><span class="pun">.. </span><span class="lit">10</span><span class="pun">)
+{
+    </span><span class="pln">result </span><span class="pun">= </span><span class="pln">result </span><span class="pun">* </span><span class="pln">a</span><span class="pun">;
+}
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">result<wbr/></span><span class="pun">.</span><span class="pln">determinant</span><span class="pun">()<wbr/>.</span><span class="pln">fequals</span><span class="pun">((-</span><span class="lit">2.0</span><span class="pun">) ^^ </span><span class="lit">10</span><span class="pun">),
+    </span><span class="str">"Determinant of A^100 should be det(A)^100"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

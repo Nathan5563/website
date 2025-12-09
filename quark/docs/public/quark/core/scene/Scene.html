@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class Scene</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class Scene</h1><p>Represents a game scene containing a hierarchy of entities.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">Scene</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>The Scene class manages a tree of entities and their lifecycle. It provides
+ methods to add, remove, and find entities, as well as to trigger update and
+ render cycles across all entities in the scene via depth-first traversal.
+ Scenes are typically managed by a SceneManager.
+</p>
+</section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.this.html" class="public">
+								<code>this</code>
+							</a>
+							<span class="tableEntryAnnotation">(name)</span>
+						</td>
+						<td>Creates a new scene with the given name.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene._active.html" class="private"><code>_active</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene._id.html" class="private"><code>_id</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene._name.html" class="private"><code>_name</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene._nextId.html" class="private"><code>_nextId</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">shared</span><span class="pun">(</span><span class="typ">ulong</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene._root.html" class="private"><code>_root</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/tree/TreeNode.html"><span class="typ">TreeNode</span></a>!(quark.core.entity.Entity)</code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.active.html" class="public property"><code>active</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Gets whether this scene is active.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.active.html" class="public property"><code>active</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Sets whether this scene is active.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.id.html" class="public property"><code>id</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td>Gets the unique ID of this scene.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.name.html" class="public property"><code>name</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Gets the name of this scene.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.name.html" class="public property"><code>name</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Sets the name of this scene.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.root.html" class="public property"><code>root</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/tree/TreeNode.html"><span class="typ">TreeNode</span></a>!(quark.core.entity.Entity)</code></td><td>Gets the root node of the entity tree.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.addEntity.html" class="public">
+								<code>addEntity</code>
+							</a>
+							<span class="tableEntryAnnotation">(entity)</span>
+						</td>
+						<td>Adds an entity to the scene as a child of the root entity.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.addEntity.html" class="public">
+								<code>addEntity</code>
+							</a>
+							<span class="tableEntryAnnotation">(entity, parent)</span>
+						</td>
+						<td>Adds an entity as a child of a specific parent node.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.findAllEntitiesByName.html" class="public">
+								<code>findAllEntitiesByName</code>
+							</a>
+							<span class="tableEntryAnnotation">(name)</span>
+						</td>
+						<td>Finds all entities with the given name.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.findEntityById.html" class="public">
+								<code>findEntityById</code>
+							</a>
+							<span class="tableEntryAnnotation">(id)</span>
+						</td>
+						<td>Finds the first entity with the given ID.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.findEntityByName.html" class="public">
+								<code>findEntityByName</code>
+							</a>
+							<span class="tableEntryAnnotation">(name)</span>
+						</td>
+						<td>Finds the first entity with the given name.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.getActiveCamera.html" class="public">
+								<code>getActiveCamera</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Finds the active camera in the scene.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.onExit.html" class="public">
+								<code>onExit</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Cleans up the scene and destroys all entities. Calls onExit
+ on all entities in the scene.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.postRender.html" class="public">
+								<code>postRender</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Calls postRender on all entities in the scene via depth-first traversal.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.postUpdate.html" class="public">
+								<code>postUpdate</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td>Calls postUpdate on all entities in the scene via depth-first traversal.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.preRender.html" class="public">
+								<code>preRender</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Calls preRender on all entities in the scene via depth-first traversal.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.preUpdate.html" class="public">
+								<code>preUpdate</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td>Calls preUpdate on all entities in the scene via depth-first traversal.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/scene/Scene.removeEntity.html" class="public">
+								<code>removeEntity</code>
+							</a>
+							<span class="tableEntryAnnotation">(node)</span>
+						</td>
+						<td>Removes an entity node from the scene.
+</td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>API documentation</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>API documentation</h1>
+			<table>
+				<col class="caption"/>
+				<tr>
+					<th>Module</th><th>Description</th>
+				</tr>
+			<tr>
+				<td>
+					<a href="./quark/common/deque.html">quark.common.deque</a>
+				</td>
+				<td>
+					@file deque.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/common/grid.html">quark.common.grid</a>
+				</td>
+				<td>
+					@file grid.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/common/matrix.html">quark.common.matrix</a>
+				</td>
+				<td>
+					@file matrix.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/common/tree.html">quark.common.tree</a>
+				</td>
+				<td>
+					@file tree.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/common/utils.html">quark.common.utils</a>
+				</td>
+				<td>
+					@file utils.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/common/vector.html">quark.common.vector</a>
+				</td>
+				<td>
+					@file vector.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/components/colliders/boxcollider.html">quark.components.colliders.boxcollider</a>
+				</td>
+				<td>
+					@file boxcollider.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/components/colliders/circlecollider.html">quark.components.colliders.circlecollider</a>
+				</td>
+				<td>
+					@file circlecollider.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/components/animator.html">quark.components.animator</a>
+				</td>
+				<td>
+					@file animator.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/components/camera.html">quark.components.camera</a>
+				</td>
+				<td>
+					@file camera.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/components/collider.html">quark.components.collider</a>
+				</td>
+				<td>
+					@file collider.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/components/rigidbody.html">quark.components.rigidbody</a>
+				</td>
+				<td>
+					@file rigidbody.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/components/script.html">quark.components.script</a>
+				</td>
+				<td>
+					@file script.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/components/spriterenderer.html">quark.components.spriterenderer</a>
+				</td>
+				<td>
+					@file spriterenderer.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/components/transform.html">quark.components.transform</a>
+				</td>
+				<td>
+					@file transform.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/core/component.html">quark.core.component</a>
+				</td>
+				<td>
+					@file component.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/core/entity.html">quark.core.entity</a>
+				</td>
+				<td>
+					@file entity.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/core/host.html">quark.core.host</a>
+				</td>
+				<td>
+					@file host.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/core/manager.html">quark.core.manager</a>
+				</td>
+				<td>
+					@file manager.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/core/scene.html">quark.core.scene</a>
+				</td>
+				<td>
+					@file scene.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/events/inbox.html">quark.events.inbox</a>
+				</td>
+				<td>
+					@file inbox.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/events/types.html">quark.events.types</a>
+				</td>
+				<td>
+					@file types.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/events/wiring.html">quark.events.wiring</a>
+				</td>
+				<td>
+					@file wiring.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/managers/audiomanager.html">quark.managers.audiomanager</a>
+				</td>
+				<td>
+					@file audiomanager.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/managers/debugmanager.html">quark.managers.debugmanager</a>
+				</td>
+				<td>
+					@file debugmanager.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/managers/physicsmanager.html">quark.managers.physicsmanager</a>
+				</td>
+				<td>
+					@file physicsmanager.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/managers/resourcemanager.html">quark.managers.resourcemanager</a>
+				</td>
+				<td>
+					@file resourcemanager.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/managers/scenemanager.html">quark.managers.scenemanager</a>
+				</td>
+				<td>
+					@file scenemanager.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/physics/broadphase.html">quark.physics.broadphase</a>
+				</td>
+				<td>
+					@file broadphase.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/physics/collision.html">quark.physics.collision</a>
+				</td>
+				<td>
+					@file collision.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/physics/solver.html">quark.physics.solver</a>
+				</td>
+				<td>
+					@file solver.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/physics/world.html">quark.physics.world</a>
+				</td>
+				<td>
+					@file world.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/scripting/interpreter.html">quark.scripting.interpreter</a>
+				</td>
+				<td>
+					@file interpreter.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/scripting/lexer.html">quark.scripting.lexer</a>
+				</td>
+				<td>
+					@file lexer.d
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./quark/scripting/parser.html">quark.scripting.parser</a>
+				</td>
+				<td>
+					@file parser.d
+
+				</td>
+			</tr>
+			</table>
+			<footer>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

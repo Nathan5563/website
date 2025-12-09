@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class PhysicsWorld</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class PhysicsWorld</h1><p>Main physics world that coordinates collision detection and physics simulation.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">PhysicsWorld</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>The PhysicsWorld manages all physics entities, performs collision detection
+ using broadphase and narrowphase algorithms, and handles physics integration.
+ It maintains the connection between ECS entities and physics simulation.
+</p>
+</section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld.this.html" class="public">
+								<code>this</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Creates a new physics world.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._broadphase.html" class="private"><code>_broadphase</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/physics/broadphase/Broadphase.html"><span class="typ">Broadphase</span></a></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._collisionStates.html" class="private"><code>_collisionStates</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/physics/world/CollisionState.html"><span class="typ">CollisionState</span></a><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._currentFrameCollisions.html" class="private"><code>_currentFrameCollisions</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span><span class="pun">[]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._enabled.html" class="private"><code>_enabled</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._gravity.html" class="private"><code>_gravity</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/common/vector/Vec2.html"><span class="typ">Vec2</span></a>!(float)</code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._normalChangeThreshold.html" class="private"><code>_normalChangeThreshold</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._penetrationChangeThreshold.html" class="private"><code>_penetrationChangeThreshold</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">float</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._registeredEntities.html" class="private"><code>_registeredEntities</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span><span class="pun">[]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._solver.html" class="private"><code>_solver</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/physics/solver/PhysicsSolver.html"><span class="typ">PhysicsSolver</span></a></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._stayEventFrameInterval.html" class="private"><code>_stayEventFrameInterval</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">uint</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld.broadphase.html" class="public property"><code>broadphase</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/physics/broadphase/Broadphase.html"><span class="typ">Broadphase</span></a></code></td><td>Gets the broadphase collision detection system.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld.enabled.html" class="public property"><code>enabled</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Gets whether the physics world is enabled.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld.enabled.html" class="public property"><code>enabled</code></a><span class="tableEntryAnnotation">[set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Sets whether the physics world is enabled.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld.entityCount.html" class="public property"><code>entityCount</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td>Gets the number of registered entities.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld.cleanup.html" class="public">
+								<code>cleanup</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Cleans up the physics world.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld.registerEntity.html" class="public">
+								<code>registerEntity</code>
+							</a>
+							<span class="tableEntryAnnotation">(entityId)</span>
+						</td>
+						<td>Registers an entity with the physics system.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld.unregisterEntity.html" class="public">
+								<code>unregisterEntity</code>
+							</a>
+							<span class="tableEntryAnnotation">(entityId)</span>
+						</td>
+						<td>Unregisters an entity from the physics system.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld.update.html" class="public">
+								<code>update</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td>Updates the physics world for the given time step.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._checkCollisions.html" class="private">
+								<code>_checkCollisions</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._getCollisionKey.html" class="private">
+								<code>_getCollisionKey</code>
+							</a>
+							<span class="tableEntryAnnotation">(entityA, entityB)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._hasSignificantChange.html" class="private">
+								<code>_hasSignificantChange</code>
+							</a>
+							<span class="tableEntryAnnotation">(current, previous)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._processCollisionPair.html" class="private">
+								<code>_processCollisionPair</code>
+							</a>
+							<span class="tableEntryAnnotation">(pair)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._processCollisionState.html" class="private">
+								<code>_processCollisionState</code>
+							</a>
+							<span class="tableEntryAnnotation">(entityA, entityB, result)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._processEndedCollisions.html" class="private">
+								<code>_processEndedCollisions</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Processes collisions that ended this frame.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._updateBroadphase.html" class="private">
+								<code>_updateBroadphase</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/physics/world/PhysicsWorld._updateRigidbodies.html" class="private">
+								<code>_updateRigidbodies</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

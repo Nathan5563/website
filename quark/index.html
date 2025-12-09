@@ -1,24 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30-second progress video</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quark</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>30-second progress video</h1>
+      <header class="hero-section">
+        <h1>Quark</h1>
+        <p class="subtitle">
+          Quark is a fully-featured 2D game engine built as a final project for
+          CPSC 4791 at Yale University. Its features include a constraint-based
+          physics engine, a custom scripting language, and mutex-controlled
+          multithreading for subsystems running at different timesteps.
+        </p>
+      </header>
+
+      <!-- YouTube Video Section -->
+      <section class="video-section">
+        <h2>Engine Demo</h2>
         <div class="video-container">
-            <iframe width="560" 
-                    height="315" 
-                    src="https://www.youtube-nocookie.com/embed/rZtXVBNsgYE" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-            </iframe>
+          <iframe
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            title="Quark Game Engine Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
         </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery-section">
+        <h2>Screenshots</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="screenshot1.png" alt="Game Engine Screenshot 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="screenshot2.png" alt="Game Engine Screenshot 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="screenshot3.png" alt="Game Engine Screenshot 3" />
+          </div>
+          <div class="gallery-item">
+            <img src="screenshot4.png" alt="Game Engine Screenshot 4" />
+          </div>
+        </div>
+      </section>
+
+      <!-- UML Diagram Section -->
+      <section class="diagram-section">
+        <h2>Engine Architecture</h2>
+        <div class="diagram-container">
+          <img
+            src="Quark_UML.png"
+            alt="Quark Game Engine UML Diagram"
+            class="uml-diagram"
+            width="800px"
+          />
+          <div class="doc-link-container">
+            <a href="docs/public/index.html" class="doc-link" target="_blank">
+              <span class="doc-text">View API Documentation</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Postmortem Section -->
+      <section class="description-section">
+        <h2>Postmortem</h2>
+        <div class="description-content"></div>
+      </section>
     </div>
-</body>
+  </body>
 </html>

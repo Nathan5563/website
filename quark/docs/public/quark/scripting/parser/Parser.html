@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class Parser</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class Parser</h1><p>Recursive descent parser for QScript.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">Parser</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>The parser converts a stream of tokens from the lexer into an Abstract
+ Syntax Tree (AST) following the QScript grammar. It provides detailed
+ error messages with line and column information for syntax errors.
+</p>
+</section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser.this.html" class="public">
+								<code>this</code>
+							</a>
+							<span class="tableEntryAnnotation">(tokens)</span>
+						</td>
+						<td>Creates a new parser for the given tokens.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._current.html" class="private"><code>_current</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._errorMessage.html" class="private"><code>_errorMessage</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._tokens.html" class="private"><code>_tokens</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/scripting/lexer/Token.html"><span class="typ">Token</span></a><span class="pun">[]</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser.errorMessage.html" class="public property"><code>errorMessage</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Gets the error message if parsing failed.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser.parse.html" class="public">
+								<code>parse</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Parses the token stream into an AST.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._advance.html" class="private">
+								<code>_advance</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._check.html" class="private">
+								<code>_check</code>
+							</a>
+							<span class="tableEntryAnnotation">(type)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._consume.html" class="private">
+								<code>_consume</code>
+							</a>
+							<span class="tableEntryAnnotation">(type, errorMsg)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._error.html" class="private">
+								<code>_error</code>
+							</a>
+							<span class="tableEntryAnnotation">(message)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._isAtEnd.html" class="private">
+								<code>_isAtEnd</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._match.html" class="private">
+								<code>_match</code>
+							</a>
+							<span class="tableEntryAnnotation">(types)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseBlock.html" class="private">
+								<code>_parseBlock</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseComparison.html" class="private">
+								<code>_parseComparison</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseEquality.html" class="private">
+								<code>_parseEquality</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseExpression.html" class="private">
+								<code>_parseExpression</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseFactor.html" class="private">
+								<code>_parseFactor</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseForStmt.html" class="private">
+								<code>_parseForStmt</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseFunctionCall.html" class="private">
+								<code>_parseFunctionCall</code>
+							</a>
+							<span class="tableEntryAnnotation">(identifier)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseFunctionDef.html" class="private">
+								<code>_parseFunctionDef</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseIfStmt.html" class="private">
+								<code>_parseIfStmt</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseLogicAnd.html" class="private">
+								<code>_parseLogicAnd</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseLogicOr.html" class="private">
+								<code>_parseLogicOr</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parsePrimary.html" class="private">
+								<code>_parsePrimary</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseReturnStmt.html" class="private">
+								<code>_parseReturnStmt</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseStatement.html" class="private">
+								<code>_parseStatement</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseTerm.html" class="private">
+								<code>_parseTerm</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseUnary.html" class="private">
+								<code>_parseUnary</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseVarDecl.html" class="private">
+								<code>_parseVarDecl</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._parseWhileStmt.html" class="private">
+								<code>_parseWhileStmt</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._peek.html" class="private">
+								<code>_peek</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/parser/Parser._previous.html" class="private">
+								<code>_previous</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section><section><h2>Example</h2>
+<p>Test parsing of simple expressions.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"42;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">, </span><span class="str">"Should have one statement"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of binary expressions.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"1 + 2;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">, </span><span class="str">"Should have one statement"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">exprStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/ExpressionStatement.html"></span><span class="typ">ExpressionStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">exprStmt </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be expression statement"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">binExpr </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/BinaryExpression.html"></span><span class="typ">BinaryExpression</span></a><span class="pun">) </span><span class="pln">exprStmt<wbr/></span><span class="pun">.</span><span class="pln">expression</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">binExpr </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be binary expression"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">binExpr<wbr/></span><span class="pun">.</span><span class="pln">operator </span><span class="pun">== </span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">PLUS</span><span class="pun">, </span><span class="str">"Should be addition"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of variable declarations.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"var x = 10;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">, </span><span class="str">"Should have one statement"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">varDecl </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/VarDeclStatement.html"></span><span class="typ">VarDeclStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">varDecl </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be variable declaration"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">varDecl<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"x"</span><span class="pun">, </span><span class="str">"Variable name should be 'x'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">varDecl<wbr/></span><span class="pun">.</span><span class="pln">initializer </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have initializer"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of variable declaration without initializer.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"var y;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">varDecl </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/VarDeclStatement.html"></span><span class="typ">VarDeclStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">varDecl </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be variable declaration"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">varDecl<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"y"</span><span class="pun">, </span><span class="str">"Variable name should be 'y'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">varDecl<wbr/></span><span class="pun">.</span><span class="pln">initializer </span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should not have initializer"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of assignments.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"x = 5;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">assignment </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/AssignmentStatement.html"></span><span class="typ">AssignmentStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">assignment </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be assignment statement"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">assignment<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"x"</span><span class="pun">, </span><span class="str">"Variable name should be 'x'"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of function definitions.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"func add(a, b) { return a + b; }"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">funcDef </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/FunctionDefStatement.html"></span><span class="typ">FunctionDefStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">funcDef </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be function definition"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">funcDef<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"add"</span><span class="pun">, </span><span class="str">"Function name should be 'add'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">funcDef<wbr/></span><span class="pun">.</span><span class="pln">parameters<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">2</span><span class="pun">, </span><span class="str">"Should have 2 parameters"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">funcDef<wbr/></span><span class="pun">.</span><span class="pln">parameters</span><span class="pun">[</span><span class="lit">0</span><span class="pun">] == </span><span class="str">"a"</span><span class="pun">, </span><span class="str">"First parameter should be 'a'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">funcDef<wbr/></span><span class="pun">.</span><span class="pln">parameters</span><span class="pun">[</span><span class="lit">1</span><span class="pun">] == </span><span class="str">"b"</span><span class="pun">, </span><span class="str">"Second parameter should be 'b'"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of function calls.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"print(x);"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">exprStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/ExpressionStatement.html"></span><span class="typ">ExpressionStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">exprStmt </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be expression statement"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">funcCall </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/FunctionCallExpression.html"></span><span class="typ">FunctionCallExpression</span></a><span class="pun">) </span><span class="pln">exprStmt<wbr/></span><span class="pun">.</span><span class="pln">expression</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">funcCall </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be function call"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">funcCall<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"print"</span><span class="pun">, </span><span class="str">"Function name should be 'print'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">funcCall<wbr/></span><span class="pun">.</span><span class="pln">arguments<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">, </span><span class="str">"Should have 1 argument"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of if statements.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"if (x &gt; 0) { var y = 1; }"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">ifStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/IfStatement.html"></span><span class="typ">IfStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ifStmt </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be if statement"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ifStmt<wbr/></span><span class="pun">.</span><span class="pln">condition </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have condition"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ifStmt<wbr/></span><span class="pun">.</span><span class="pln">thenBranch </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have then branch"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ifStmt<wbr/></span><span class="pun">.</span><span class="pln">elseBranch </span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should not have else branch"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of if-else statements.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"if (x &gt; 0) { var y = 1; } else { var y = 0; }"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">ifStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/IfStatement.html"></span><span class="typ">IfStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ifStmt </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be if statement"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ifStmt<wbr/></span><span class="pun">.</span><span class="pln">elseBranch </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have else branch"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of while loops.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"while (x &lt; 10) { x = x + 1; }"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">whileStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/WhileStatement.html"></span><span class="typ">WhileStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">whileStmt </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be while statement"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">whileStmt<wbr/></span><span class="pun">.</span><span class="pln">condition </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have condition"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">whileStmt<wbr/></span><span class="pun">.</span><span class="pln">body </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have body"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of for loops.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"for (var i = 0; i &lt; 10; i = i + 1) { print(i); }"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">forStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/ForStatement.html"></span><span class="typ">ForStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">forStmt </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be for statement"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">forStmt<wbr/></span><span class="pun">.</span><span class="pln">initializer </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have initializer"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">forStmt<wbr/></span><span class="pun">.</span><span class="pln">condition </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have condition"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">forStmt<wbr/></span><span class="pun">.</span><span class="pln">increment </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have increment"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">forStmt<wbr/></span><span class="pun">.</span><span class="pln">body </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have body"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of return statements.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"func test() { return 42; }"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">funcDef </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/FunctionDefStatement.html"></span><span class="typ">FunctionDefStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">funcDef </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be function definition"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">returnStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/ReturnStatement.html"></span><span class="typ">ReturnStatement</span></a><span class="pun">) </span><span class="pln">funcDef<wbr/></span><span class="pun">.</span><span class="pln">body<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">returnStmt </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be return statement"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">returnStmt<wbr/></span><span class="pun">.</span><span class="pln">value </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should have return value"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of empty return.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"func test() { return; }"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">funcDef </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/FunctionDefStatement.html"></span><span class="typ">FunctionDefStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">returnStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/ReturnStatement.html"></span><span class="typ">ReturnStatement</span></a><span class="pun">) </span><span class="pln">funcDef<wbr/></span><span class="pun">.</span><span class="pln">body<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">returnStmt </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be return statement"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">returnStmt<wbr/></span><span class="pun">.</span><span class="pln">value </span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should not have return value"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of operator precedence.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"1 + 2 * 3;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">exprStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/ExpressionStatement.html"></span><span class="typ">ExpressionStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">binExpr </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/BinaryExpression.html"></span><span class="typ">BinaryExpression</span></a><span class="pun">) </span><span class="pln">exprStmt<wbr/></span><span class="pun">.</span><span class="pln">expression</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">binExpr </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be binary expression"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">binExpr<wbr/></span><span class="pun">.</span><span class="pln">operator </span><span class="pun">== </span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">PLUS</span><span class="pun">, </span><span class="str">"Top operator should be +"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">rightExpr </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/BinaryExpression.html"></span><span class="typ">BinaryExpression</span></a><span class="pun">) </span><span class="pln">binExpr<wbr/></span><span class="pun">.</span><span class="pln">right</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rightExpr </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Right side should be binary expression"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rightExpr<wbr/></span><span class="pun">.</span><span class="pln">operator </span><span class="pun">== </span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">STAR</span><span class="pun">, </span><span class="str">"Should parse * with higher precedence"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of unary expressions.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"-x;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">exprStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/ExpressionStatement.html"></span><span class="typ">ExpressionStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">unaryExpr </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/UnaryExpression.html"></span><span class="typ">UnaryExpression</span></a><span class="pun">) </span><span class="pln">exprStmt<wbr/></span><span class="pun">.</span><span class="pln">expression</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">unaryExpr </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be unary expression"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">unaryExpr<wbr/></span><span class="pun">.</span><span class="pln">operator </span><span class="pun">== </span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">MINUS</span><span class="pun">, </span><span class="str">"Should be negation"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of grouped expressions.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"(1 + 2) * 3;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">exprStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/ExpressionStatement.html"></span><span class="typ">ExpressionStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">binExpr </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/BinaryExpression.html"></span><span class="typ">BinaryExpression</span></a><span class="pun">) </span><span class="pln">exprStmt<wbr/></span><span class="pun">.</span><span class="pln">expression</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">binExpr </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be binary expression"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">binExpr<wbr/></span><span class="pun">.</span><span class="pln">operator </span><span class="pun">== </span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">STAR</span><span class="pun">, </span><span class="str">"Top operator should be *"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test error on missing semicolon.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"var x = 5"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should fail to parse"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">errorMessage<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">&gt; </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Should have error message"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test error on unclosed parenthesis.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"(1 + 2;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should fail to parse"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">errorMessage<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">&gt; </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Should have error message"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test error on unexpected token.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"var = 5;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should fail to parse"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing multiple statements.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"var x = 1; var y = 2; x = x + y;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">3</span><span class="pun">, </span><span class="str">"Should have 3 statements"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of nested blocks.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"{ var x = 1; { var y = 2; } }"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">block </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/BlockStatement.html"></span><span class="typ">BlockStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">block </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be block statement"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">block<wbr/></span><span class="pun">.</span><span class="pln">statements<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">2</span><span class="pun">, </span><span class="str">"Should have 2 statements"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of empty program.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">""</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Should have no statements"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of logical operators.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"true &amp;&amp; false || true;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">exprStmt </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/ExpressionStatement.html"></span><span class="typ">ExpressionStatement</span></a><span class="pun">) </span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">binExpr </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(<a href="../../../quark/scripting/parser/BinaryExpression.html"></span><span class="typ">BinaryExpression</span></a><span class="pun">) </span><span class="pln">exprStmt<wbr/></span><span class="pun">.</span><span class="pln">expression</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">binExpr </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should be binary expression"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">binExpr<wbr/></span><span class="pun">.</span><span class="pln">operator </span><span class="pun">== </span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">OR_OR</span><span class="pun">, </span><span class="str">"Top operator should be ||"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing of comparison chains.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"x &lt; y == z &gt; w;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test parsing empty statement.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">";"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">parser </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Parser</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">program </span><span class="pun">= </span><span class="pln">parser<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Should parse successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">program<wbr/></span><span class="pun">.</span><span class="pln">statements<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">, </span><span class="str">"Should have one statement"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

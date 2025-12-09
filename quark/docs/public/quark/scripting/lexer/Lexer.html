@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class Lexer</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class Lexer</h1><p>Lexical analyzer that converts source code into tokens.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">Lexer</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>The lexer reads through QScript source code character by character,
+ identifying and producing tokens according to the QScript grammar.
+ It handles comments, whitespace, and provides error reporting with
+ line and column information.
+</p>
+</section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer.this.html" class="public">
+								<code>this</code>
+							</a>
+							<span class="tableEntryAnnotation">(source)</span>
+						</td>
+						<td>Creates a new lexer for the given source code.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._column.html" class="private"><code>_column</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._current.html" class="private"><code>_current</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._errorMessage.html" class="private"><code>_errorMessage</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._line.html" class="private"><code>_line</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._source.html" class="private"><code>_source</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._start.html" class="private"><code>_start</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._tokens.html" class="private"><code>_tokens</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/scripting/lexer/Token.html"><span class="typ">Token</span></a><span class="pun">[]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._tokenStartColumn.html" class="private"><code>_tokenStartColumn</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer.KEYWORDS.html" class="private"><code>KEYWORDS</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><a href="../../../quark/scripting/lexer/TokenType.html"><span class="typ">TokenType</span></a><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer.errorMessage.html" class="public property"><code>errorMessage</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Gets the error message if lexing failed.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer.tokens.html" class="public property"><code>tokens</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/scripting/lexer/Token.html"><span class="typ">Token</span></a><span class="pun">[]</span></code></td><td>Gets the list of tokens produced by the lexer.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer.tokenize.html" class="public">
+								<code>tokenize</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Tokenizes the entire source code.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._addToken.html" class="private">
+								<code>_addToken</code>
+							</a>
+							<span class="tableEntryAnnotation">(type, lexeme)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._advance.html" class="private">
+								<code>_advance</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._error.html" class="private">
+								<code>_error</code>
+							</a>
+							<span class="tableEntryAnnotation">(message)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._getKeywordType.html" class="private">
+								<code>_getKeywordType</code>
+							</a>
+							<span class="tableEntryAnnotation">(text)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._isAtEnd.html" class="private">
+								<code>_isAtEnd</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._match.html" class="private">
+								<code>_match</code>
+							</a>
+							<span class="tableEntryAnnotation">(expected)</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._peek.html" class="private">
+								<code>_peek</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._peekNext.html" class="private">
+								<code>_peekNext</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._scanBlockComment.html" class="private">
+								<code>_scanBlockComment</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._scanIdentifier.html" class="private">
+								<code>_scanIdentifier</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._scanNumber.html" class="private">
+								<code>_scanNumber</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._scanString.html" class="private">
+								<code>_scanString</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/scripting/lexer/Lexer._scanToken.html" class="private">
+								<code>_scanToken</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section><section><h2>Example</h2>
+<p>Test basic tokenization of simple tokens.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"( ) { } ; ,"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">7</span><span class="pun">, </span><span class="str">"Should have 6 tokens plus EOF"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#LPAREN"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">LPAREN</span></a><span class="pun">, </span><span class="str">"First token should be LPAREN"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#RPAREN"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">RPAREN</span></a><span class="pun">, </span><span class="str">"Second token should be RPAREN"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test tokenization of operators.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"+ - * / % ! == != &lt; &lt;= &gt; &gt;= &amp;&amp; ||"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#PLUS"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">PLUS</span></a><span class="pun">, </span><span class="str">"Should recognize +"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">5</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#BANG"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">BANG</span></a><span class="pun">, </span><span class="str">"Should recognize !"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">6</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#EQUAL_EQUAL"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">EQUAL_EQUAL</span></a><span class="pun">, </span><span class="str">"Should recognize =="</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test tokenization of keywords.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"var func return if else while for"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#VAR"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">VAR</span></a><span class="pun">, </span><span class="str">"Should recognize 'var'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#FUNC"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">FUNC</span></a><span class="pun">, </span><span class="str">"Should recognize 'func'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#RETURN"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">RETURN</span></a><span class="pun">, </span><span class="str">"Should recognize 'return'"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test tokenization of boolean and null literals.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"true false null"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#TRUE"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">TRUE</span></a><span class="pun">, </span><span class="str">"Should recognize 'true'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#FALSE"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">FALSE</span></a><span class="pun">, </span><span class="str">"Should recognize 'false'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#NULL"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">NULL</span></a><span class="pun">, </span><span class="str">"Should recognize 'null'"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test tokenization of identifiers.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"foo bar _test abc123 _123abc"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#IDENTIFIER"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">IDENTIFIER</span></a><span class="pun">, </span><span class="str">"Should recognize identifier"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">lexeme </span><span class="pun">== </span><span class="str">"foo"</span><span class="pun">, </span><span class="str">"Should capture identifier text"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]<wbr/>.</span><span class="pln">lexeme </span><span class="pun">== </span><span class="str">"_test"</span><span class="pun">, </span><span class="str">"Should handle underscore prefix"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test tokenization of numbers.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"123 45.67 0.5 100"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#NUMBER"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">NUMBER</span></a><span class="pun">, </span><span class="str">"Should recognize integer"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">lexeme </span><span class="pun">== </span><span class="str">"123"</span><span class="pun">, </span><span class="str">"Should capture integer value"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#NUMBER"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">NUMBER</span></a><span class="pun">, </span><span class="str">"Should recognize float"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">lexeme </span><span class="pun">== </span><span class="str">"45.67"</span><span class="pun">, </span><span class="str">"Should capture float value"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test tokenization of strings.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"\"hello\" \"world\""</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#STRING"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">STRING</span></a><span class="pun">, </span><span class="str">"Should recognize string"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">lexeme </span><span class="pun">== </span><span class="str">"hello"</span><span class="pun">, </span><span class="str">"Should capture string without quotes"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test unterminated string error.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"\"unterminated"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should fail on unterminated string"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">errorMessage<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">&gt; </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Should have error message"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test line comments.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"var x; // this is a comment\nvar y;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="com">// Should have: var, x, ;, var, y, ;, EOF = 7 tokens
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">7</span><span class="pun">, </span><span class="str">"Comments should be ignored"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test block comments.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"var x; /* this is\na block comment */ var y;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">7</span><span class="pun">, </span><span class="str">"Block comments should be ignored"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test unterminated block comment error.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"/* unterminated comment"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should fail on unterminated block comment"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">errorMessage<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">&gt; </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Should have error message"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test line and column tracking.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"var\nx"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">line </span><span class="pun">== </span><span class="lit">1</span><span class="pun">, </span><span class="str">"First token should be on line 1"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">line </span><span class="pun">== </span><span class="lit">2</span><span class="pun">, </span><span class="str">"Second token should be on line 2"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]<wbr/>.</span><span class="pln">line </span><span class="pun">== </span><span class="lit">2</span><span class="pun">, </span><span class="str">"Third token should be on line 2"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test complete variable declaration.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"var x = 42;"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">6</span><span class="pun">, </span><span class="str">"Should have 5 tokens plus EOF"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#VAR"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">VAR</span></a><span class="pun">, </span><span class="str">"Should start with 'var'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#IDENTIFIER"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">IDENTIFIER</span></a><span class="pun">, </span><span class="str">"Should have identifier"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#EQUAL"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">EQUAL</span></a><span class="pun">, </span><span class="str">"Should have assignment"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">3</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#NUMBER"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">NUMBER</span></a><span class="pun">, </span><span class="str">"Should have number"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">4</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#SEMICOLON"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">SEMICOLON</span></a><span class="pun">, </span><span class="str">"Should end with semicolon"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test function definition tokens.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"func add(a, b) { return a + b; }"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#FUNC"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">FUNC</span></a><span class="pun">, </span><span class="str">"Should start with 'func'"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#IDENTIFIER"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">IDENTIFIER</span></a><span class="pun">, </span><span class="str">"Should have function name"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#LPAREN"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">LPAREN</span></a><span class="pun">, </span><span class="str">"Should have opening paren"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test error on single ampersand.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"x &amp; y"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should fail on single ampersand"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test error on single pipe.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"x | y"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should fail on single pipe"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test multiline string.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"\"line1\nline2\""</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should handle multiline strings"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">lexeme </span><span class="pun">== </span><span class="str">"line1\nline2"</span><span class="pun">, </span><span class="str">"Should preserve newlines in strings"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test whitespace handling.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"  var   x  =  5  ;  "</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should handle extra whitespace"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">6</span><span class="pun">, </span><span class="str">"Whitespace should not create tokens"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test empty source.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">""</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should handle empty source"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">, </span><span class="str">"Should only have EOF token"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#EOF"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">EOF</span></a><span class="pun">, </span><span class="str">"Should be EOF token"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test assignment vs equality.
+</p>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lexer </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">Lexer</span><span class="pun">(</span><span class="str">"x = 5 == 5"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokenize</span><span class="pun">(), </span><span class="str">"Should tokenize successfully"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#EQUAL"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">EQUAL</span></a><span class="pun">, </span><span class="str">"Should recognize assignment"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">lexer<wbr/></span><span class="pun">.</span><span class="pln">tokens</span><span class="pun">[</span><span class="lit">3</span><span class="pun">]<wbr/>.</span><span class="pln">type </span><span class="pun">== <a href="../../../quark/scripting/lexer/TokenType.html#EQUAL_EQUAL"></span><span class="typ">TokenType<wbr/></span><span class="pun">.</span><span class="pln">EQUAL_EQUAL</span></a><span class="pun">, </span><span class="str">"Should recognize equality"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

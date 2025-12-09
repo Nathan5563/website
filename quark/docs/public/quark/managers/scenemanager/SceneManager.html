@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class SceneManager</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class SceneManager</h1><p>Thread-safe singleton manager for game scene management and transitions.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">SceneManager</span><br>&nbsp;&nbsp;: <a href="../../../quark/core/manager/Manager.html"><span class="typ">Manager</span></a><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>The SceneManager maintains a collection of scenes indexed by their unique
+ IDs and tracks the currently active scene. It provides methods for scene
+ switching with proper cleanup, and forwards all lifecycle methods (preUpdate,
+ postUpdate, preRender, postRender) to the active scene. Designed to be called
+ from the main game loop while remaining thread-safe for access from other
+ systems.
+</p>
+</section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.this.html" class="private">
+								<code>this</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/core/manager/Manager._mutex.html" class="protected inherited"><code>_mutex</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">sync<wbr/></span><span class="pun">.</span><span class="pln">mutex<wbr/></span><span class="pun">.</span><span class="typ">Mutex</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager._activeSceneId.html" class="private"><code>_activeSceneId</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager._instance.html" class="private"><code>_instance</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/managers/scenemanager/SceneManager.html"><span class="typ">SceneManager</span></a></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager._instanceMutex.html" class="private"><code>_instanceMutex</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">sync<wbr/></span><span class="pun">.</span><span class="pln">mutex<wbr/></span><span class="pun">.</span><span class="typ">Mutex</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager._scenes.html" class="private"><code>_scenes</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../../quark/core/scene/Scene.html"><span class="typ">Scene</span></a><span class="pun">[</span><span class="typ">ulong</span><span class="pun">]</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.addScene.html" class="public">
+								<code>addScene</code>
+							</a>
+							<span class="tableEntryAnnotation">(scene)</span>
+						</td>
+						<td>Adds a scene to the manager's collection.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.cleanup.html" class="public">
+								<code>cleanup</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Cleans up all scenes. Must be called before program shutdown.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.getActiveScene.html" class="public">
+								<code>getActiveScene</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Gets the currently active scene.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.getActiveSceneId.html" class="public">
+								<code>getActiveSceneId</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Gets the ID of the currently active scene.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.getInstance.html" class="public">
+								<code>getInstance</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Gets the singleton instance of the SceneManager. Uses thread-safe
+ lazy initialization. The instance is created on first access and reused
+ for subsequent calls.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.getScene.html" class="public">
+								<code>getScene</code>
+							</a>
+							<span class="tableEntryAnnotation">(id)</span>
+						</td>
+						<td>Gets a scene by ID.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.getSceneByName.html" class="public">
+								<code>getSceneByName</code>
+							</a>
+							<span class="tableEntryAnnotation">(name)</span>
+						</td>
+						<td>Retrieves a scene by its name.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.getSceneIds.html" class="public">
+								<code>getSceneIds</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Gets all scene IDs in the manager.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.getScenes.html" class="public">
+								<code>getScenes</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Gets all scenes in the manager.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.hasScene.html" class="public">
+								<code>hasScene</code>
+							</a>
+							<span class="tableEntryAnnotation">(id)</span>
+						</td>
+						<td>Checks if a scene with the given ID exists.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.initialize.html" class="public">
+								<code>initialize</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Initializes the scene manager.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.postRender.html" class="public">
+								<code>postRender</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Calls postRender on the active scene. This should be called every
+ frame after rendering.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.postUpdate.html" class="public">
+								<code>postUpdate</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td>Calls postUpdate on the active scene. This should be called every
+ frame after physics updates.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.preRender.html" class="public">
+								<code>preRender</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Calls preRender on the active scene. This should be called every
+ frame before rendering.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.preUpdate.html" class="public">
+								<code>preUpdate</code>
+							</a>
+							<span class="tableEntryAnnotation">(deltaTime)</span>
+						</td>
+						<td>Calls preUpdate on the active scene. This should be called every
+ frame before physics updates.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.processCollisionEnterEvent.html" class="public">
+								<code>processCollisionEnterEvent</code>
+							</a>
+							<span class="tableEntryAnnotation">(event)</span>
+						</td>
+						<td>Processes collision events by calling script callbacks on entities.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.processCollisionExitEvent.html" class="public">
+								<code>processCollisionExitEvent</code>
+							</a>
+							<span class="tableEntryAnnotation">(event)</span>
+						</td>
+						<td>Processes collision exit events by calling script callbacks on entities.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.processCollisionStayEvent.html" class="public">
+								<code>processCollisionStayEvent</code>
+							</a>
+							<span class="tableEntryAnnotation">(event)</span>
+						</td>
+						<td>Processes collision stay events by calling script callbacks on entities.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.processEvents.html" class="public">
+								<code>processEvents</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Processes events from the event inbox.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.processTriggerEvent.html" class="public">
+								<code>processTriggerEvent</code>
+							</a>
+							<span class="tableEntryAnnotation">(event)</span>
+						</td>
+						<td>Processes trigger events by calling script callbacks on entities.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.removeScene.html" class="public">
+								<code>removeScene</code>
+							</a>
+							<span class="tableEntryAnnotation">(id)</span>
+						</td>
+						<td>Removes a scene from the manager's collection by ID. If the scene
+ being removed is currently active, the active scene is set to 0.
+ Calls onExit on the scene before removal.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.removeScene.html" class="public">
+								<code>removeScene</code>
+							</a>
+							<span class="tableEntryAnnotation">(scene)</span>
+						</td>
+						<td>Removes a scene from the manager's collection.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.setActiveScene.html" class="public">
+								<code>setActiveScene</code>
+							</a>
+							<span class="tableEntryAnnotation">(id)</span>
+						</td>
+						<td>Sets the active scene by ID. Deactivates the previous active scene if
+ one exists, then switches to the new scene. The new scene's active flag
+ is set to true.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/managers/scenemanager/SceneManager.setActiveScene.html" class="public">
+								<code>setActiveScene</code>
+							</a>
+							<span class="tableEntryAnnotation">(scene)</span>
+						</td>
+						<td>Sets the active scene by reference.
+</td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

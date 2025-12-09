@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct Vec2</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">quark
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">common
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/deque.html">deque</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/grid.html">grid</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/matrix.html">matrix</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/tree.html">tree</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/common/utils.html">utils</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../quark/common/vector.html">vector</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">components
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">colliders
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/boxcollider.html">boxcollider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/colliders/circlecollider.html">circlecollider</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/animator.html">animator</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/camera.html">camera</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/collider.html">collider</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/rigidbody.html">rigidbody</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/script.html">script</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/spriterenderer.html">spriterenderer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/components/transform.html">transform</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">core
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/component.html">component</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/entity.html">entity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/host.html">host</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/manager.html">manager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/core/scene.html">scene</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">events
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/inbox.html">inbox</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/events/wiring.html">wiring</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">managers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/audiomanager.html">audiomanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/debugmanager.html">debugmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/physicsmanager.html">physicsmanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/resourcemanager.html">resourcemanager</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/managers/scenemanager.html">scenemanager</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">physics
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/broadphase.html">broadphase</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/collision.html">collision</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/solver.html">solver</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/physics/world.html">world</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">scripting
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/interpreter.html">interpreter</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/lexer.html">lexer</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../quark/scripting/parser.html">parser</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct Vec2</h1><p>Generic 2D vector struct supporting both integer and floating-point types.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">Vec2</span>(T)
+			<br/>
+			&nbsp;&nbsp;
+			<br/>
+			<span class="kwd">if</span> <span class="pun">(</span><span class="kwd">__traits</span><span class="pun">(</span><span class="pln">isIntegral</span><span class="pun">, </span><span class="pln">T</span><span class="pun">) || </span><span class="kwd">__traits</span><span class="pun">(</span><span class="pln">isFloating</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">);</span>
+					</div>
+				</code>
+			</div>
+			<section></section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.this.html" class="public">
+								<code>this</code>
+							</a>
+							<span class="tableEntryAnnotation">(x, y)</span>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.elem.html" class="public"><code>elem</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.x.html" class="public"><code>x</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.y.html" class="public"><code>y</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.distance.html" class="public">
+								<code>distance</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Calculates the Euclidean distance to another vector.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.dot.html" class="public">
+								<code>dot</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Calculates the dot product with another vector.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.magnitude.html" class="public">
+								<code>magnitude</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Calculates the norm (magnitude) of the vector.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.normal.html" class="public">
+								<code>normal</code>
+							</a>
+							<span class="tableEntryAnnotation">(clockwise)</span>
+						</td>
+						<td>Returns a vector perpendicular to this one.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.normalized.html" class="public">
+								<code>normalized</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Returns a normalized (unit) vector in the same direction.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.opBinary.html" class="public">
+								<code>opBinary</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Binary vector operations.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.opBinary.html" class="public">
+								<code>opBinary</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Binary scalar operations.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.opIndex.html" class="public">
+								<code>opIndex</code>
+							</a>
+							<span class="tableEntryAnnotation">(index)</span>
+						</td>
+						<td>Array-style access to vector components.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.opOpAssign.html" class="public">
+								<code>opOpAssign</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Assignment vector operations.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.opOpAssign.html" class="public">
+								<code>opOpAssign</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Assignment scalar operations.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.opUnary.html" class="public">
+								<code>opUnary</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Unary operations on the vector.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.project.html" class="public">
+								<code>project</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Projects this vector onto another vector.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.reflect.html" class="public">
+								<code>reflect</code>
+							</a>
+							<span class="tableEntryAnnotation">(rhs)</span>
+						</td>
+						<td>Reflects this vector across a surface with the given normal.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../quark/common/vector/Vec2.slope.html" class="public">
+								<code>slope</code>
+							</a>
+							<span class="tableEntryAnnotation">()</span>
+						</td>
+						<td>Calculates the slope of the vector.
+</td>
+					</tr>
+				</table>
+			</section><section><h2>Parameters</h2>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="T">T</td><td> The numeric type for vector components (must be integral or floating-point)</td></tr>
+</table>
+</section>
+<section><h2>Supports</h2>
+<p>- Coordinates x and y
+ - Array of 2 elements where the first is x and the second is y
+</p>
+</section>
+<section><h2>Example</h2>
+<p>Test basic vector creation and access.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Vector should store correct values"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Array access should work correctly"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test vector negation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, -</span><span class="lit">4.0f</span><span class="pun">);
+-</span><span class="pln">v</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(-</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Negation should flip signs"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test vector increment operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+++</span><span class="pln">v</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">), </span><span class="str">"Increment should add 1 to all components"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test vector decrement operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+--</span><span class="pln">v</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">), </span><span class="str">"Decrement should subtract 1 from all components"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test vector addition.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">2.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">v3 </span><span class="pun">= </span><span class="pln">v1 </span><span class="pun">+ </span><span class="pln">v2</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v3<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v3<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">6.0f</span><span class="pun">), </span><span class="str">"Addition should sum components"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test vector subtraction.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">7.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">, </span><span class="lit">3.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">v3 </span><span class="pun">= </span><span class="pln">v1 </span><span class="pun">- </span><span class="pln">v2</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v3<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v3<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Subtraction should subtract components"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scalar multiplication.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">, </span><span class="lit">3.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">v2 </span><span class="pun">= </span><span class="pln">v </span><span class="pun">* </span><span class="lit">2.0</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v2<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v2<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">6.0f</span><span class="pun">), </span><span class="str">"Scalar multiplication should scale components"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scalar division.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">, </span><span class="lit">6.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">v2 </span><span class="pun">= </span><span class="pln">v </span><span class="pun">/ </span><span class="lit">2.0</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v2<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v2<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">), </span><span class="str">"Scalar division should divide components"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test division by zero protection.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">2.0f</span><span class="pun">);
+
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="kwd">auto </span><span class="pln">v2 </span><span class="pun">= </span><span class="pln">v </span><span class="pun">/ </span><span class="lit">0.0</span><span class="pun">;
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test addition assignment operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">2.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="pln">v1 </span><span class="pun">+= </span><span class="pln">v2</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">6.0f</span><span class="pun">), </span><span class="str">"Addition assignment should modify vector"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test subtraction assignment operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">7.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">, </span><span class="lit">3.0f</span><span class="pun">);
+</span><span class="pln">v1 </span><span class="pun">-= </span><span class="pln">v2</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">), </span><span class="str">"Subtraction assignment should modify vector"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scalar multiplication assignment operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">, </span><span class="lit">3.0f</span><span class="pun">);
+</span><span class="pln">v </span><span class="pun">*= </span><span class="lit">2.0</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">6.0f</span><span class="pun">),
+    </span><span class="str">"Scalar multiplication assignment should modify vector"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test scalar division assignment operator.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">, </span><span class="lit">6.0f</span><span class="pun">);
+</span><span class="pln">v </span><span class="pun">/= </span><span class="lit">2.0</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">), </span><span class="str">"Scalar division assignment should modify vector"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test magnitude calculation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">mag </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mag<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">5.0</span><span class="pun">), </span><span class="str">"Magnitude of [3, 4] should be 5"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test magnitude of unit vectors.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">1.0f</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">()<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0</span><span class="pun">), </span><span class="str">"Unit vector magnitude should be 1"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v2<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">()<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0</span><span class="pun">), </span><span class="str">"Unit vector magnitude should be 1"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test magnitude of zero vector.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">()<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0</span><span class="pun">), </span><span class="str">"Zero vector magnitude should be 0"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test slope calculation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">s </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">slope</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">s<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">2.0</span><span class="pun">), </span><span class="str">"Slope of [2, 4] should be 2"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test slope with zero x coordinate fails.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">5.0f</span><span class="pun">);
+
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="kwd">auto </span><span class="pln">s </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">slope</span><span class="pun">();
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test vector normalization.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="kwd">auto <a href="../../../quark/common/vector/Vec2.normalized.html"></span><span class="pln">normalized</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">normalized</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">normalized<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">()<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0</span><span class="pun">), </span><span class="str">"Normalized vector should have magnitude 1"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">normalized<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.6f</span><span class="pun">) &amp;&amp; </span><span class="pln">normalized<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.8f</span><span class="pun">),
+    </span><span class="str">"Normalized [3, 4] should be [0.6, 0.8]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test normalizing zero vector fails.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="kwd">auto <a href="../../../quark/common/vector/Vec2.normalized.html"></span><span class="pln">normalized</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">normalized</span><span class="pun">();
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test distance calculation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">dist </span><span class="pun">= </span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">distance</span><span class="pun">(</span><span class="pln">v2</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dist<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">5.0</span><span class="pun">), </span><span class="str">"Distance from [0, 0] to [3, 4] should be 5"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test distance between identical points is zero.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">7.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">dist </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">distance</span><span class="pun">(</span><span class="pln">v</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dist<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0</span><span class="pun">), </span><span class="str">"Distance from point to itself should be 0"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test normal vector (counter-clockwise).
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">n </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">normal</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">n<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">n<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">),
+    </span><span class="str">"Counter-clockwise normal of [1, 0] should be [0, 1]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test normal vector (clockwise).
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">n </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">normal</span><span class="pun">(</span><span class="kwd">true</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">n<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">n<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(-</span><span class="lit">1.0f</span><span class="pun">),
+    </span><span class="str">"Clockwise normal of [1, 0] should be [0, -1]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test normal vector is perpendicular.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">n </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">normal</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">dot</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0</span><span class="pun">), </span><span class="str">"Normal vector should be perpendicular (dot product = 0)"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test dot product calculation.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">2.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">dotProd </span><span class="pun">= </span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">dot</span><span class="pun">(</span><span class="pln">v2</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dotProd<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">11.0</span><span class="pun">), </span><span class="str">"Dot product of [1, 2] and [3, 4] should be 11"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test dot product of perpendicular vectors is zero.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">1.0f</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">dot</span><span class="pun">(</span><span class="pln">v2</span><span class="pun">)<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0</span><span class="pun">), </span><span class="str">"Dot product of perpendicular vectors should be 0"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test dot product of parallel vectors.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">2.0f</span><span class="pun">, </span><span class="lit">3.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">4.0f</span><span class="pun">, </span><span class="lit">6.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">dotProd </span><span class="pun">= </span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">dot</span><span class="pun">(</span><span class="pln">v2</span><span class="pun">);
+
+</span><span class="typ">double </span><span class="pln">v1Mag </span><span class="pun">= </span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">();
+</span><span class="typ">double </span><span class="pln">v2Mag </span><span class="pun">= </span><span class="pln">v2<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dotProd<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">v1Mag </span><span class="pun">* </span><span class="pln">v2Mag</span><span class="pun">),
+    </span><span class="str">"Dot product of parallel vectors should equal product of magnitudes"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test vector projection.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">proj </span><span class="pun">= </span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">project</span><span class="pun">(</span><span class="pln">v2</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">proj<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">proj<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">),
+    </span><span class="str">"Projection of [3, 4] onto [1, 0] should be [3, 0]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test projection onto same vector gives the vector.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">proj </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">project</span><span class="pun">(</span><span class="pln">v</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">proj<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">x</span><span class="pun">) &amp;&amp; </span><span class="pln">proj<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">y</span><span class="pun">),
+    </span><span class="str">"Projection of vector onto itself should be the vector"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test projection onto zero vector fails.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="kwd">auto </span><span class="pln">proj </span><span class="pun">= </span><span class="pln">v1<wbr/></span><span class="pun">.</span><span class="pln">project</span><span class="pun">(</span><span class="pln">v2</span><span class="pun">);
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test vector reflection.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">1.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> normal </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">1.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">reflected </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">reflect</span><span class="pun">(<a href="../../../quark/common/vector/Vec2.normal.html"></span><span class="pln">normal</span></a><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">reflected<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">reflected<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(-</span><span class="lit">1.0f</span><span class="pun">),
+    </span><span class="str">"Reflecting [1, 1] across horizontal should give [1, -1]"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test reflection preserves magnitude.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> normal </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">reflected </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">reflect</span><span class="pun">(<a href="../../../quark/common/vector/Vec2.normal.html"></span><span class="pln">normal</span></a><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">()<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="pln">reflected<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">()),
+    </span><span class="str">"Reflection should preserve magnitude"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test reflection with zero normal fails.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> normal </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+
+</span><span class="kwd">try
+</span><span class="pun">{
+    </span><span class="kwd">auto </span><span class="pln">reflected </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">reflect</span><span class="pun">(<a href="../../../quark/common/vector/Vec2.normal.html"></span><span class="pln">normal</span></a><span class="pun">);
+}
+</span><span class="kwd">catch </span><span class="pun">(</span><span class="typ">Throwable</span><span class="pun">)
+{
+}
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test array-style modification of vector components.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">2.0f</span><span class="pun">);
+</span><span class="pln">v</span><span class="pun">[</span><span class="lit">0</span><span class="pun">] = </span><span class="lit">5.0f</span><span class="pun">;
+</span><span class="pln">v</span><span class="pun">[</span><span class="lit">1</span><span class="pun">] = </span><span class="lit">7.0f</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">) &amp;&amp; </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">y<wbr/></span><span class="pun">.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">7.0f</span><span class="pun">), </span><span class="str">"Array-style modification should work"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test vector with integer type.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2i.html"><span class="typ">Vec2i</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2i.html"></span><span class="typ">Vec2i</span></a><span class="pun">(</span><span class="lit">3</span><span class="pun">, </span><span class="lit">4</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">()<wbr/>.</span><span class="pln">fequals</span><span class="pun">(</span><span class="lit">5.0</span><span class="pun">), </span><span class="str">"Integer vector magnitude should work"</span><span class="pun">);
+
+<a href="../../../quark/common/vector/Vec2i.html"></span><span class="typ">Vec2i</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2i.html"></span><span class="typ">Vec2i</span></a><span class="pun">(</span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">v3 </span><span class="pun">= </span><span class="pln">v </span><span class="pun">+ </span><span class="pln">v2</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v3<wbr/></span><span class="pun">.</span><span class="pln">x </span><span class="pun">== </span><span class="lit">4 </span><span class="pun">&amp;&amp; </span><span class="pln">v3<wbr/></span><span class="pun">.</span><span class="pln">y </span><span class="pun">== </span><span class="lit">6</span><span class="pun">, </span><span class="str">"Integer vector addition should work"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Performance test with many vector operations.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v1 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">2.0f</span><span class="pun">);
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> v2 </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">3.0f</span><span class="pun">, </span><span class="lit">4.0f</span><span class="pun">);
+
+<a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pln"> result </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">0.0f</span><span class="pun">, </span><span class="lit">0.0f</span><span class="pun">);
+
+</span><span class="kwd">foreach </span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0 </span><span class="pun">.. </span><span class="lit">1000</span><span class="pun">)
+{
+    </span><span class="pln">result </span><span class="pun">= </span><span class="pln">result </span><span class="pun">+ </span><span class="pln">v1</span><span class="pun">;
+    </span><span class="pln">result </span><span class="pun">= </span><span class="pln">result </span><span class="pun">- </span><span class="pln">v2</span><span class="pun">;
+    </span><span class="pln">result </span><span class="pun">= </span><span class="pln">result </span><span class="pun">* </span><span class="lit">1.01</span><span class="pun">;
+}
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">result<wbr/></span><span class="pun">.</span><span class="pln">magnitude</span><span class="pun">() &gt; </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Complex operations should produce non-zero result"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test that normalized vector direction matches original.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">5.0f</span><span class="pun">, </span><span class="lit">5.0f</span><span class="pun">);
+</span><span class="kwd">auto <a href="../../../quark/common/vector/Vec2.normalized.html"></span><span class="pln">normalized</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">normalized</span><span class="pun">();
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">dot</span><span class="pun">(<a href="../../../quark/common/vector/Vec2.normalized.html"></span><span class="pln">normalized</span></a><span class="pun">) &gt; </span><span class="lit">0</span><span class="pun">, </span><span class="str">"Normalized vector should point in same direction"</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+<p>Test vector operations preserve direction.
+</p>
+<pre class="code"><code class="lang-d"><a href="../../../quark/common/vector/Vec2f.html"><span class="typ">Vec2f</span></a><span class="pln"> v </span><span class="pun">= <a href="../../../quark/common/vector/Vec2f.html"></span><span class="typ">Vec2f</span></a><span class="pun">(</span><span class="lit">1.0f</span><span class="pun">, </span><span class="lit">1.0f</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">scaled </span><span class="pun">= </span><span class="pln">v </span><span class="pun">* </span><span class="lit">5.0</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">x </span><span class="pun">/ </span><span class="pln">v<wbr/></span><span class="pun">.</span><span class="pln">y </span><span class="pun">== </span><span class="pln">scaled<wbr/></span><span class="pun">.</span><span class="pln">x </span><span class="pun">/ </span><span class="pln">scaled<wbr/></span><span class="pun">.</span><span class="pln">y</span><span class="pun">, </span><span class="str">"Scaling should preserve direction"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>
