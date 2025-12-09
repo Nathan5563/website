@@ -6,7 +6,12 @@
     <title>Quark</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="latex-light-auto">
+    <!-- Theme toggle button -->
+    <button id="toggle-theme" class="btn btn-light" onclick="toggleTheme()">
+      <img id="theme-icon" src="../icons/moon.png" alt="Toggle theme" width="35" height="35" />
+    </button>
+
     <div class="container">
       <header class="hero-section">
         <h1>Quark</h1>
@@ -76,5 +81,7 @@
         <div class="description-content"></div>
       </section>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
