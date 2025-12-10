@@ -25,12 +25,13 @@
           Quark is a fully-featured 2D game engine built as a final project for
           CPSC 4791 at Yale University. Its features include a constraint-based
           physics engine, a custom scripting language, and mutex-controlled
-          multithreading for subsystems running at different timesteps. Download
+          multithreading for subsystems running at different timesteps. <b>Download
           demos
           <a
             href="https://drive.google.com/file/d/1p4x6o00BvuqNLabH8m_VDwzCUMK2mRMC/view?usp=sharing"
+            target="_blank"
             >here</a
-          >!
+          >!</b>
         </p>
       </header>
 
@@ -89,7 +90,26 @@
       <!-- Postmortem Section -->
       <section class="description-section">
         <h2>Postmortem</h2>
-        <div class="description-content"></div>
+        <div class="description-content">
+          Looking back, I should have spent some more time building out useful
+          tools to assist in data creation. I had planned on building a scene
+          editor early on in the project, but later cut it out because I didn't
+          have enough time and decided to focus on my engine. While I am happy
+          with how things turned out, having to develop the actual game at the
+          end taught me to think from the perspective of the user as well, since
+          I realized that some additional tooling would've been more useful as
+          opposed to additional features in the engine.
+        </div>
+        <br />
+        <div>
+          That being said, if I had more time to work on the project, I would do
+          the following, roughly in stated order: build more assistive tooling
+          to make scene/collider/rigidbody creation as trivial as possible,
+          upgrade my physics engine to include fluid simulations for
+          in-game fluid animations, and add nice-to-have features such as
+          spatial sound effects, better text rendering, and various performance
+          optimizations.
+        </div>
       </section>
     </div>
 
