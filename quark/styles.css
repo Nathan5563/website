@@ -68,11 +68,11 @@ body {
 
 /* Header */
 .hero-section {
-  text-align: center;
   margin-bottom: 40px;
 }
 
 .hero-section h1 {
+  text-align: center;
   font-size: 2.5em;
   margin-bottom: 15px;
   font-weight: 600;
@@ -304,6 +304,7 @@ iframe {
   
   section {
     padding: 20px;
+    padding-top: 7.5px;
     margin-bottom: 30px;
   }
   
