@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quark | Nathan Abebe</title>
+    <meta
+      name="description"
+      content="Quark is a fully-featured 2D game engine by Nathan Abebe. Built for CPSC 4791 at Yale University, featuring impulse-based physics engine, custom scripting language, and mutex-controlled multithreading."
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nathan Abebe",
+        "url": "https://nathanabebe.com",
+        "email": "mailto:nathan.abebe@yale.edu",
+        "jobTitle": "Computer Science and Electrical Engineering Student",
+        "worksFor": {
+          "@type": "EducationalOrganization",
+          "name": "Yale University"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Yale University"
+        },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Bachelor of Science in Computer Science and Electrical Engineering",
+          "educationalLevel": "Undergraduate"
+        },
+        "knowsAbout": [
+          "Computer Science",
+          "Electrical Engineering",
+          "FPGA Development",
+          "Embedded Systems",
+          "Low-latency Systems",
+          "Distributed Systems"
+        ],
+        "sameAs": [
+          "https://github.com/Nathan5563",
+          "https://linkedin.com/in/nathan5563"
+        ]
+      }
+    </script>
+    <meta property="og:title" content="Quark | Nathan Abebe" />
+    <meta
+      property="og:description"
+      content="Quark is a fully-featured 2D game engine by Nathan Abebe. Built for CPSC 4791 at Yale University, featuring impulse-based physics engine, custom scripting language, and mutex-controlled multithreading."
+    />
+    <meta property="og:url" content="https://nathanabebe.com/projects/quark/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="Quark_UML.png" />
+    <meta
+      property="og:image:alt"
+      content="Quark Game Engine UML Architecture Diagram"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nathanabebe.com/projects/quark/" />
+    <link rel="icon" type="image/png" href="../../icons/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="latex-light-auto">
+    <!-- Theme toggle button -->
+    <button id="toggle-theme" class="btn btn-light" onclick="toggleTheme()">
+      <img
+        id="theme-icon"
+        src="../../icons/moon.png"
+        alt="Toggle theme"
+        width="35"
+        height="35"
+      />
+    </button>
+
+    <div class="container">
+      <header class="hero-section">
+        <h1>Quark</h1>
+        <p class="subtitle">
+          Quark is a fully-featured 2D game engine built as a final project for
+          CPSC 4791 at Yale University. It includes an impulse-based physics
+          engine, a custom scripting language, and mutex-controlled
+          multithreading for subsystems running with different timesteps.
+          <b
+            >Download demos
+            <a
+              href="https://drive.google.com/file/d/1p4x6o00BvuqNLabH8m_VDwzCUMK2mRMC/view?usp=sharing"
+              target="_blank"
+              >here</a
+            >!</b
+          >
+        </p>
+      </header>
+
+      <!-- YouTube Video Section -->
+      <section class="video-section">
+        <h2>Engine Demo</h2>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/BruQP0oKTyU"
+            title="Quark Game Engine Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery-section">
+        <h2>Screenshots</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="screenshot1.gif" alt="Game Engine Screenshot 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="screenshot2.gif" alt="Game Engine Screenshot 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="screenshot3.gif" alt="Game Engine Screenshot 3" />
+          </div>
+          <div class="gallery-item">
+            <img src="screenshot4.gif" alt="Game Engine Screenshot 4" />
+          </div>
+        </div>
+      </section>
+
+      <!-- UML Diagram Section -->
+      <section class="diagram-section">
+        <h2>Engine Architecture</h2>
+        <div class="diagram-container">
+          <img
+            src="Quark_UML.png"
+            alt="Quark Game Engine UML Diagram"
+            class="uml-diagram"
+            width="900px"
+          />
+          <div class="doc-link-container">
+            <a href="docs/public/index.html" class="doc-link" target="_blank">
+              <span class="doc-text">View API Documentation</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Postmortem Section -->
+      <section class="description-section">
+        <h2>Postmortem</h2>
+        <div class="description-content">
+          Looking back, I should have spent some more time building out useful
+          tools to assist in data creation. I had planned on building a scene
+          editor early on in the project, but later cut it out because I didn't
+          have enough time and decided to focus on my engine. While I am happy
+          with how things turned out, having to develop the actual game at the
+          end taught me to think from the perspective of the user as well, since
+          I realized that some additional tooling would've been more useful as
+          opposed to additional features in the engine.
+        </div>
+        <br />
+        <div>
+          That being said, if I had more time to work on the project, I would do
+          the following, roughly in stated order: build more assistive tooling
+          to make scene/collider/rigidbody creation as trivial as possible,
+          upgrade my physics engine to include fluid simulations for in-game
+          fluid animations, and add nice-to-have features such as spatial sound
+          effects, better text rendering, and various performance optimizations.
+          At a higher level, I would also like to build an input manager for
+          cohesive input tracking and a network manager/networking subsystem
+          for multiplayer games.
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

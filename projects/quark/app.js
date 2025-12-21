@@ -7,12 +7,12 @@ const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 function updateTheme(theme) {
   if (theme === "latex-light-auto") {
     if (themeIcon) {
-      themeIcon.src = "../icons/moon.png";
+      themeIcon.src = "../../icons/moon.png";
       themeIcon.alt = "Dark mode";
     }
   } else {
     if (themeIcon) {
-      themeIcon.src = "../icons/sun.png";
+      themeIcon.src = "../../icons/sun.png";
       themeIcon.alt = "Light mode";
     }
   }
