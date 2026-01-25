@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -132,6 +132,11 @@
             <h3 class="news-year-heading">[2025]</h3>
             <ul class="news-list">
               <li>
+                Published <a href="projects/quark/index.html">Quark</a>, a
+                feature-complete 2D game engine with an impulse-based physics
+                system and a custom scripting language.
+              </li>
+              <li>
                 Started as a Teaching Assistant for CPSC 3230 (Systems
                 Programming and Computer Organization).
               </li>
@@ -192,66 +197,12 @@
         <div class="top-card">
           <h2 class="card-title">Selected Projects</h2>
 
-          <!-- Project: PLIQ Flight Computer -->
-          <div class="project">
-            <div class="project-header">
-              <h3 class="project-title">
-                <a href="#" rel="noopener">
-                  fpgafs
-                  <!-- TODO: Find better name for fpgafs -->
-                </a>
-              </h3>
-              <h4 class="project-subtitle">Jun 2025 &ndash; Present</h4>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">C</span>
-              <span class="skill-tag">Linux Kernel</span>
-              <span class="skill-tag">Distributed Systems</span>
-              <span class="skill-tag">SystemVerilog</span>
-            </div>
-            <p class="project-desc">
-              Developed a distributed system for managing FPGA resources across
-              multiple nodes. Designed a custom Linux kernel module for
-              efficient, parallel communication between the server and various
-              FPGA nodes. Tested management software with production-grade
-              quantum error code decoders. Paper in progress.
-            </p>
-          </div>
-          <span><hr /></span>
-
-          <!-- Project: PLIQ Flight Computer -->
-          <div class="project">
-            <div class="project-header">
-              <h3 class="project-title">
-                <a href="#" rel="noopener">
-                  Rocket Flight Computer
-                  <!-- TODO: Find better name for flight computer -->
-                </a>
-              </h3>
-              <h4 class="project-subtitle">Aug 2025 &ndash; Present</h4>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Rust</span>
-              <span class="skill-tag">Embedded Systems</span>
-              <span class="skill-tag">Sensor Integration</span>
-              <span class="skill-tag">RF Communication</span>
-            </div>
-            <p class="project-desc">
-              Engineering a flight computer with firmware for a Teensy 4.1-based
-              system with sensor data from IMU, GPS, etc transmitted
-              over radio. Developing a Kalman filter for sensor fusion and
-              implemented real-time scheduling for mission control.
-            </p>
-          </div>
-          <span><hr /></span>
-
           <!-- Project: GRAPH .obj Parser-->
           <div class="project" style="margin-top: 20px !important">
             <div class="project-header">
               <h3 class="project-title">
                 <a href="#" rel="noopener">
-                  Wavefront (.obj) File Parser
-                  <!-- TODO: Find better name for parser -->
+                  superFastObj &mdash; Optimized Wavefront (.obj) Parser
                 </a>
               </h3>
               <h4 class="project-subtitle">Jul 2025 &ndash; Present</h4>
@@ -266,17 +217,121 @@
               A high-performance Wavefront (.obj) file parser leveraging
               multithreading and SIMD instructions for rapid geometry
               processing. Designed for scalability and efficiency in 3D
-              rendering pipelines, it achieves 7x performance over industry
-              standard tinyobjloader. Paper in progress.
+              rendering pipelines, it achieves over 7x performance over industry
+              standard tinyobjloader.
+            </p>
+          </div>
+          <span><hr /></span>
+
+          <!-- Project: PLIQ EGSE -->
+          <div class="project">
+            <div class="project-header">
+              <h3 class="project-title">
+                <a href="#" rel="noopener">
+                  HADES &mdash; Liquid Rocketry Electrical Ground Support System
+                </a>
+              </h3>
+              <h4 class="project-subtitle">Aug 2025 &ndash; Present</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Embedded Systems</span>
+              <span class="skill-tag">Sensor Integration</span>
+              <span class="skill-tag">RF Communication</span>
+            </div>
+            <p class="project-desc">
+              Comprehensive 4-PCB electrical system for remote-controlled liquid
+              rocket fueling and arming operations. The system includes a power
+              management board, central MCU with high-precision ADCs, dedicated
+              load cell, pressure, and temperature sensor interfaces, and valve
+              actuation control for Class 2 liquid propellant systems.
+            </p>
+          </div>
+          <span><hr /></span>
+
+          <!-- Project: quark -->
+          <div class="project">
+            <div class="project-header">
+              <h3 class="project-title">
+                <a href="projects/quark/index.html" rel="noopener">
+                  Quark &mdash; 2D Game Engine
+                </a>
+              </h3>
+              <h4 class="project-subtitle">Oct 2025 &ndash; Dec 2025</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Dlang</span>
+              <span class="skill-tag">Impulse-Based Physics</span>
+              <span class="skill-tag">Multithreading and Events</span>
+              <span class="skill-tag">Compilers</span>
+            </div>
+            <p class="project-desc">
+              Quark is a fully-featured 2D game engine built as a final project
+              for CPSC 4791 at Yale University. It includes an impulse-based
+              physics engine, a custom scripting language, and mutex-controlled
+              multithreading for subsystems running with different timesteps.
+            </p>
+          </div>
+          <span><hr /></span>
+
+          <!-- Project: fpgafs -->
+          <!-- <div class="project">
+            <div class="project-header">
+              <h3 class="project-title">
+                <a href="#" rel="noopener">
+                  fpgafs &mdash; Distributed Multi-FPGA Control Stack
+                </a>
+              </h3>
+              <h4 class="project-subtitle">Jun 2025 &ndash; Aug 2025</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">Linux Kernel</span>
+              <span class="skill-tag">Distributed Systems</span>
+              <span class="skill-tag">SystemVerilog</span>
+            </div>
+            <p class="project-desc">
+              Developed a distributed system for managing FPGA resources across
+              multiple nodes. Designed a custom Linux kernel module for
+              efficient, parallel communication between the server and various
+              FPGA nodes. Tested management software with production-grade
+              quantum error code decoders.
+            </p>
+          </div>
+          <span><hr /></span> -->
+
+          <!-- Project: ntraycer -->
+          <div class="project">
+            <div class="project-header">
+              <h3 class="project-title">
+                <a href="#" rel="noopener">
+                  ntraycer &mdash; Path Tracing From Scratch
+                </a>
+              </h3>
+              <h4 class="project-subtitle">Jun 2025 &ndash; Aug 2025</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Dlang</span>
+              <span class="skill-tag">Path Tracing</span>
+              <span class="skill-tag">Monte-Carlo Integration</span>
+              <span class="skill-tag">x86 Assembly</span>
+            </div>
+            <p class="project-desc">
+              A physically-based path tracer written with no external
+              dependencies as a learning exercise. Features Monte Carlo
+              integration for global illumination, support for various material
+              types, custom RNG (xorshift) modules, and low-level assembly I/O.
+              Implements the rendering equation using multiple importance
+              sampling for faster convergence.
             </p>
           </div>
           <span><hr /></span>
 
           <!-- Project: NES Emulator -->
-          <div class="project">
+          <!-- <div class="project">
             <div class="project-header">
               <h3 class="project-title">
-                <a href="#" rel="noopener"> nnes </a>
+                <a href="#" rel="noopener"> nnes &mdash; NES Emulator </a>
               </h3>
               <h4 class="project-subtitle">Mar 2025 &ndash; Jul 2025</h4>
             </div>
@@ -287,12 +342,12 @@
               <span class="skill-tag">Console Emulation</span>
             </div>
             <p class="project-desc">
-              A NES emulator achieving cycle accuracy for Mapper 0 titles like
-              Pac-Man and Donkey Kong. Emulated all official opcodes of the 6502
+              A NES emulator achieving near-cycle accuracy for Mapper 0 titles
+              like Donkey Kong. Emulated all official opcodes of the 6502
               processor and implemented the graphics rendering pipeline of the
               2C02 chip via SDL2.
             </p>
-          </div>
+          </div> -->
 
           <div class="more-projects">
             <a href="projects/index.html">See more...</a>
@@ -328,31 +383,37 @@
             <h3 class="class-heading">Student</h3>
             <ul class="class-list">
               <li>
-                <b class="course-code">CPSC 5330</b> &mdash; Computer Networks
-                <span class="skill-tag">Graduate</span>
+                <b class="course-code">CPSC 4200</b>
+                &mdash; Computer Architecture
                 <span class="skill-tag">Ongoing</span>
               </li>
               <li>
-                <b class="course-code">CPSC 5230</b> &mdash; Operating Systems
-                <span class="skill-tag">Graduate</span>
+                <b class="course-code">CPSC 4330</b>
+                &mdash; Computer Networks
                 <span class="skill-tag">Ongoing</span>
               </li>
               <li>
-                <b class="course-code">CPSC 4791</b> &mdash; Building Game
-                Engines
+                <b class="course-code">CPSC 4792</b>
+                &mdash; Real-time Computer Graphics
                 <span class="skill-tag">Ongoing</span>
               </li>
               <li>
-                <b class="course-code">CPSC 3650</b> &mdash; Algorithms
+                <b class="course-code">ECE &nbsp;3481</b>
+                &mdash; Digital Systems
                 <span class="skill-tag">Ongoing</span>
               </li>
               <li>
-                <b class="course-code">MATH 2410</b> &mdash; Probability Theory
-                <span class="skill-tag">Ongoing</span>
+                <b class="course-code">CPSC 4791</b>
+                &mdash; Building Game Engines
+              </li>
+              <li><b class="course-code">CPSC 3650</b> &mdash; Algorithms</li>
+              <li>
+                <b class="course-code">MATH 2410</b>
+                &mdash; Probability Theory
               </li>
               <li>
-                <b class="course-code">MATH 2250</b> &mdash; Linear Algebra
-                <span class="skill-tag">Ongoing</span>
+                <b class="course-code">MATH 2250</b>
+                &mdash; Linear Algebra
               </li>
               <li>
                 <b class="course-code">CPSC 323</b>
