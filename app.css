@@ -66,11 +66,6 @@ ul {
   flex-direction: column;
   gap: 5px;
 }
-hr {
-  border: none;
-  height: 0.5px;
-  background-color: currentColor;
-}
 
 /* Main containert */
 .container {
@@ -153,7 +148,21 @@ hr {
 .project {
   display: flex;
   flex-direction: column;
-  margin: 15px 0px;
+  margin: 10px 0px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid;
+  border-bottom-color: currentColor;
+  opacity: 1;
+}
+.project:last-of-type {
+  border-bottom: none;
+  /* padding-bottom: 5px; */
+}
+.latex-light-auto .project {
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+}
+.latex-dark-auto .project {
+  border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 .project-header {
   display: flex;
