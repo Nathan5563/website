@@ -11,6 +11,7 @@ class ResumeManager {
     };
 
     this.currentCommitSha = null;
+    this.currentPdfUrl = null;
     this.lastChecked = null;
     this.checkTimer = null;
     this.retryCount = 0;
@@ -56,6 +57,11 @@ class ResumeManager {
 
       const data = JSON.parse(cached);
       const now = Date.now();
+
+      if (!data.commit?.sha) {
+        localStorage.removeItem(this.cacheKey);
+        return null;
+      }
 
       // Check if cache is still valid
       if (now - data.timestamp > this.config.cacheExpiry) {
@@ -120,7 +126,13 @@ class ResumeManager {
   async checkForUpdates() {
     try {
       const cachedData = this.getCachedData();
-      if (cachedData && this.currentCommitSha === cachedData.commit.sha) {
+      if (
+        cachedData?.pdfUrl &&
+        this.currentCommitSha === cachedData.commit.sha
+      ) {
+        if (!this.currentPdfUrl) {
+          await this.loadPdfFromUrl(cachedData.pdfUrl);
+        }
         return;
       }
 
@@ -137,7 +149,21 @@ class ResumeManager {
         const pdfUrl = await this.updateResume(latestCommit);
         this.setCachedData(latestCommit, pdfUrl);
       } else {
-        this.setCachedData(latestCommit, cachedData?.pdfUrl);
+        const pdfUrl =
+          cachedData?.pdfUrl ||
+          this.currentPdfUrl ||
+          this.elements.downloadBtn?.dataset.href ||
+          (await this.getPdfFromRepo(latestCommit.sha));
+
+        if (!pdfUrl) {
+          throw new Error("Resume PDF is not available");
+        }
+
+        if (!this.currentPdfUrl) {
+          await this.loadPdfFromUrl(pdfUrl);
+        }
+
+        this.setCachedData(latestCommit, pdfUrl);
       }
 
       this.updateCommitInfo(latestCommit);
@@ -179,6 +205,10 @@ class ResumeManager {
         return pdfUrl;
       } else {
         const compiledPdfUrl = await this.compileLatexToPdf(commit.sha);
+        if (!compiledPdfUrl) {
+          throw new Error("Resume PDF is not available");
+        }
+
         this.currentCommitSha = commit.sha;
         return compiledPdfUrl;
       }
@@ -246,10 +276,7 @@ class ResumeManager {
 
       this.elements.resumeFrame.onload = () => {
         clearTimeout(loadTimeout);
-        this.elements.resumeFrame.style.display = "block";
-        this.elements.downloadBtn.dataset.href = pdfUrl;
-        this.elements.downloadBtn.disabled = false;
-        this.elements.downloadBtn.setAttribute("aria-disabled", "false");
+        this.markPdfLoaded(pdfUrl);
         resolve();
       };
 
@@ -272,10 +299,7 @@ class ResumeManager {
 
   tryFallbackViewer(pdfUrl, resolve, reject) {
     this.elements.resumeFrame.onload = () => {
-      this.elements.resumeFrame.style.display = "block";
-      this.elements.downloadBtn.dataset.href = pdfUrl;
-      this.elements.downloadBtn.disabled = false;
-      this.elements.downloadBtn.setAttribute("aria-disabled", "false");
+      this.markPdfLoaded(pdfUrl);
       resolve();
     };
 
@@ -283,10 +307,7 @@ class ResumeManager {
       this.elements.resumeFrame.src =
         pdfUrl + "#view=FitH&toolbar=1&navpanes=1";
       setTimeout(() => {
-        this.elements.resumeFrame.style.display = "block";
-        this.elements.downloadBtn.dataset.href = pdfUrl;
-        this.elements.downloadBtn.disabled = false;
-        this.elements.downloadBtn.setAttribute("aria-disabled", "false");
+        this.markPdfLoaded(pdfUrl);
         resolve();
       }, 1000);
     };
@@ -294,6 +315,14 @@ class ResumeManager {
     this.elements.resumeFrame.src = `https://docs.google.com/gview?url=${encodeURIComponent(
       pdfUrl
     )}&embedded=true`;
+  }
+
+  markPdfLoaded(pdfUrl) {
+    this.currentPdfUrl = pdfUrl;
+    this.elements.resumeFrame.style.display = "block";
+    this.elements.downloadBtn.dataset.href = pdfUrl;
+    this.elements.downloadBtn.disabled = false;
+    this.elements.downloadBtn.setAttribute("aria-disabled", "false");
   }
 
   getPdfViewerUrl(pdfUrl) {
@@ -327,11 +356,17 @@ class ResumeManager {
     const commitMessage = commit.commit.message.split("\n")[0];
     const commitDate = new Date(commit.commit.author.date).toLocaleDateString();
 
-    this.elements.latestCommit.innerHTML = `
-            <a href="${commit.html_url}" target="_blank" style="color: #007bff; text-decoration: none;">
-                ${shortSha}
-            </a> - ${commitMessage} (${commitDate})
-        `;
+    const commitLink = document.createElement("a");
+    commitLink.href = commit.html_url;
+    commitLink.target = "_blank";
+    commitLink.rel = "noopener";
+    commitLink.textContent = shortSha;
+
+    this.elements.latestCommit.textContent = "";
+    this.elements.latestCommit.appendChild(commitLink);
+    this.elements.latestCommit.appendChild(
+      document.createTextNode(` - ${commitMessage} (${commitDate})`)
+    );
   }
 
   updateLastCheckedTime() {
