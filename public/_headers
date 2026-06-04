@@ -1,0 +1,14 @@
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/resume/Nathan_Abebe_Resume.pdf
+  Cache-Control: public, max-age=3600
+  Content-Disposition: inline; filename="Nathan_Abebe_Resume.pdf"
+
+/projects/quark/docs/*
+  X-Robots-Tag: noindex
+
+/*
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY

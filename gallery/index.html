@@ -1,135 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery | Nathan Abebe</title>
+    <title>Photography | Nathan Abebe</title>
+    <meta name="author" content="Nathan Abebe" />
+    <meta name="theme-color" content="#fbfbf7" />
     <meta
       name="description"
-      content="See Nathan Abebe's gallery. Computer Science and Electrical Engineering at Yale University. Robust, low-latency systems, FPGA architectures, embedded systems."
+      content="Personal photography by Nathan Abebe, shot on a Canon EOS Rebel T7."
     />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Nathan Abebe",
-        "url": "https://nathanabebe.com",
-        "email": "mailto:nathan.abebe@yale.edu",
-        "jobTitle": "Computer Science and Electrical Engineering Student",
-        "worksFor": {
-          "@type": "EducationalOrganization",
-          "name": "Yale University"
-        },
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Yale University"
-        },
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Bachelor of Science in Computer Science and Electrical Engineering",
-          "educationalLevel": "Undergraduate"
-        },
-        "knowsAbout": [
-          "Computer Science",
-          "Electrical Engineering",
-          "FPGA Development",
-          "Embedded Systems",
-          "Low-latency Systems",
-          "Distributed Systems"
-        ],
-        "sameAs": [
-          "https://github.com/Nathan5563",
-          "https://linkedin.com/in/nathan5563"
-        ]
+        "@type": "ImageGallery",
+        "name": "Photography | Nathan Abebe",
+        "author": {
+          "@type": "Person",
+          "name": "Nathan Abebe",
+          "url": "https://nathanabebe.com"
+        }
       }
     </script>
-    <meta property="og:title" content="Gallery | Nathan Abebe" />
+    <meta property="og:title" content="Photography | Nathan Abebe" />
+    <meta property="og:site_name" content="Nathan Abebe" />
     <meta
       property="og:description"
-      content="See Nathan Abebe's gallery. Computer Science and Electrical Engineering at Yale University. Robust, low-latency systems, FPGA architectures, embedded systems."
+      content="Personal photography by Nathan Abebe."
     />
     <meta property="og:url" content="https://nathanabebe.com/gallery/" />
     <meta property="og:type" content="website" />
     <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Photography | Nathan Abebe" />
+    <meta name="twitter:description" content="Personal photography by Nathan Abebe." />
     <link rel="canonical" href="https://nathanabebe.com/gallery/" />
-    <link rel="icon" type="image/png" href="../icons/favicon.png" />
-    <link rel="stylesheet" href="gallery.css" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="stylesheet" href="/app.css" />
   </head>
   <body>
-    <div class="construction-banner">
-      🚧 Page Under Construction 🚧
-    </div>
-    <div class="container">
-      <header>
-        <div class="header-left">
-          <a href="../index.html" class="back-link">← Back to Home</a>
-          <h1>Gallery</h1>
-          <p class="gallery-description">
-            Some of my favorite shots, captured on a Canon EOS Rebel T7 with the EF-S
-            18-55mm IS II lens.
+    <a class="skip-link" href="#content">Skip to content</a>
+    <main id="content" class="site-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">Gallery</p>
+          <h1 class="page-title">Gallery.</h1>
+          <p class="lede">
+            I also enjoy photography. Shot on an EOS Rebel T7 with the 18-55mm IS II lens.
           </p>
         </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/gallery/" aria-current="page">Gallery</a>
+          <a href="/blog/">Blog</a>
+        </nav>
       </header>
 
-      <div class="gallery-grid">
-        <div class="photo-item">
-          <img src="https://placehold.co/800x600/4a90e2/ffffff" alt="" />
-          <div class="location-tag">Yosemite, CA</div>
+      <section class="gallery-layout" aria-label="Photography">
+        <div class="photo-masonry">
+          <!-- gallery:generated:start -->
+          <p class="gallery-empty">Coming soon.</p>
+          <!-- gallery:generated:end -->
         </div>
+      </section>
 
-        <div class="photo-item">
-          <img src="https://placehold.co/600x800/7b68ee/ffffff" alt="" />
-          <div class="location-tag">New Haven, CT</div>
-        </div>
-
-        <div class="photo-item">
-          <img src="https://placehold.co/900x600/50c878/ffffff" alt="" />
-          <div class="location-tag">Vermont</div>
-        </div>
-
-        <div class="photo-item">
-          <img src="https://placehold.co/600x600/ff6b6b/ffffff" alt="" />
-          <div class="location-tag">NYC</div>
-        </div>
-
-        <div class="photo-item">
-          <img src="https://placehold.co/700x500/ffa500/ffffff" alt="" />
-          <div class="location-tag">Boston, MA</div>
-        </div>
-
-        <div class="photo-item">
-          <img src="https://placehold.co/500x700/9370db/ffffff" alt="" />
-          <div class="location-tag">Cape Cod</div>
-        </div>
-
-        <div class="photo-item">
-          <img src="https://placehold.co/800x500/20b2aa/ffffff" alt="" />
-          <div class="location-tag">Providence, RI</div>
-        </div>
-
-        <div class="photo-item">
-          <img src="https://placehold.co/600x900/dc143c/ffffff" alt="" />
-          <div class="location-tag">Maine</div>
-        </div>
-
-        <div class="photo-item">
-          <img src="https://placehold.co/750x550/32cd32/ffffff" alt="" />
-          <div class="location-tag">Yellowstone</div>
-        </div>
-      </div>
-    </div>
-
-    <button id="toggle-theme" class="btn">
-      <img width="35px" id="theme-icon" />
-    </button>
-
-    <!-- Lightbox modal -->
-    <div id="lightbox" class="lightbox">
-      <span class="lightbox-close">&times;</span>
-      <img id="lightbox-img" class="lightbox-content" />
-      <div id="lightbox-caption" class="lightbox-caption"></div>
-    </div>
-
-    <script src="gallery.js"></script>
+      <footer class="footer">
+        <a href="/">Home</a>
+      </footer>
+    </main>
   </body>
 </html>

@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nathan Abebe</title>
+    <meta name="author" content="Nathan Abebe" />
+    <meta name="theme-color" content="#fbfbf7" />
     <meta
       name="description"
-      content="I'm a sophomore at Yale interested in robust, low-latency systems. Distributed FPGA management, rocket avionics and control, real-time graphics."
+      content="Nathan Abebe is a Yale Computer Science and Electrical Engineering student and Cloudflare SWE intern focused on robust, low-latency systems, embedded software, and real-time graphics."
     />
     <script type="application/ld+json">
       {
@@ -16,18 +18,9 @@
         "url": "https://nathanabebe.com",
         "email": "mailto:nathan.abebe@yale.edu",
         "jobTitle": "Computer Science and Electrical Engineering Student",
-        "worksFor": {
+        "affiliation": {
           "@type": "EducationalOrganization",
           "name": "Yale University"
-        },
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Yale University"
-        },
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Bachelor of Science in Computer Science and Electrical Engineering",
-          "educationalLevel": "Undergraduate"
         },
         "knowsAbout": [
           "Computer Science",
@@ -35,7 +28,8 @@
           "FPGA Development",
           "Embedded Systems",
           "Low-latency Systems",
-          "Distributed Systems"
+          "Distributed Systems",
+          "Real-time Graphics"
         ],
         "sameAs": [
           "https://github.com/Nathan5563",
@@ -44,411 +38,197 @@
       }
     </script>
     <meta property="og:title" content="Nathan Abebe" />
+    <meta property="og:site_name" content="Nathan Abebe" />
     <meta
       property="og:description"
-      content="I'm a sophomore at Yale interested in robust, low-latency systems. Distributed FPGA management, rocket avionics and control, real-time graphics."
+      content="Yale CS/EE student working on robust, low-latency systems: FPGA management, embedded rocketry, real-time graphics, and performance-oriented software."
     />
-    <meta property="og:url" content="https://nathanabebe.com" />
+    <meta property="og:url" content="https://nathanabebe.com/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/profile-image.jpg" />
+    <meta
+      property="og:image"
+      content="https://nathanabebe.com/projects/quark/Quark_UML.png"
+    />
     <meta
       property="og:image:alt"
-      content="Nathan Abebe, Computer Science and Electrical Engineering at Yale"
+      content="Quark game engine architecture diagram"
     />
     <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nathan Abebe" />
+    <meta
+      name="twitter:description"
+      content="Yale CS/EE student focused on robust, low-latency systems."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nathanabebe.com/projects/quark/Quark_UML.png"
+    />
     <link rel="canonical" href="https://nathanabebe.com/" />
-    <link rel="icon" type="image/png" href="icons/favicon.png" />
-    <link rel="stylesheet" href="latex.css" />
-    <link rel="stylesheet" href="app.css" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="stylesheet" href="/app.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- Personal Profile -->
-      <div class="col-left">
-        <img
-          src="images/profile-image.jpg"
-          alt="Nathan Abebe, Computer Science and Electrical Engineering student at Yale"
-          class="profile-image"
-          width="250px"
-        />
-        <div class="profile">
-          <h1 class="profile-name">Nathan Abebe</h1>
-          <address class="contact-info">
-            <!-- Addresses -->
-            <span itemprop="streetAddress">51 Prospect St., New Haven, CT</span>
-            <span itemprop="emailAddress"
-              >nathan [dot] abebe [at] yale [dot] edu</span
-            >
+    <a class="skip-link" href="#content">Skip to content</a>
+    <main id="content" class="site-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">Nathan Abebe</p>
+          <h1>I build systems where timing matters.</h1>
+          <p class="lede">
+            I am a junior at Yale studying Computer Science and Electrical
+            Engineering. My work sits near the hardware/software boundary:
+            distributed infrastructure, embedded software, real-time systems,
+            and performance-oriented tools.
+          </p>
+        </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/" aria-current="page">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/gallery/">Gallery</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+      </header>
 
-            <!-- Social media -->
-            <div>
+      <section class="section" aria-labelledby="contact">
+        <h2 id="contact" class="section-title">Contact</h2>
+        <div class="stack">
+          <dl class="contact-list">
+            <dd>nathan [dot] abebe [at] yale [dot] edu</dd>
+            <br />
+            <dd class="link-row">
               <a
                 href="https://github.com/Nathan5563"
                 target="_blank"
                 rel="noopener"
                 >GitHub</a
               >
-              •
               <a
                 href="https://linkedin.com/in/nathan5563"
                 target="_blank"
                 rel="noopener"
                 >LinkedIn</a
               >
-            </div>
-
-            <!-- Subdomains -->
-            <div>
-              <a href="resume/index.html">Resume</a> •
-              <a href="projects/index.html">Projects</a> •
-              <a
-                href="https://nathanabebe.substack.com"
-                target="_blank"
-                rel="noopener"
-                >Blog</a
-              >
-              •
-              <a href="gallery/index.html">Gallery</a>
-            </div>
-          </address>
+              <a href="/resume/Nathan_Abebe_Resume.pdf">Resume</a>
+            </dd>
+          </dl>
         </div>
-      </div>
+      </section>
 
-      <!-- Main Content -->
-      <div class="col-right">
-        <!-- Section: About -->
-        <div class="top-card">
-          <p>
-            I’m a sophomore at
-            <a href="https://www.yale.edu" target="_blank" rel="noopener"
-              >Yale University</a
-            >
-            pursuing a double major in Computer Science and Electrical
-            Engineering (ABET-accredited). My focus is on
-            <strong>robust, low-latency systems</strong> and
-            <strong>scalable architectures</strong>.
-          </p>
+      <section class="section" aria-labelledby="work">
+        <h2 id="work" class="section-title">Work</h2>
+        <div class="stack">
+          <article class="entry">
+            <div class="entry-header">
+              <h3>Cloudflare</h3>
+              <span class="entry-time">Summer 2026</span>
+            </div>
+            <p class="role-line">Software Engineer Intern</p>
+            <p>Coming soon.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-header">
+              <h3>Yale Computer Graphics Group</h3>
+              <span class="entry-time">2025-2026</span>
+            </div>
+            <p class="role-line">Performance Engineering Researcher</p>
+            <p>
+              Performance optimization for graphics systems, advised by
+              <a href="https://mshah.io" target="_blank" rel="noopener"
+                >Dr. Mike Shah</a
+              >.
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-header">
+              <h3>Yale University</h3>
+              <span class="entry-time">Fall 2025-Spring 2026</span>
+            </div>
+            <p class="role-line">Teaching Assistant</p>
+            <p>Computer Systems office hours, grading, and review sessions.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-header">
+              <h3>Yale Efficient Computing Lab</h3>
+              <span class="entry-time">Summer 2025</span>
+            </div>
+            <p class="role-line">Systems Engineering Researcher</p>
+            <p>
+              Large-scale FPGA management systems, advised by
+              <a href="https://www.linzhong.org/" target="_blank" rel="noopener"
+                >Prof. Lin Zhong</a
+              >.
+            </p>
+          </article>
         </div>
+      </section>
 
-        <!-- Section: Recent News -->
-        <div class="top-card">
-          <h2 class="card-title">Recent News</h2>
-          <div class="news-year">
-            <h3 class="news-year-heading">[2025]</h3>
-            <ul class="news-list">
-              <li>
-                Published <a href="projects/quark/index.html">Quark</a>, a
-                feature-complete 2D game engine with an impulse-based physics
-                system and a custom scripting language.
-              </li>
-              <li>
-                Started as a Teaching Assistant for CPSC 3230 (Systems
-                Programming and Computer Organization).
-              </li>
-              <li>
-                Participated in
-                <a
-                  href="https://www.usenix.org/conference/osdi25"
-                  target="_blank"
-                  rel="noopener"
-                  >ATC/OSDI '25</a
-                >
-                and
-                <a
-                  href="https://qec25.yalepages.org/"
-                  target="_blank"
-                  rel="noopener"
-                  >QEC '25</a
-                >
-                research conferences.
-              </li>
-              <li>
-                Joined the
-                <a href="https://yecl.org" target="_blank" rel="noopener"
-                  >Yale Efficient Computing Lab</a
-                >
-                to work on large-scale FPGA management systems, advised by Prof.
-                <a
-                  href="https://www.linzhong.org/"
-                  target="_blank"
-                  rel="noopener"
-                  >Lin Zhong</a
-                >.
-              </li>
-              <li>
-                Started working on performance optimization for graphics
-                systems, advised by Dr.
-                <a href="https://mshah.io" target="_blank" rel="noopener"
-                  >Mike Shah</a
-                >.
-              </li>
-            </ul>
-          </div>
-          <div class="news-year">
-            <h3 class="news-year-heading">[2024]</h3>
-            <ul class="news-list">
-              <li>
-                Joined
-                <a
-                  href="https://yaleaerospace.org/main/project-liquid"
-                  target="_blank"
-                  rel="noopener"
-                  >Yale Project Liquid</a
-                >
-                to work on real-time flight computer systems and electrical
-                ground support equipment for liquid rockets.
-              </li>
-              <li>
-                Completed coursework in data structures, discrete mathematics,
-                and electronics.
-              </li>
-            </ul>
-          </div>
+      <section class="section" aria-labelledby="systems">
+        <h2 id="systems" class="section-title">Projects</h2>
+        <div class="project-list">
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>superFastObj</h3>
+              <span class="project-meta">C++ / SIMD / threads</span>
+            </div>
+            <p>
+              Wavefront <code>.obj</code> parser designed for rapid geometry
+              processing. Order-of-magnitude performance gains over
+              industry-standard <code>tinyobjloader</code>.
+            </p>
+          </article>
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>HADES</h3>
+              <span class="project-meta">embedded / sensors / RF</span>
+            </div>
+            <p>
+              Four-PCB electrical ground support system for remote-controlled
+              liquid rocket fueling and arming operations.
+            </p>
+          </article>
+          <article class="project-entry">
+            <div class="project-head">
+              <h3><a href="/projects/quark/">Quark</a></h3>
+              <span class="project-meta">D / physics / scripting</span>
+            </div>
+            <p>
+              A 2D game engine with impulse-based physics, a custom scripting
+              language, and mutex-controlled multithreading across subsystem
+              timesteps.
+            </p>
+          </article>
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>ntraycer</h3>
+              <span class="project-meta">D / path tracing / assembly I/O</span>
+            </div>
+            <p>
+              A dependency-free path tracer implementing Monte Carlo global
+              illumination, material models, custom RNG modules, and low-level
+              assembly I/O.
+            </p>
+          </article>
         </div>
+      </section>
 
-        <!-- Section: Selected Projects -->
-        <div class="top-card">
-          <h2 class="card-title">Selected Projects</h2>
-
-          <!-- Project: GRAPH .obj Parser-->
-          <div class="project" style="margin-top: 20px !important">
-            <div class="project-header">
-              <h3 class="project-title">
-                <a href="#" rel="noopener">
-                  superFastObj &mdash; Optimized Wavefront (.obj) Parser
-                </a>
-              </h3>
-              <h4 class="project-subtitle">Jul 2025 &ndash; Present</h4>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">C++</span>
-              <span class="skill-tag">SIMD</span>
-              <span class="skill-tag">Multithreading</span>
-              <span class="skill-tag">Performance Optimization</span>
-            </div>
-            <p class="project-desc">
-              A high-performance Wavefront (.obj) file parser leveraging
-              multithreading and SIMD instructions for rapid geometry
-              processing. Designed for scalability and efficiency in 3D
-              rendering pipelines, it achieves over 7x performance over industry
-              standard tinyobjloader.
-            </p>
-          </div>
-
-          <!-- Project: PLIQ EGSE -->
-          <div class="project">
-            <div class="project-header">
-              <h3 class="project-title">
-                <a href="#" rel="noopener">
-                  HADES &mdash; Liquid Rocketry Electrical Ground Support System
-                </a>
-              </h3>
-              <h4 class="project-subtitle">Aug 2025 &ndash; Present</h4>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">C++</span>
-              <span class="skill-tag">Embedded Systems</span>
-              <span class="skill-tag">Sensor Integration</span>
-              <span class="skill-tag">RF Communication</span>
-            </div>
-            <p class="project-desc">
-              Comprehensive 4-PCB electrical system for remote-controlled liquid
-              rocket fueling and arming operations. The system includes a power
-              management board, central MCU with high-precision ADCs, dedicated
-              load cell, pressure, and temperature sensor interfaces, and valve
-              actuation control for Class 2 liquid propellant systems.
-            </p>
-          </div>
-
-          <!-- Project: quark -->
-          <div class="project">
-            <div class="project-header">
-              <h3 class="project-title">
-                <a href="projects/quark/index.html" rel="noopener">
-                  Quark &mdash; 2D Game Engine
-                </a>
-              </h3>
-              <h4 class="project-subtitle">Oct 2025 &ndash; Dec 2025</h4>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Dlang</span>
-              <span class="skill-tag">Impulse-Based Physics</span>
-              <span class="skill-tag">Multithreading and Events</span>
-              <span class="skill-tag">Compilers</span>
-            </div>
-            <p class="project-desc">
-              Quark is a fully-featured 2D game engine built as a final project
-              for CPSC 4791 at Yale University. It includes an impulse-based
-              physics engine, a custom scripting language, and mutex-controlled
-              multithreading for subsystems running with different timesteps.
-            </p>
-          </div>
-
-          <!-- Project: fpgafs -->
-          <!-- <div class="project">
-            <div class="project-header">
-              <h3 class="project-title">
-                <a href="#" rel="noopener">
-                  fpgafs &mdash; Distributed Multi-FPGA Control Stack
-                </a>
-              </h3>
-              <h4 class="project-subtitle">Jun 2025 &ndash; Aug 2025</h4>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">C</span>
-              <span class="skill-tag">Linux Kernel</span>
-              <span class="skill-tag">Distributed Systems</span>
-              <span class="skill-tag">SystemVerilog</span>
-            </div>
-            <p class="project-desc">
-              Developed a distributed system for managing FPGA resources across
-              multiple nodes. Designed a custom Linux kernel module for
-              efficient, parallel communication between the server and various
-              FPGA nodes. Tested management software with production-grade
-              quantum error code decoders.
-            </p>
-          </div>
-          <span><hr /></span> -->
-
-          <!-- Project: ntraycer -->
-          <div class="project">
-            <div class="project-header">
-              <h3 class="project-title">
-                <a href="#" rel="noopener">
-                  ntraycer &mdash; Path Tracing From Scratch
-                </a>
-              </h3>
-              <h4 class="project-subtitle">Jun 2025 &ndash; Aug 2025</h4>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Dlang</span>
-              <span class="skill-tag">Path Tracing</span>
-              <span class="skill-tag">Monte-Carlo Integration</span>
-              <span class="skill-tag">x86 Assembly</span>
-            </div>
-            <p class="project-desc">
-              A physically-based path tracer written with no external
-              dependencies as a learning exercise. Features Monte Carlo
-              integration for global illumination, support for various material
-              types, custom RNG (xorshift) modules, and low-level assembly I/O.
-              Implements the rendering equation using multiple importance
-              sampling for faster convergence.
-            </p>
-          </div>
-          <!-- <span><hr /></span> -->
-
-          <!-- Project: NES Emulator -->
-          <!-- <div class="project">
-            <div class="project-header">
-              <h3 class="project-title">
-                <a href="#" rel="noopener"> nnes &mdash; NES Emulator </a>
-              </h3>
-              <h4 class="project-subtitle">Mar 2025 &ndash; Jul 2025</h4>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Rust</span>
-              <span class="skill-tag">SDL2</span>
-              <span class="skill-tag">6502 Assembly</span>
-              <span class="skill-tag">Console Emulation</span>
-            </div>
-            <p class="project-desc">
-              A NES emulator achieving near-cycle accuracy for Mapper 0 titles
-              like Donkey Kong. Emulated all official opcodes of the 6502
-              processor and implemented the graphics rendering pipeline of the
-              2C02 chip via SDL2.
-            </p>
-          </div> -->
-
-          <div class="more-projects">
-            <a href="projects/index.html">See more...</a>
-          </div>
+      <section class="section" aria-labelledby="coursework">
+        <h2 id="coursework" class="section-title">Courses</h2>
+        <div class="stack">
+          <ul class="course-list" aria-label="Selected coursework">
+            <li><code>CPSC 4200</code><span>Computer Architecture</span></li>
+            <li><code>CPSC 4330</code><span>Computer Networks</span></li>
+            <li>
+              <code>CPSC 4792</code><span>Real-time Computer Graphics</span>
+            </li>
+            <li><code>CPSC 3650</code><span>Algorithms</span></li>
+            <li><code>CPSC 3230</code><span>Computer Systems</span></li>
+            <li><code>MATH 2410</code><span>Probability Theory</span></li>
+          </ul>
         </div>
+      </section>
 
-        <!-- Section: Relevant Courses -->
-        <div class="top-card">
-          <h2 class="card-title">Relevant Coursework</h2>
-
-          <!-- TA'd Classes -->
-          <div class="classes">
-            <h3 class="class-heading">Teaching Assistant</h3>
-            <ul class="class-list">
-              <li>
-                <b class="course-code">CPSC 3230</b> &mdash; Computer Systems
-                <br />
-                <small
-                  >Held weekly office hours, graded assignments, and led review
-                  sessions on assembly language, operating systems, and computer
-                  architecture fundamentals. Primarily programmed and instructed
-                  using the C programming language, with coverage of Rust and
-                  Dlang for memory safety.</small
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Taken Classes -->
-          <div class="classes">
-            <h3 class="class-heading">Student</h3>
-            <ul class="class-list">
-              <li>
-                <b class="course-code">CPSC 4200</b>
-                &mdash; Computer Architecture
-              </li>
-              <li>
-                <b class="course-code">CPSC 4330</b>
-                &mdash; Computer Networks
-              </li>
-              <li>
-                <b class="course-code">CPSC 4792</b>
-                &mdash; Real-time Computer Graphics
-              </li>
-              <li>
-                <b class="course-code">ECE &nbsp;3481</b>
-                &mdash; Digital Systems
-              </li>
-              <li>
-                <b class="course-code">CPSC 4791</b>
-                &mdash; Building Game Engines
-              </li>
-              <li><b class="course-code">CPSC 3650</b> &mdash; Algorithms</li>
-              <li>
-                <b class="course-code">MATH 2410</b>
-                &mdash; Probability Theory
-              </li>
-              <li>
-                <b class="course-code">MATH 2250</b>
-                &mdash; Linear Algebra
-              </li>
-              <li>
-                <b class="course-code">CPSC 323</b>
-                &mdash; Computer Systems
-              </li>
-              <li>
-                <b class="course-code">CPSC 223</b>
-                &mdash; Data Structures
-              </li>
-              <li>
-                <b class="course-code">MATH 244</b>
-                &mdash; Discrete Mathematics
-              </li>
-              <li>
-                <b class="course-code">EENG 200</b>
-                &mdash; Electronics
-              </li>
-              <li>
-                <b class="course-code">MATH 120</b>
-                &mdash; Multivariable Calculus
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <button id="toggle-theme" class="btn">
-      <img width="35px" id="theme-icon" />
-    </button>
-
-    <script src="app.js"></script>
+      <footer class="footer">Last updated 2026-06-03.</footer>
+    </main>
   </body>
 </html>

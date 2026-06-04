@@ -1,176 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quark | Nathan Abebe</title>
+    <meta name="author" content="Nathan Abebe" />
+    <meta name="theme-color" content="#fbfbf7" />
     <meta
       name="description"
-      content="Quark is a fully-featured 2D game engine by Nathan Abebe. Built for CPSC 4791 at Yale University, featuring impulse-based physics engine, custom scripting language, and mutex-controlled multithreading."
+      content="Quark is a 2D game engine by Nathan Abebe with impulse-based physics, a custom scripting language, and mutex-controlled multithreading."
     />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Nathan Abebe",
-        "url": "https://nathanabebe.com",
-        "email": "mailto:nathan.abebe@yale.edu",
-        "jobTitle": "Computer Science and Electrical Engineering Student",
-        "worksFor": {
-          "@type": "EducationalOrganization",
-          "name": "Yale University"
+        "@type": "SoftwareSourceCode",
+        "name": "Quark",
+        "author": {
+          "@type": "Person",
+          "name": "Nathan Abebe",
+          "url": "https://nathanabebe.com"
         },
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Yale University"
-        },
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Bachelor of Science in Computer Science and Electrical Engineering",
-          "educationalLevel": "Undergraduate"
-        },
-        "knowsAbout": [
-          "Computer Science",
-          "Electrical Engineering",
-          "FPGA Development",
-          "Embedded Systems",
-          "Low-latency Systems",
-          "Distributed Systems"
-        ],
-        "sameAs": [
-          "https://github.com/Nathan5563",
-          "https://linkedin.com/in/nathan5563"
-        ]
+        "programmingLanguage": "D",
+        "description": "A 2D game engine with impulse-based physics, a custom scripting language, and mutex-controlled multithreading."
       }
     </script>
     <meta property="og:title" content="Quark | Nathan Abebe" />
+    <meta property="og:site_name" content="Nathan Abebe" />
     <meta
       property="og:description"
-      content="Quark is a fully-featured 2D game engine by Nathan Abebe. Built for CPSC 4791 at Yale University, featuring impulse-based physics engine, custom scripting language, and mutex-controlled multithreading."
+      content="A D-based 2D game engine with physics, scripting, events, and multithreaded subsystems."
     />
     <meta property="og:url" content="https://nathanabebe.com/projects/quark/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="Quark_UML.png" />
+    <meta
+      property="og:image"
+      content="https://nathanabebe.com/projects/quark/Quark_UML.png"
+    />
     <meta
       property="og:image:alt"
-      content="Quark Game Engine UML Architecture Diagram"
+      content="Quark game engine UML architecture diagram"
     />
     <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Quark | Nathan Abebe" />
+    <meta
+      name="twitter:description"
+      content="A D-based 2D game engine with physics, scripting, events, and multithreaded subsystems."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nathanabebe.com/projects/quark/Quark_UML.png"
+    />
     <link rel="canonical" href="https://nathanabebe.com/projects/quark/" />
-    <link rel="icon" type="image/png" href="../../icons/favicon.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="stylesheet" href="/app.css" />
   </head>
-  <body class="latex-light-auto">
-    <!-- Theme toggle button -->
-    <button id="toggle-theme" class="btn btn-light" onclick="toggleTheme()">
-      <img
-        id="theme-icon"
-        src="../../icons/moon.png"
-        alt="Toggle theme"
-        width="35"
-        height="35"
-      />
-    </button>
-
-    <div class="container">
-      <header class="hero-section">
-        <h1>Quark</h1>
-        <p class="subtitle">
-          Quark is a fully-featured 2D game engine built as a final project for
-          CPSC 4791 at Yale University. It includes an impulse-based physics
-          engine, a custom scripting language, and mutex-controlled
-          multithreading for subsystems running with different timesteps.
-          <b
-            >Download demos
-            <a
-              href="https://drive.google.com/file/d/1p4x6o00BvuqNLabH8m_VDwzCUMK2mRMC/view?usp=sharing"
-              target="_blank"
-              >here</a
-            >!</b
-          >
-        </p>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <main id="content" class="site-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">Projects / Quark</p>
+          <h1 class="page-title">Quark</h1>
+          <p class="lede">
+            A 2D game engine I built for CPSC 4791 at Yale. It has impulse-based
+            physics, a custom scripting language, and threaded subsystems that
+            run at different timesteps.
+          </p>
+        </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/projects/" aria-current="page">Projects</a>
+          <a href="/gallery/">Gallery</a>
+          <a href="/blog/">Blog</a>
+        </nav>
       </header>
 
-      <!-- YouTube Video Section -->
-      <section class="video-section">
-        <h2>Engine Demo</h2>
-        <div class="video-container">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/BruQP0oKTyU"
-            title="Quark Game Engine Demo"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          >
-          </iframe>
+      <section class="section" aria-labelledby="summary">
+        <h2 id="summary" class="section-title">Summary</h2>
+        <div class="stack">
+          <dl class="meta-list">
+            <dt>Language</dt>
+            <dd>D</dd>
+            <dt>Focus</dt>
+            <dd>
+              2D engine architecture, physics, scripting, events, multithreading
+            </dd>
+            <dt>Docs</dt>
+            <dd>
+              <a
+                href="/projects/quark/docs/public/index.html"
+                target="_blank"
+                rel="noopener"
+                >API documentation</a
+              >
+            </dd>
+          </dl>
+          <p>
+            Quark is primarily a framework for developing 2D games, providing engine
+            services such as resource management, real-time updates, and user scripts
+            sharing one runtime.
+          </p>
         </div>
       </section>
 
-      <!-- Gallery Section -->
-      <section class="gallery-section">
-        <h2>Screenshots</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="screenshot1.gif" alt="Game Engine Screenshot 1" />
-          </div>
-          <div class="gallery-item">
-            <img src="screenshot2.gif" alt="Game Engine Screenshot 2" />
-          </div>
-          <div class="gallery-item">
-            <img src="screenshot3.gif" alt="Game Engine Screenshot 3" />
-          </div>
-          <div class="gallery-item">
-            <img src="screenshot4.gif" alt="Game Engine Screenshot 4" />
-          </div>
+      <section class="section" aria-labelledby="how-it-works">
+        <h2 id="how-it-works" class="section-title">How it works</h2>
+        <div class="project-list">
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>Physics</h3>
+              <span class="project-meta">impulse solver</span>
+            </div>
+            <p>
+              Collision events flow through engine managers, so gameplay code
+              can react to contact without owning the physics loop.
+            </p>
+          </article>
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>Scripting</h3>
+              <span class="project-meta">custom language</span>
+            </div>
+            <p>
+              Game behavior can be written in a small custom language
+              interpreted inside the engine.
+            </p>
+          </article>
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>Scheduling</h3>
+              <span class="project-meta">mutex-controlled threads</span>
+            </div>
+            <p>
+              Subsystems can tick at different rates and coordinate through
+              mutex-controlled threads.
+            </p>
+          </article>
         </div>
       </section>
 
-      <!-- UML Diagram Section -->
-      <section class="diagram-section">
-        <h2>Engine Architecture</h2>
-        <div class="diagram-container">
-          <img
-            src="Quark_UML.png"
-            alt="Quark Game Engine UML Diagram"
-            class="uml-diagram"
-            width="900px"
-          />
-          <div class="doc-link-container">
-            <a href="docs/public/index.html" class="doc-link" target="_blank">
-              <span class="doc-text">View API Documentation</span>
+      <section class="section" aria-labelledby="links">
+        <h2 id="links" class="section-title">Links</h2>
+        <div class="stack">
+          <ul class="link-list">
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1p4x6o00BvuqNLabH8m_VDwzCUMK2mRMC/view?usp=sharing"
+                target="_blank"
+                rel="noopener"
+                >Download demos</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube-nocookie.com/embed/BruQP0oKTyU"
+                target="_blank"
+                rel="noopener"
+                >Video</a
+              >
+            </li>
+            <li><a href="/projects/quark/screenshot1.gif">Screenshot 1</a></li>
+            <li><a href="/projects/quark/screenshot2.gif">Screenshot 2</a></li>
+            <li><a href="/projects/quark/screenshot3.gif">Screenshot 3</a></li>
+            <li><a href="/projects/quark/screenshot4.gif">Screenshot 4</a></li>
+          </ul>
+          <figure>
+            <a href="/projects/quark/Quark_UML.png">
+              <img
+                src="/projects/quark/Quark_UML.png"
+                width="1501"
+                height="2011"
+                loading="lazy"
+                alt="UML architecture diagram for the Quark game engine"
+              />
             </a>
-          </div>
+            <figcaption>Engine architecture diagram.</figcaption>
+          </figure>
         </div>
       </section>
 
-      <!-- Postmortem Section -->
-      <section class="description-section">
-        <h2>Postmortem</h2>
-        <div class="description-content">
-          Looking back, I should have spent some more time building out useful
-          tools to assist in data creation. I had planned on building a scene
-          editor early on in the project, but later cut it out because I didn't
-          have enough time and decided to focus on my engine. While I am happy
-          with how things turned out, having to develop the actual game at the
-          end taught me to think from the perspective of the user as well, since
-          I realized that some additional tooling would've been more useful as
-          opposed to additional features in the engine.
-        </div>
-        <br />
-        <div>
-          That being said, if I had more time to work on the project, I would do
-          the following, roughly in stated order: build more assistive tooling
-          to make scene/collider/rigidbody creation as trivial as possible,
-          upgrade my physics engine to include fluid simulations for in-game
-          fluid animations, and add nice-to-have features such as spatial sound
-          effects, better text rendering, and various performance optimizations.
-          At a higher level, I would also like to build an input manager for
-          cohesive input tracking and a network manager/networking subsystem
-          for multiplayer games.
+      <section class="section" aria-labelledby="what-i-would-change">
+        <h2 id="what-i-would-change" class="section-title">
+          What I would change
+        </h2>
+        <div class="stack">
+          <p>
+            The engine ended up much farther than the tooling. Once I'd finished
+            the project, making game content was slower than it needed to be
+            because the scene, collider, and rigidbody construction was still
+            mostly manual.
+          </p>
+          <p>
+            If I extended this project, I would build an editor first, then add
+            more interesting features like fluid effects, spatial audio, better
+            text rendering, input management, and networking.
+          </p>
         </div>
       </section>
-    </div>
 
-    <script src="app.js"></script>
+      <footer class="footer">
+        <a href="/projects/">Projects</a>
+      </footer>
+    </main>
   </body>
 </html>

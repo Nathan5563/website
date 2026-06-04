@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects | Nathan Abebe</title>
+    <meta name="author" content="Nathan Abebe" />
+    <meta name="theme-color" content="#fbfbf7" />
     <meta
       name="description"
-      content="See Nathan Abebe's projects. Computer Science and Electrical Engineering at Yale University. Robust, low-latency systems, FPGA architectures, embedded systems."
+      content="Projects by Nathan Abebe: optimized parsers, embedded systems, FPGA management work, path tracing, emulation, and the Quark game engine."
     />
     <script type="application/ld+json">
       {
@@ -16,27 +18,10 @@
         "url": "https://nathanabebe.com",
         "email": "mailto:nathan.abebe@yale.edu",
         "jobTitle": "Computer Science and Electrical Engineering Student",
-        "worksFor": {
+        "affiliation": {
           "@type": "EducationalOrganization",
           "name": "Yale University"
         },
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Yale University"
-        },
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Bachelor of Science in Computer Science and Electrical Engineering",
-          "educationalLevel": "Undergraduate"
-        },
-        "knowsAbout": [
-          "Computer Science",
-          "Electrical Engineering",
-          "FPGA Development",
-          "Embedded Systems",
-          "Low-latency Systems",
-          "Distributed Systems"
-        ],
         "sameAs": [
           "https://github.com/Nathan5563",
           "https://linkedin.com/in/nathan5563"
@@ -44,80 +29,216 @@
       }
     </script>
     <meta property="og:title" content="Projects | Nathan Abebe" />
+    <meta property="og:site_name" content="Nathan Abebe" />
     <meta
       property="og:description"
-      content="See Nathan Abebe's projects. Computer Science and Electrical Engineering at Yale University. Robust, low-latency systems, FPGA architectures, embedded systems."
+      content="Project notes across systems, embedded hardware, graphics, and performance engineering."
     />
     <meta property="og:url" content="https://nathanabebe.com/projects/" />
     <meta property="og:type" content="website" />
     <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Projects | Nathan Abebe" />
+    <meta
+      name="twitter:description"
+      content="Project notes across systems, embedded hardware, graphics, and performance engineering."
+    />
     <link rel="canonical" href="https://nathanabebe.com/projects/" />
-    <link rel="icon" type="image/png" href="../icons/favicon.png" />
-    <link rel="stylesheet" href="projects.css" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="stylesheet" href="/app.css" />
   </head>
   <body>
-    <div class="construction-banner">
-      🚧 Project Pages Under Construction 🚧
-    </div>
-    <div class="container">
-      <header>
-        <div class="header-left">
-          <a href="../index.html" class="back-link">← Back to Home</a>
-          <h1>Projects</h1>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <main id="content" class="site-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">Projects</p>
+          <h1 class="page-title">Projects.</h1>
+          <p class="lede">
+            Systems and tooling I've developed, spanning embedded systems,
+            graphics, performance engineering, and low-level software.
+          </p>
         </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/projects/" aria-current="page">Projects</a>
+          <a href="/gallery/">Gallery</a>
+          <a href="/blog/">Blog</a>
+        </nav>
       </header>
-      <div class="project-grid">
-        <a href="quark/index.html">
-          <div class="project">
-            <img src="../images/quark.png" alt="Platformer game" />
-            <div class="project-title-overlay"><mark>Quark</mark></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="project">
-            <img src="../images/fpga.jpg" alt="FPGA array" />
-            <div class="project-title-overlay"><mark>fpgafs</mark></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="project">
-            <img src="../images/obj.png" alt="Buggy render of Stanford bunny" />
-            <div class="project-title-overlay"><mark>.obj Parser</mark></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="project">
-            <img src="../images/rocket.png" alt="CAD drawing of rocket" />
-            <div class="project-title-overlay">
-              <mark>Rocket Flight Computer</mark>
+
+      <section class="section" aria-labelledby="project-index">
+        <h2 id="project-index" class="section-title">Projects</h2>
+        <div class="project-list">
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>superFastObj</h3>
+              <span class="project-meta">Jul 2025-Apr 2026</span>
             </div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="project">
-            <img src="../images/egse.png" alt="Circuitry for rocket ground support" />
-            <div class="project-title-overlay"><mark>Rocket EGSE</mark></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="project">
-            <img src="../images/nnes.png" alt="Super Mario Bros on nnes NES emulator" />
-            <div class="project-title-overlay"><mark>nnes</mark></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="project">
-            <img src="../images/ntraycer.png" alt="Cornell box scene rendered via ray tracing" />
-            <div class="project-title-overlay"><mark>ntraycer</mark></div>
-          </div>
-        </a>
-      </div>
-    </div>
+            <p>
+              A high-performance Wavefront <code>.obj</code> parser using
+              multithreading and SIMD instructions for geometry processing in 3D
+              rendering pipelines.
+            </p>
+            <ul class="fact-list">
+              <li>
+                <b>Area</b
+                ><span
+                  >Parsing, rendering infrastructure, performance
+                  optimization.</span
+                >
+              </li>
+              <li><b>Built with</b><span>C++, SIMD, multithreading.</span></li>
+              <li>
+                <b>Context</b
+                ><span
+                  >Yale Computer Graphics Group; advised by
+                  <a href="https://mshah.io" target="_blank" rel="noopener"
+                    >Dr. Mike Shah</a
+                  >.</span
+                >
+              </li>
+            </ul>
+          </article>
 
-    <button id="toggle-theme" class="btn">
-      <img width="35px" id="theme-icon" />
-    </button>
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>HADES</h3>
+              <span class="project-meta">Aug 2025-Apr 2026</span>
+            </div>
+            <p>
+              A four-PCB electrical system for remote-controlled liquid rocket
+              fueling and arming operations, including power management, central
+              MCU, sensor interfaces, and valve actuation control.
+            </p>
+            <ul class="fact-list">
+              <li>
+                <b>Area</b
+                ><span
+                  >Embedded systems and electrical ground support
+                  equipment.</span
+                >
+              </li>
+              <li>
+                <b>Built with</b
+                ><span>C++, sensor integration, RF communication.</span>
+              </li>
+              <li><b>Context</b><span>Yale Project Liquid.</span></li>
+            </ul>
+          </article>
 
-    <script src="projects.js"></script>
+          <article class="project-entry">
+            <div class="project-head">
+              <h3><a href="/projects/quark/">Quark</a></h3>
+              <span class="project-meta">Oct 2025-Dec 2025</span>
+            </div>
+            <p>
+              A 2D game engine built for CPSC 4791 at Yale, with impulse-based
+              physics, a custom scripting language, and mutex-controlled
+              multithreading for subsystems running at different timesteps.
+            </p>
+            <ul class="fact-list">
+              <li>
+                <b>Area</b
+                ><span
+                  >Game engines, real-time simulation, language tooling.</span
+                >
+              </li>
+              <li>
+                <b>Built with</b
+                ><span>D, physics, events, scripting, multithreading.</span>
+              </li>
+              <li>
+                <b>Context</b><span>Final project for CPSC 4791 at Yale.</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>ntraycer</h3>
+              <span class="project-meta">Jun 2025-Aug 2025</span>
+            </div>
+            <p>
+              A physically based path tracer written without external
+              dependencies, implementing Monte Carlo global illumination,
+              material models, custom RNG modules, and low-level assembly I/O.
+            </p>
+            <ul class="fact-list">
+              <li>
+                <b>Area</b
+                ><span>Rendering, numerical methods, systems programming.</span>
+              </li>
+              <li>
+                <b>Built with</b
+                ><span
+                  >D, path tracing, Monte Carlo integration, x86 assembly.</span
+                >
+              </li>
+              <li><b>Context</b><span>Personal project.</span></li>
+            </ul>
+          </article>
+
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>fpgafs</h3>
+              <span class="project-meta">Jun 2025-Aug 2025</span>
+            </div>
+            <p>
+              FPGA management work connected to systems research at the Yale
+              Efficient Computing Lab.
+            </p>
+            <ul class="fact-list">
+              <li>
+                <b>Area</b
+                ><span
+                  >Distributed systems, FPGA management, hardware/software
+                  interfaces.</span
+                >
+              </li>
+              <li>
+                <b>Built with</b
+                ><span>C, kernel development, FPGA management.</span>
+              </li>
+              <li>
+                <b>Context</b
+                ><span
+                  >Yale Efficient Computing Lab; advised by
+                  <a
+                    href="https://www.linzhong.org/"
+                    target="_blank"
+                    rel="noopener"
+                    >Prof. Lin Zhong</a
+                  >.</span
+                >
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-entry">
+            <div class="project-head">
+              <h3>nnes</h3>
+              <span class="project-meta">Mar 2025-Jul 2025</span>
+            </div>
+            <p>A Rust NES emulator focused on low-level console behavior.</p>
+            <ul class="fact-list">
+              <li>
+                <b>Area</b
+                ><span>Emulation and low-level systems behavior.</span>
+              </li>
+              <li>
+                <b>Built with</b
+                ><span>Rust, NES emulation, cycle-accurate systems.</span>
+              </li>
+              <li><b>Context</b><span>Personal project.</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <a href="/">Home</a>
+      </footer>
+    </main>
   </body>
 </html>
