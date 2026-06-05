@@ -1,0 +1,42 @@
+[
+  {
+    "file": "ceid-yale.png",
+    "location": "CEID @ Yale, New Haven, CT.",
+    "columns": 4
+  },
+  {
+    "file": "east-rock.png",
+    "location": "East Rock, New Haven, CT",
+    "columns": 2
+  },
+  {
+    "file": "sunflowers.png",
+    "location": "New Haven, CT",
+    "columns": 2
+  },
+  {
+    "file": "silliman-yale.png",
+    "location": "New Haven, CT",
+    "columns": 4
+  },
+  {
+    "file": "houseplant.png",
+    "location": "SOM @ Yale, New Haven, CT",
+    "columns": 4
+  },
+  {
+    "file": "sunset.png",
+    "location": "New Haven, CT",
+    "columns": 2
+  },
+  {
+    "file": "som-yale.png",
+    "location": "New Haven, CT",
+    "columns": 4
+  },
+  {
+    "file": "window.png",
+    "location": "New Haven, CT",
+    "columns": 2
+  }
+]
