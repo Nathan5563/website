@@ -243,7 +243,7 @@ function head({ title, description, canonical, robots = "index, follow", type = 
     <meta name="twitter:title" content="${escapeAttr(fullTitle)}" />
     <meta name="twitter:description" content="${escapeAttr(description)}" />
     <link rel="canonical" href="${escapeAttr(canonical)}" />
-    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="/app.css" />
   </head>`;
 }
