@@ -213,8 +213,8 @@ function nav(current = "Blog") {
   const links = [
     ["Home", "/"],
     ["Projects", "/projects/"],
-    ["Gallery", "/gallery/"],
-    ["Blog", "/blog/"]
+    ["Blog", "/blog/"],
+    ["Gallery", "/gallery/"]
   ];
 
   return `<nav class="site-nav" aria-label="Primary navigation">

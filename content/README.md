@@ -24,26 +24,26 @@ Run `npm run blog` to regenerate only blog HTML, or `npm run build` to regenerat
 
 ## Gallery
 
-Put PNG files in `content/gallery/`.
+Put original PNG files in `content/gallery/`, then list the public gallery in
+`content/gallery/photos.json`. The manifest is authoritative: images not listed
+there are ignored, order follows the JSON order unless an `order` value is set,
+and captions come only from `location`.
 
-The gallery generator runs before `npm run dev` and `npm run build`. It copies those files to `public/gallery/` so Vite can serve them at `/gallery/<file>.png`. Deleting a PNG removes its copied public image and its gallery entry on the next generation run.
+The gallery generator runs before `npm run dev` and `npm run build`. It converts
+listed PNG sources into stripped, lossless WebP files in `public/gallery/` and
+serves them at `/gallery/<basename>.webp`. Raw PNG originals are not copied into
+`public/gallery/` or `dist/`.
 
-Filenames control default order and captions:
-
-```text
-01-new-haven-ct.png -> New Haven, CT.
-02-east-rock-new-haven.png -> East Rock New Haven.
-```
-
-For exact captions or manual ordering, add `content/gallery/photos.json`:
+Each generated WebP must stay below the Cloudflare Workers Static Assets
+per-file limit of `26,214,400` bytes; generation fails if an image exceeds it.
 
 ```json
 [
   {
-    "file": "01-new-haven-ct.png",
-    "location": "New Haven, CT.",
-    "alt": "Photograph from New Haven, Connecticut",
-    "columns": 2
+    "file": "ceid-yale.png",
+    "location": "CEID @ Yale, New Haven, CT.",
+    "alt": "Photograph of the CEID at Yale University in New Haven, Connecticut",
+    "columns": 4
   }
 ]
 ```

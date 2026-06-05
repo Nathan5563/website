@@ -1,10 +1,15 @@
+import { execFileSync } from "node:child_process";
 import {
-  copyFileSync,
   existsSync,
   mkdirSync,
+  closeSync,
+  openSync,
+  readSync,
   readdirSync,
   readFileSync,
+  renameSync,
   rmSync,
+  statSync,
   writeFileSync
 } from "node:fs";
 import { basename, extname, join } from "node:path";
@@ -17,60 +22,7 @@ const galleryPath = join(root, "gallery", "index.html");
 const publicUrl = "/gallery";
 const startMarker = "<!-- gallery:generated:start -->";
 const endMarker = "<!-- gallery:generated:end -->";
-
-const stateAbbreviations = new Set([
-  "ak",
-  "al",
-  "ar",
-  "az",
-  "ca",
-  "co",
-  "ct",
-  "dc",
-  "de",
-  "fl",
-  "ga",
-  "hi",
-  "ia",
-  "id",
-  "il",
-  "in",
-  "ks",
-  "ky",
-  "la",
-  "ma",
-  "md",
-  "me",
-  "mi",
-  "mn",
-  "mo",
-  "ms",
-  "mt",
-  "nc",
-  "nd",
-  "ne",
-  "nh",
-  "nj",
-  "nm",
-  "nv",
-  "ny",
-  "oh",
-  "ok",
-  "or",
-  "pa",
-  "ri",
-  "sc",
-  "sd",
-  "tn",
-  "tx",
-  "ut",
-  "va",
-  "vt",
-  "wa",
-  "wi",
-  "wv",
-  "wy"
-]);
+const maxWorkerAssetBytes = 25 * 1024 * 1024;
 
 function escapeHtml(value) {
   return String(value)
@@ -101,8 +53,16 @@ function readPngSize(filePath) {
   };
 }
 
-function readMetadata() {
-  if (!existsSync(metadataPath)) return new Map();
+function requireText(entry, key, index) {
+  if (typeof entry[key] !== "string" || !entry[key].trim()) {
+    throw new Error(`${metadataPath} entry ${index + 1} needs a non-empty ${key}`);
+  }
+
+  return entry[key].trim();
+}
+
+function readPhotoEntries() {
+  if (!existsSync(metadataPath)) return [];
 
   const parsed = JSON.parse(readFileSync(metadataPath, "utf8"));
   const entries = Array.isArray(parsed) ? parsed : parsed.photos;
@@ -111,42 +71,51 @@ function readMetadata() {
     throw new Error(`${metadataPath} must be an array or an object with a photos array`);
   }
 
-  return new Map(
-    entries
-      .filter((entry) => entry && entry.file)
-      .map((entry, index) => [entry.file, { ...entry, order: entry.order ?? index }])
-  );
+  const seen = new Set();
+
+  return entries.map((entry, index) => {
+    if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
+      throw new Error(`${metadataPath} entry ${index + 1} must be an object`);
+    }
+
+    const file = requireText(entry, "file", index);
+
+    if (file !== basename(file) || file.includes("\\") || file.includes("/")) {
+      throw new Error(`${metadataPath} entry ${index + 1} file must be a filename only`);
+    }
+
+    if (!file.toLowerCase().endsWith(".png")) {
+      throw new Error(`${metadataPath} entry ${index + 1} must name a PNG source file`);
+    }
+
+    if (seen.has(file)) {
+      throw new Error(`${metadataPath} contains duplicate gallery file ${file}`);
+    }
+
+    seen.add(file);
+
+    const order = Number(entry.order ?? index);
+
+    if (!Number.isFinite(order)) {
+      throw new Error(`${metadataPath} entry ${index + 1} order must be a number`);
+    }
+
+    return {
+      file,
+      location: requireText(entry, "location", index),
+      alt: requireText(entry, "alt", index),
+      columns: entry.columns,
+      order
+    };
+  });
 }
 
-function cleanName(file) {
-  return basename(file, extname(file))
-    .replace(/^\d+[-_. ]+/, "")
-    .replace(/[-_]+/g, " ")
-    .trim();
-}
-
-function titleToken(token) {
-  const lower = token.toLowerCase();
-  if (stateAbbreviations.has(lower)) return lower.toUpperCase();
-  if (lower === "usa" || lower === "uk") return lower.toUpperCase();
-  return `${lower.charAt(0).toUpperCase()}${lower.slice(1)}`;
-}
-
-function captionFromFile(file) {
-  const tokens = cleanName(file).split(/\s+/).filter(Boolean);
-  if (!tokens.length) return "Untitled.";
-
-  const words = tokens.map(titleToken);
-  const last = tokens[tokens.length - 1].toLowerCase();
-  const caption = stateAbbreviations.has(last) && words.length > 1
-    ? `${words.slice(0, -1).join(" ")}, ${words.at(-1)}`
-    : words.join(" ");
-
-  return /[.?!]$/.test(caption) ? caption : `${caption}.`;
+function publicFileFor(sourceFile) {
+  return `${basename(sourceFile, extname(sourceFile))}.webp`;
 }
 
 function chooseColumns(width, height, metadata) {
-  if (metadata.columns) {
+  if (metadata.columns !== undefined) {
     const explicit = Number(metadata.columns);
     if (Number.isFinite(explicit)) return Math.min(6, Math.max(1, Math.round(explicit)));
   }
@@ -172,49 +141,156 @@ function chooseRows(width, height, columns) {
   return Math.max(24, Math.ceil((renderedHeight + rowGap) / rowStep));
 }
 
-function readPhotos() {
-  mkdirSync(photoDir, { recursive: true });
-  mkdirSync(publicPhotoDir, { recursive: true });
-  const metadata = readMetadata();
-  const files = readdirSync(photoDir)
-    .filter((file) => file.toLowerCase().endsWith(".png"))
-    .sort((left, right) => left.localeCompare(right, undefined, { numeric: true }));
-  const liveFiles = new Set(files);
+function convertToLosslessWebp(sourcePath, outputPath) {
+  const tempPath = `${outputPath}.${process.pid}.tmp.webp`;
 
-  for (const entry of readdirSync(publicPhotoDir, { withFileTypes: true })) {
+  rmSync(tempPath, { force: true });
+
+  try {
+    execFileSync(
+      "convert",
+      [sourcePath, "-strip", "-define", "webp:lossless=true", tempPath],
+      { stdio: ["ignore", "pipe", "pipe"] }
+    );
+
+    const outputSize = validateWebpOutput(tempPath);
+
+    renameSync(tempPath, outputPath);
+    return outputSize;
+  } catch (error) {
+    rmSync(tempPath, { force: true });
+    const stderr = error.stderr?.toString().trim();
+    if (stderr) {
+      throw new Error(`ImageMagick failed while converting ${sourcePath}:\n${stderr}`);
+    }
+
+    throw error;
+  }
+}
+
+function validateWebpOutput(filePath) {
+  const outputSize = statSync(filePath).size;
+
+  if (outputSize <= 0) {
+    throw new Error(`${filePath} is empty after WebP conversion`);
+  }
+
+  const header = Buffer.alloc(12);
+  const descriptor = openSync(filePath, "r");
+
+  try {
+    const bytesRead = readSync(descriptor, header, 0, header.length, 0);
+
     if (
-      entry.isFile() &&
-      entry.name.toLowerCase().endsWith(".png") &&
-      !liveFiles.has(entry.name)
+      bytesRead < header.length ||
+      header.toString("ascii", 0, 4) !== "RIFF" ||
+      header.toString("ascii", 8, 12) !== "WEBP"
     ) {
+      throw new Error(`${filePath} is not a valid WebP file`);
+    }
+  } finally {
+    closeSync(descriptor);
+  }
+
+  return outputSize;
+}
+
+function readCachedWebpSize(sourcePath, outputPath) {
+  if (!existsSync(outputPath)) return null;
+
+  try {
+    const sourceStats = statSync(sourcePath);
+    const outputStats = statSync(outputPath);
+
+    if (outputStats.mtimeMs < sourceStats.mtimeMs) return null;
+
+    const outputSize = validateWebpOutput(outputPath);
+
+    if (outputSize > maxWorkerAssetBytes) return null;
+
+    return outputSize;
+  } catch {
+    return null;
+  }
+}
+
+function removeStalePublicFiles(liveWebps) {
+  for (const entry of readdirSync(publicPhotoDir, { withFileTypes: true })) {
+    if (!entry.isFile()) continue;
+
+    const lowerName = entry.name.toLowerCase();
+    const isRawPng = lowerName.endsWith(".png");
+    const isStaleWebp = lowerName.endsWith(".webp") && !liveWebps.has(entry.name);
+
+    if (isRawPng || isStaleWebp) {
       rmSync(join(publicPhotoDir, entry.name), { force: true });
     }
   }
+}
 
-  return files
-    .map((file, fallbackOrder) => {
-      const filePath = join(photoDir, file);
-      copyFileSync(filePath, join(publicPhotoDir, file));
-      const dimensions = readPngSize(filePath);
-      const data = metadata.get(file) || {};
-      const location = data.location || captionFromFile(file);
-      const columns = chooseColumns(dimensions.width, dimensions.height, data);
+function readPhotos() {
+  mkdirSync(photoDir, { recursive: true });
+  mkdirSync(publicPhotoDir, { recursive: true });
 
-      return {
-        file,
-        order: Number(data.order ?? fallbackOrder),
-        location,
-        alt: data.alt || `Photograph from ${location.replace(/[.?!]$/, "")}`,
-        columns,
-        rows: chooseRows(dimensions.width, dimensions.height, columns),
-        ...dimensions
-      };
-    })
-    .sort((left, right) => left.order - right.order || left.file.localeCompare(right.file));
+  const entries = readPhotoEntries();
+  const liveWebps = new Set(entries.map((entry) => publicFileFor(entry.file)));
+  let cachedCount = 0;
+  let convertedCount = 0;
+
+  removeStalePublicFiles(liveWebps);
+
+  const photos = entries.map((entry) => {
+    const sourcePath = join(photoDir, entry.file);
+
+    if (!existsSync(sourcePath)) {
+      throw new Error(`${metadataPath} lists missing gallery source ${entry.file}`);
+    }
+
+    const dimensions = readPngSize(sourcePath);
+    const publicFile = publicFileFor(entry.file);
+    const outputPath = join(publicPhotoDir, publicFile);
+
+    let outputSize = readCachedWebpSize(sourcePath, outputPath);
+
+    if (outputSize === null) {
+      outputSize = convertToLosslessWebp(sourcePath, outputPath);
+      convertedCount += 1;
+    } else {
+      cachedCount += 1;
+    }
+
+    if (outputSize > maxWorkerAssetBytes) {
+      rmSync(outputPath, { force: true });
+      throw new Error(
+        `${publicFile} is ${outputSize} bytes, above Workers' ${maxWorkerAssetBytes} byte per-file limit`
+      );
+    }
+
+    const columns = chooseColumns(dimensions.width, dimensions.height, entry);
+
+    return {
+      ...entry,
+      publicFile,
+      columns,
+      rows: chooseRows(dimensions.width, dimensions.height, columns),
+      size: outputSize,
+      ...dimensions
+    };
+  });
+
+  removeStalePublicFiles(liveWebps);
+
+  return {
+    photos: photos.sort(
+      (left, right) => left.order - right.order || left.file.localeCompare(right.file)
+    ),
+    cachedCount,
+    convertedCount
+  };
 }
 
 function renderFigure(photo) {
-  const src = `${publicUrl}/${encodeURIComponent(photo.file)}`;
+  const src = `${publicUrl}/${encodeURIComponent(photo.publicFile)}`;
 
   return `          <figure class="photo-tile" style="--cols: ${photo.columns}; --rows: ${photo.rows}">
             <a class="photo-frame" href="${src}">
@@ -223,6 +299,7 @@ function renderFigure(photo) {
                 width="${photo.width}"
                 height="${photo.height}"
                 loading="lazy"
+                decoding="async"
                 alt="${escapeAttr(photo.alt)}"
               />
             </a>
@@ -245,7 +322,9 @@ function replaceGeneratedRegion(html, photos) {
   return `${html.slice(0, start + startMarker.length)}${body}${html.slice(end)}`;
 }
 
-const photos = readPhotos();
+const { photos, cachedCount, convertedCount } = readPhotos();
 writeFileSync(galleryPath, replaceGeneratedRegion(readFileSync(galleryPath, "utf8"), photos));
 
-console.log(`Generated ${photos.length} gallery photo${photos.length === 1 ? "" : "s"}.`);
+console.log(
+  `Generated ${photos.length} gallery photo${photos.length === 1 ? "" : "s"} (${cachedCount} cached, ${convertedCount} converted).`
+);
