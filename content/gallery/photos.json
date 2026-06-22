@@ -2,49 +2,49 @@
   {
     "file": "ceid-yale.png",
     "location": "CEID @ Yale, New Haven, CT.",
-    "alt": "Photograph of the CEID at Yale University in New Haven, Connecticut",
+    "alt": "Red chairs along a covered walkway",
     "columns": 4
   },
   {
     "file": "east-rock.png",
     "location": "East Rock, New Haven, CT",
-    "alt": "Photograph from East Rock in New Haven, Connecticut",
+    "alt": "Water flowing over a stone dam",
     "columns": 2
   },
   {
     "file": "sunflowers.png",
     "location": "New Haven, CT",
-    "alt": "Photograph of sunflowers in New Haven, Connecticut",
+    "alt": "A bed of yellow flowers",
     "columns": 2
   },
   {
     "file": "silliman-yale.png",
     "location": "New Haven, CT",
-    "alt": "Photograph from Silliman College at Yale University in New Haven, Connecticut",
+    "alt": "A stone tower glowing at sunset",
     "columns": 4
   },
   {
     "file": "houseplant.png",
-    "location": "SOM @ Yale, New Haven, CT",
-    "alt": "Photograph of a houseplant at Yale School of Management in New Haven, Connecticut",
+    "location": "New Haven, CT",
+    "alt": "A potted plant in sunlight",
     "columns": 4
   },
   {
     "file": "sunset.png",
     "location": "New Haven, CT",
-    "alt": "Photograph of a sunset in New Haven, Connecticut",
+    "alt": "Sunset behind silhouetted branches",
     "columns": 2
   },
   {
     "file": "som-yale.png",
-    "location": "New Haven, CT",
-    "alt": "Photograph of Yale School of Management in New Haven, Connecticut",
+    "location": "SOM @ Yale, New Haven, CT",
+    "alt": "An ornate street clock",
     "columns": 4
   },
   {
     "file": "window.png",
     "location": "New Haven, CT",
-    "alt": "Photograph from New Haven, Connecticut",
+    "alt": "A yellow house seen through a window",
     "columns": 2
   }
 ]

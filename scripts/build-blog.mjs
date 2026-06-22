@@ -271,8 +271,7 @@ function renderIndex(posts) {
 
   const body = `      <header class="site-header">
         <div>
-          <p class="eyebrow">Blog</p>
-          <h1 class="page-title">Blog.</h1>
+          <h1 class="page-title">Blog</h1>
           <p class="lede">
             My thoughts on, and experiments with, systems, performance, engineering, and research.
           </p>
@@ -323,7 +322,6 @@ function renderPost(post, previous, next) {
   ].filter(Boolean);
 
   const body = `      <header class="article-header">
-        <p class="eyebrow">Blog / ${escapeHtml(post.title)}</p>
         <h1>${escapeHtml(displayTitle(post.title))}</h1>
         <p class="lede">${escapeHtml(post.summary)}</p>
         <dl class="article-meta">
