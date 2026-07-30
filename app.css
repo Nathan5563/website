@@ -699,17 +699,17 @@ code {
 }
 
 .problem-shell {
-  max-width: 720px;
   padding-top: 64px;
 }
 
 .problem-header {
-  padding-bottom: 24px;
+  padding-bottom: 12px;
 }
 
 .problem-header h1 {
   font-size: clamp(1.6rem, 3vw, 2rem);
   line-height: 1.2;
+  max-width: var(--measure);
 }
 
 .problem-meta {
@@ -720,8 +720,7 @@ code {
 }
 
 .problem-body {
-  max-width: none;
-  padding-top: 24px;
+  padding-top: 8px;
 }
 
 .problem-math {
