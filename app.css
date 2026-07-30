@@ -704,7 +704,7 @@ code {
 }
 
 .problem-header {
-  padding-bottom: 12px;
+  padding-bottom: 0;
 }
 
 .problem-header h1 {
@@ -721,7 +721,7 @@ code {
 
 .problem-body {
   max-width: none;
-  padding-top: 8px;
+  padding-top: 14px;
 }
 
 .problem-math {
