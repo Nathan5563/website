@@ -53,7 +53,8 @@ per-file limit of `26,214,400` bytes; generation fails if an image exceeds it.
 Each `.tex` file in `content/problems/` becomes one unlisted page at
 `/problems/<id>/`. `<id>` is a random 5-character id assigned automatically the
 first time a file is built (the generator writes `id: ...` back into the
-file's frontmatter, so keep it once assigned). These pages are not linked from
+file's frontmatter and renames the file to `<id>.tex`, so name the file
+whatever's convenient when you create it). These pages are not linked from
 anywhere on the site, are marked `noindex, nofollow`, and are blocked in
 `robots.txt` — they're only reachable by someone who has the exact URL.
 

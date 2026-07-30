@@ -5,6 +5,7 @@ import {
   mkdirSync,
   readdirSync,
   readFileSync,
+  renameSync,
   rmSync,
   writeFileSync
 } from "node:fs";
@@ -308,7 +309,7 @@ function readProblems() {
   }
 
   return files.map((file) => {
-    const filePath = join(contentDir, file);
+    let filePath = join(contentDir, file);
     let source = readFileSync(filePath, "utf8");
     const newId = ensureId(filePath, source, existingIds);
     if (newId) {
@@ -317,6 +318,15 @@ function readProblems() {
     }
 
     const { data, body } = parseFrontmatter(source, filePath);
+
+    const expectedFile = `${data.id}.tex`;
+    if (file !== expectedFile) {
+      const expectedPath = join(contentDir, expectedFile);
+      renameSync(filePath, expectedPath);
+      console.log(`Renamed ${file} to ${expectedFile}`);
+      filePath = expectedPath;
+    }
+
     return {
       title: data.title,
       data,
