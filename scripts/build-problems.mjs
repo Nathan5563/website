@@ -235,11 +235,11 @@ function renderBody(source, filePath) {
   return output.join("\n");
 }
 
-function head({ title }) {
+function head({ id }) {
   return `<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${escapeHtml(title)} | Nathan Abebe</title>
+    <title>${escapeHtml(id.toUpperCase())}</title>
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#fbfbf7" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -251,7 +251,7 @@ function head({ title }) {
 function renderPage(problem) {
   return `<!doctype html>
 <html lang="en">
-  ${head({ title: problem.title })}
+  ${head({ id: problem.id })}
   <body>
     <main class="site-shell problem-shell">
       <header class="problem-header">
