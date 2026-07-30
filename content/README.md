@@ -47,3 +47,61 @@ per-file limit of `26,214,400` bytes; generation fails if an image exceeds it.
   }
 ]
 ```
+
+## Problems
+
+Each `.tex` file in `content/problems/` becomes one unlisted page at
+`/problems/<id>/`. `<id>` is a random 5-character id assigned automatically the
+first time a file is built (the generator writes `id: ...` back into the
+file's frontmatter, so keep it once assigned). These pages are not linked from
+anywhere on the site, are marked `noindex, nofollow`, and are blocked in
+`robots.txt` — they're only reachable by someone who has the exact URL.
+
+Frontmatter:
+
+```
+---
+title: Problem title
+date: 2026-07-29
+---
+```
+
+`title` is required. `date` is optional and shown as a small caption if
+present. `id` is filled in automatically — don't set it by hand.
+
+The body is a lightweight LaTeX-flavored format, rendered server-side with
+KaTeX (no client-side JS or fonts loaded from a CDN):
+
+- `$...$` for inline math, `$$` / `\[ ... \]` on their own lines for display
+  math (opening and closing delimiters must each be alone on a line).
+- `\begin{align}...\end{align}` and `equation`, `gather`, `multline`,
+  `alignat` (and their starred forms) work the same way.
+- `\section{...}` and `\subsection{...}` for headings.
+- `\begin{itemize}` / `\begin{enumerate}` with `\item` lines for lists.
+- `\textbf{}`, `\textit{}`/`\emph{}`, `\texttt{}`, plus Markdown-style
+  `**bold**`, `*italic*`, `` `code` ``, and `[text](url)` links.
+- Blank-line-separated plain text becomes paragraphs.
+- Triple-backtick fenced blocks for code.
+
+Example:
+
+```
+---
+title: A parity argument
+date: 2026-07-29
+---
+Let $n$ be a positive integer. Show that $n^2 + n$ is always even.
+
+\section{Solution sketch}
+
+Note that $n^2 + n = n(n+1)$, a product of consecutive integers, so one of
+them is even.
+
+$$
+n(n+1) \equiv 0 \pmod{2}
+$$
+```
+
+Run `npm run problems` to regenerate only problem pages, or `npm run build`
+to regenerate everything. Deleting a `.tex` file removes its generated page
+on the next generation run.

@@ -8,6 +8,9 @@
 /projects/quark/docs/*
   X-Robots-Tag: noindex
 
+/problems/*
+  X-Robots-Tag: noindex, nofollow
+
 /*
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff

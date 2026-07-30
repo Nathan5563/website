@@ -6,6 +6,7 @@
   "scripts": {
     "blog": "node scripts/build-blog.mjs",
     "gallery": "node scripts/build-gallery.mjs",
+    "problems": "node scripts/build-problems.mjs",
     "content": "node scripts/build-content.mjs",
     "predev": "node scripts/build-content.mjs",
     "dev": "vite dev",
@@ -15,6 +16,7 @@
     "deploy": "npm run build && wrangler deploy"
   },
   "devDependencies": {
+    "katex": "^0.18.1",
     "vite": "^8.0.16",
     "wrangler": "^4.97.0"
   }

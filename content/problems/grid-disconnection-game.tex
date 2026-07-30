@@ -1,0 +1,28 @@
+---
+title: The Grid Disconnection Game
+date: 2026-07-29
+id: 6vuwz
+---
+Alice and Bob are playing a game on an $8\times8$ grid. Two cells in the grid are adjacent if they share a side; the shared side is called a passage between them. On their turn, a player removes any remaining passage from the grid. A route from cell $X$ to cell $Y$ is defined as a sequence of cells $X=c_1,\dots,c_k=Y$ where, for each consecutive pair $c_i$ and $c_{i+1}$, $c_i$ is adjacent to $c_{i+1}$ and the passage between them has not yet been removed. We say that the grid becomes disconnected the first time there exist two cells which do not have a route between them. The game ends when the grid becomes disconnected, and the player who made the last move loses. Define the length of the game as the number of removed passages. Alice starts.
+
+\begin{enumerate}
+\item[(a)] What's the minimum length of the game? What's the maximum?
+\item[(b)] Assume that both players are rational, i.e., the winner wants to win as fast as possible and the loser wants to lose as slowly as possible. What's the length of the game? Who will win? What is the winning player's strategy?
+\item[(c)] Suppose instead on Bob's turn, he reinforces one existing passage, i.e., makes it permanently indestructible. Alice wins if she can disconnect the grid; Bob wins otherwise. Assume that both players are rational. Who will win? What is the winning player's strategy?
+\item[(d)$^*$] Assume that both players remove passages uniformly at random. Approximate the expected length of the game.
+\item[(e)$^*$] Suppose instead Alice and Bob are playing on an $n\times n$ grid ($n\ge2$), and they remove passages uniformly at random. Find an asymptotically tight bound on the expected length of the game.
+\end{enumerate}
+
+For the following parts, flip the game: the player who made the last move wins. Assume that both players are rational and $m,n\ge2$.
+
+\begin{enumerate}
+\item[(f)] Suppose instead Alice and Bob are playing on a $2\times n$ grid. Does the same player win for all $n$? If so, who wins, and what is their winning strategy? If not, characterize the values of $n$ in which Alice wins.
+\item[(g)$^{**}$] Suppose instead Alice and Bob are playing on an $n\times n$ grid. Does the same player win for all $n$? If so, who wins, and what is their winning strategy? If not, characterize the values of $n$ in which Alice wins.
+\item[(h)$^{***}$] Suppose instead Alice and Bob are playing on an $m\times n$ grid. Does the same player win for all $m,n$? If so, who wins, and what is their winning strategy? If not, characterize the values of $m,n$ in which Alice wins.
+\end{enumerate}
+
+$^*$ These are quite instructive and probably my favorites among the problems.
+
+$^{**}$ Beware, this one is surprisingly difficult, but there is a very clever solution.
+
+$^{***}$ I haven't been able to solve this one; please reach out to [ndawit611@gmail.com](mailto:ndawit611@gmail.com) if you find a solution!

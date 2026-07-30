@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /problems/
 
 Sitemap: https://nathanabebe.com/sitemap.xml
