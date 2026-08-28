@@ -1,0 +1,19 @@
+---
+title: The Wizard's Aviary
+date: 2026-07-30
+id: b2a97
+---
+A wizard keeps an aviary with sixteen perches for his phoenixes. The perches are numbered and all start out empty. Upon experimentation, the wizard has devised a spell to increase the power of his phoenixes. The strength of a phoenix can be represented as a positive integer. At any time, the wizard may do one of two things:
+
+\begin{enumerate}
+\item Summon a phoenix of strength 1 onto any empty perch. It is then bound to that perch.
+\item Release two bound phoenixes of strength $k$, wherever they sit, and cast the spell to fuse them into a phoenix of strength $k+1$. The perches previously occupied by the released phoenixes now become empty, and the new phoenix settles onto any empty perch and is bound to that perch.
+\end{enumerate}
+
+The wizard is a stickler about bookkeeping and requires his scribe to maintain a time-ordered record for the state of the aviary. The state of the aviary tells us, for each numbered perch, whether it is empty or the strength of the phoenix that occupies it. The wizard's scribe insists every observable state can be recorded as a single 64-bit integer and has wagered a month's wages on it.
+
+\begin{enumerate}
+\item[(a)] Settle the bet.
+\item[(b)] The wizard has since developed his own strength and can now summon phoenixes of strength 1 or strength 2. Settle the bet once more.
+\item[(c)] Summoning phoenixes of strength 2 has taken a toll on the wizard. Humbled, he returns to only summoning phoenixes of strength 1. Furthermore, he decided that he should keep stronger phoenixes closer to his dais for protection while he is recovering: when two phoenixes are fused, the new phoenix now must settle on the lower-numbered perch among the two previously-occupied perches. Settle the bet one final time. What is the number of observable states?
+\end{enumerate}
