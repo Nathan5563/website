@@ -214,6 +214,7 @@ function nav(current = "Blog") {
     ["Home", "/"],
     ["Projects", "/projects/"],
     ["Blog", "/blog/"],
+    ["Puzzles", "/puzzles/"],
     ["Gallery", "/gallery/"]
   ];
 

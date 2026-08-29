@@ -6,7 +6,7 @@
   "scripts": {
     "blog": "node scripts/build-blog.mjs",
     "gallery": "node scripts/build-gallery.mjs",
-    "problems": "node scripts/build-problems.mjs",
+    "puzzles": "node scripts/build-puzzles.mjs",
     "content": "node scripts/build-content.mjs",
     "predev": "node scripts/build-content.mjs",
     "dev": "vite dev",

@@ -15,16 +15,16 @@ function blogPostInputs() {
   );
 }
 
-function problemPageInputs() {
-  if (!existsSync("problems")) return {};
+function puzzlePageInputs() {
+  if (!existsSync("puzzles")) return {};
 
   return Object.fromEntries(
-    readdirSync("problems", { withFileTypes: true })
+    readdirSync("puzzles", { withFileTypes: true })
       .filter((entry) => entry.isDirectory())
-      .filter((entry) => existsSync(`problems/${entry.name}/index.html`))
+      .filter((entry) => existsSync(`puzzles/${entry.name}/index.html`))
       .map((entry) => [
-        `problem-${entry.name.replace(/[^a-z0-9]+/gi, "-")}`,
-        `problems/${entry.name}/index.html`
+        `puzzle-${entry.name.replace(/[^a-z0-9]+/gi, "-")}`,
+        `puzzles/${entry.name}/index.html`
       ])
   );
 }
@@ -39,8 +39,9 @@ export default defineConfig({
         quark: "projects/quark/index.html",
         gallery: "gallery/index.html",
         blog: "blog/index.html",
+        puzzles: "puzzles/index.html",
         ...blogPostInputs(),
-        ...problemPageInputs()
+        ...puzzlePageInputs()
       }
     }
   }

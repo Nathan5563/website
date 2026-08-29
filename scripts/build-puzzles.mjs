@@ -13,11 +13,16 @@ import { dirname, join } from "node:path";
 import katex from "katex";
 
 const root = process.cwd();
-const contentDir = join(root, "content", "problems");
-const outputDir = join(root, "problems");
+const contentDir = join(root, "content", "puzzles");
+const outputDir = join(root, "puzzles");
 const katexSrcDir = join(root, "node_modules", "katex", "dist");
 const katexDestDir = join(root, "public", "vendor", "katex");
+const siteUrl = "https://nathanabebe.com";
 const idChars = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+const monthNames = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
 
 function escapeHtml(value) {
   return String(value)
@@ -29,6 +34,12 @@ function escapeHtml(value) {
 
 function escapeAttr(value) {
   return escapeHtml(value).replaceAll("'", "&#39;");
+}
+
+function formatDate(value) {
+  const [year, month, day] = String(value).split("-").map(Number);
+  if (!year || !month || !day) return value;
+  return `${monthNames[month - 1]} ${day}, ${year}`;
 }
 
 function generateId(existing) {
@@ -163,7 +174,7 @@ function renderBody(source, filePath) {
       if (i >= lines.length) {
         throw new Error(`${filePath}: unterminated display math (missing ${closer})`);
       }
-      output.push(`<div class="problem-math">${renderMath(collected.join("\n"), true, filePath)}</div>`);
+      output.push(`<div class="puzzle-math">${renderMath(collected.join("\n"), true, filePath)}</div>`);
       continue;
     }
 
@@ -179,7 +190,7 @@ function renderBody(source, filePath) {
       if (!lines[i]?.includes(`\\end{${envName}}`)) {
         throw new Error(`${filePath}: unterminated \\begin{${envName}}`);
       }
-      output.push(`<div class="problem-math">${renderMath(collected.join("\n"), true, filePath)}</div>`);
+      output.push(`<div class="puzzle-math">${renderMath(collected.join("\n"), true, filePath)}</div>`);
       continue;
     }
 
@@ -225,7 +236,7 @@ function renderBody(source, filePath) {
         }
         return `<li><span class="item-label">${inlineTex(label, filePath)}</span><span class="item-body">${inlineTex(item.text, filePath)}</span></li>`;
       });
-      output.push(`<${listType} class="problem-list">${renderedItems.join("")}</${listType}>`);
+      output.push(`<${listType} class="puzzle-list">${renderedItems.join("")}</${listType}>`);
       continue;
     }
 
@@ -236,36 +247,131 @@ function renderBody(source, filePath) {
   return output.join("\n");
 }
 
-function head({ id }) {
+function nav(current = "Puzzles") {
+  const links = [
+    ["Home", "/"],
+    ["Projects", "/projects/"],
+    ["Blog", "/blog/"],
+    ["Puzzles", "/puzzles/"],
+    ["Gallery", "/gallery/"]
+  ];
+
+  return `<nav class="site-nav" aria-label="Primary navigation">
+          ${links
+            .map(([label, href]) => `<a href="${href}"${label === current ? ' aria-current="page"' : ""}>${label}</a>`)
+            .join("\n          ")}
+        </nav>`;
+}
+
+function head({ title, description, canonical, type = "website", extra = "" }) {
+  const fullTitle = title.includes("Nathan Abebe") ? title : `${title} | Nathan Abebe`;
   return `<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${escapeHtml(id.toUpperCase())}</title>
-    <meta name="robots" content="noindex, nofollow" />
+    <title>${escapeHtml(fullTitle)}</title>
+    <meta name="author" content="Nathan Abebe" />
     <meta name="theme-color" content="#fbfbf7" />
+    <meta name="description" content="${escapeAttr(description)}" />
+    <meta property="og:title" content="${escapeAttr(fullTitle)}" />
+    <meta property="og:site_name" content="Nathan Abebe" />
+    <meta property="og:description" content="${escapeAttr(description)}" />
+    <meta property="og:url" content="${escapeAttr(canonical)}" />
+    <meta property="og:type" content="${type}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="${escapeAttr(fullTitle)}" />
+    <meta name="twitter:description" content="${escapeAttr(description)}" />
+    <link rel="canonical" href="${escapeAttr(canonical)}" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" href="/app.css" />
-    <link rel="stylesheet" href="/vendor/katex/katex.min.css" />
+    <link rel="stylesheet" href="/app.css" />${extra}
   </head>`;
 }
 
-function renderPage(problem) {
+function page({ title, description, canonical, type, body, extra }) {
   return `<!doctype html>
 <html lang="en">
-  ${head({ id: problem.id })}
+  ${head({ title, description, canonical, type, extra })}
   <body>
-    <main class="site-shell problem-shell">
-      <header class="problem-header">
-        <h1>${escapeHtml(problem.title)}</h1>
-        ${problem.data.date ? `<p class="problem-meta">${escapeHtml(problem.data.date)}</p>` : ""}
-      </header>
-      <article class="post-article problem-body">
-${problem.html}
-      </article>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <main id="content" class="site-shell">
+${body}
     </main>
   </body>
 </html>
 `;
+}
+
+function renderIndex(puzzles) {
+  const list = puzzles.length
+    ? puzzles.map(renderPuzzlePreview).join("\n")
+    : `          <article class="post-entry">
+            <p>Coming soon.</p>
+          </article>`;
+
+  const body = `      <header class="site-header">
+        <div>
+          <h1 class="page-title">Puzzles</h1>
+          <p class="lede">
+            Original problems I've written, mostly combinatorics and games. Solutions are mine alone unless noted.
+          </p>
+        </div>
+        ${nav("Puzzles")}
+      </header>
+
+      <section class="section" aria-labelledby="puzzles">
+        <h2 id="puzzles" class="section-title">All</h2>
+        <div class="post-list">
+${list}
+        </div>
+      </section>
+
+      <footer class="footer">
+        <a href="/">Home</a>
+      </footer>`;
+
+  return page({
+    title: "Puzzles | Nathan Abebe",
+    description: "Original puzzles and problems written by Nathan Abebe, mostly combinatorics and games.",
+    canonical: `${siteUrl}/puzzles/`,
+    body
+  });
+}
+
+function renderPuzzlePreview(puzzle) {
+  return `          <article class="post-entry">
+            <div class="post-head">
+              <h3><a href="/puzzles/${escapeAttr(puzzle.id)}/">${escapeHtml(puzzle.title)}</a></h3>
+              ${puzzle.data.date ? `<span class="post-meta">${escapeHtml(formatDate(puzzle.data.date))}</span>` : ""}
+            </div>
+          </article>`;
+}
+
+function renderPuzzle(puzzle) {
+  const katexStylesheet = `\n    <link rel="stylesheet" href="/vendor/katex/katex.min.css" />`;
+
+  const body = `      <header class="article-header">
+        <h1>${escapeHtml(puzzle.title)}</h1>
+        <dl class="article-meta">
+          ${puzzle.data.date ? `<dt>Date</dt>\n          <dd>${escapeHtml(formatDate(puzzle.data.date))}</dd>` : ""}
+        </dl>
+        ${nav("Puzzles")}
+      </header>
+
+      <article class="post-article puzzle-body">
+${puzzle.html}
+      </article>
+
+      <footer class="footer article-footer">
+        <a href="/puzzles/">Puzzles</a>
+      </footer>`;
+
+  return page({
+    title: puzzle.title,
+    description: `A puzzle: ${puzzle.title}.`,
+    canonical: `${siteUrl}/puzzles/${puzzle.id}/`,
+    type: "article",
+    body,
+    extra: katexStylesheet
+  });
 }
 
 function write(path, contents) {
@@ -282,7 +388,7 @@ function copyKatexAssets() {
   }
 }
 
-function removeStaleProblemDirs(ids) {
+function removeStalePuzzleDirs(ids) {
   if (!existsSync(outputDir)) return;
   for (const entry of readdirSync(outputDir, { withFileTypes: true })) {
     if (!entry.isDirectory() || ids.has(entry.name)) continue;
@@ -293,7 +399,7 @@ function removeStaleProblemDirs(ids) {
   }
 }
 
-function readProblems() {
+function readPuzzles() {
   if (!existsSync(contentDir)) return [];
 
   const files = readdirSync(contentDir).filter((file) => file.endsWith(".tex"));
@@ -308,7 +414,7 @@ function readProblems() {
     if (idMatch) existingIds.add(idMatch[1]);
   }
 
-  return files.map((file) => {
+  const puzzles = files.map((file) => {
     let filePath = join(contentDir, file);
     let source = readFileSync(filePath, "utf8");
     const newId = ensureId(filePath, source, existingIds);
@@ -334,15 +440,18 @@ function readProblems() {
       html: renderBody(body, filePath)
     };
   });
+
+  return puzzles.sort((left, right) => String(right.data.date || "").localeCompare(String(left.data.date || "")));
 }
 
 copyKatexAssets();
 
-const problems = readProblems();
-removeStaleProblemDirs(new Set(problems.map((problem) => problem.id)));
+const puzzles = readPuzzles();
+removeStalePuzzleDirs(new Set(puzzles.map((puzzle) => puzzle.id)));
 
-for (const problem of problems) {
-  write(join(outputDir, problem.id, "index.html"), renderPage(problem));
+write(join(outputDir, "index.html"), renderIndex(puzzles));
+for (const puzzle of puzzles) {
+  write(join(outputDir, puzzle.id, "index.html"), renderPuzzle(puzzle));
 }
 
-console.log(`Generated ${problems.length} problem page${problems.length === 1 ? "" : "s"}.`);
+console.log(`Generated ${puzzles.length} puzzle page${puzzles.length === 1 ? "" : "s"}.`);

@@ -48,21 +48,21 @@ per-file limit of `26,214,400` bytes; generation fails if an image exceeds it.
 ]
 ```
 
-## Problems
+## Puzzles
 
-Each `.tex` file in `content/problems/` becomes one unlisted page at
-`/problems/<id>/`. `<id>` is a random 5-character id assigned automatically the
-first time a file is built (the generator writes `id: ...` back into the
-file's frontmatter and renames the file to `<id>.tex`, so name the file
-whatever's convenient when you create it). These pages are not linked from
-anywhere on the site, are marked `noindex, nofollow`, and are blocked in
-`robots.txt` — they're only reachable by someone who has the exact URL.
+Each `.tex` file in `content/puzzles/` becomes one page at `/puzzles/<id>/`,
+listed on `/puzzles/`. `<id>` is a random 5-character id assigned
+automatically the first time a file is built (the generator writes `id: ...`
+back into the file's frontmatter and renames the file to `<id>.tex`, so name
+the file whatever's convenient when you create it). `/puzzles/<id>/` also
+routes case-insensitively (`/puzzles/AB12C/` redirects to the canonical
+lowercase URL), and old `/problems/<id>/` links redirect to the new path.
 
 Frontmatter:
 
 ```
 ---
-title: Problem title
+title: Puzzle title
 date: 2026-07-29
 ---
 ```
@@ -103,6 +103,6 @@ n(n+1) \equiv 0 \pmod{2}
 $$
 ```
 
-Run `npm run problems` to regenerate only problem pages, or `npm run build`
+Run `npm run puzzles` to regenerate only puzzle pages, or `npm run build`
 to regenerate everything. Deleting a `.tex` file removes its generated page
 on the next generation run.

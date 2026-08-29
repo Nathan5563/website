@@ -395,11 +395,17 @@ p {
 }
 
 .article-header {
+  align-items: start;
   border-bottom: 1px solid var(--rule);
+  column-gap: 20px;
   display: grid;
+  grid-template-areas:
+    "title nav"
+    "lede lede"
+    "meta meta";
+  grid-template-columns: minmax(0, 1fr) max-content;
   padding-bottom: 30px;
   padding-top: 0;
-  position: relative;
 }
 
 .article-header::after {
@@ -409,14 +415,21 @@ p {
 .article-header h1 {
   font-size: clamp(2.15rem, 3vw, 2.65rem);
   font-weight: 700;
+  grid-area: title;
   line-height: 1.08;
   max-width: var(--measure);
   width: 100%;
 }
 
 .article-header .lede {
+  grid-area: lede;
   max-width: var(--measure);
   width: 100%;
+}
+
+.article-header .site-nav {
+  grid-area: nav;
+  position: static;
 }
 
 .article-meta {
@@ -425,6 +438,7 @@ p {
   font-family: var(--mono);
   font-size: 0.78rem;
   gap: 7px 20px;
+  grid-area: meta;
   grid-template-columns: max-content minmax(0, 1fr);
   margin: 22px 0 0;
   padding-top: 14px;
@@ -698,43 +712,13 @@ code {
   padding-top: 20px;
 }
 
-.problem-shell {
-  max-width: 720px;
-  padding-top: 64px;
-}
-
-.problem-header {
-  padding-bottom: 0;
-}
-
-.problem-header h1 {
-  font-size: clamp(1.6rem, 3vw, 2rem);
-  line-height: 1.2;
-}
-
-.problem-meta {
-  color: var(--faint);
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  margin-top: 10px;
-}
-
-.problem-body {
-  max-width: none;
-  padding-top: 14px;
-}
-
-.problem-math {
+.puzzle-math {
   margin-top: 18px;
   overflow-x: auto;
 }
 
-.problem-body p:first-child {
-  margin-top: 0;
-}
-
-.problem-body ul.problem-list,
-.problem-body ol.problem-list {
+.puzzle-body ul.puzzle-list,
+.puzzle-body ol.puzzle-list {
   display: grid;
   gap: 12px;
   list-style: none;
@@ -742,13 +726,13 @@ code {
   padding: 0;
 }
 
-.problem-list li {
+.puzzle-list li {
   display: grid;
   gap: 4px 10px;
   grid-template-columns: minmax(2.4em, max-content) minmax(0, 1fr);
 }
 
-.problem-list li + li {
+.puzzle-list li + li {
   margin-top: 0;
 }
 
@@ -766,8 +750,18 @@ code {
   }
 
   .article-header {
+    grid-template-areas:
+      "nav"
+      "title"
+      "lede"
+      "meta";
+    grid-template-columns: 1fr;
     padding-bottom: 24px;
     padding-top: 0;
+  }
+
+  .article-header .site-nav {
+    grid-area: nav;
   }
 
   .article-header::after {
