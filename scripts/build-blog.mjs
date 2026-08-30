@@ -280,8 +280,7 @@ function renderIndex(posts) {
         ${nav("Blog")}
       </header>
 
-      <section class="section" aria-labelledby="posts">
-        <h2 id="posts" class="section-title">Posts</h2>
+      <section class="section section-full" aria-label="Posts">
         <div class="post-list">
 ${postList}
         </div>

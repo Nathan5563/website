@@ -198,6 +198,10 @@ p {
   border-top: 0;
 }
 
+.section-full {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .section-title {
   color: var(--muted);
   font-family: var(--mono);

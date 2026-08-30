@@ -317,8 +317,7 @@ function renderIndex(puzzles) {
         ${nav("Puzzles")}
       </header>
 
-      <section class="section" aria-labelledby="puzzles">
-        <h2 id="puzzles" class="section-title">All</h2>
+      <section class="section section-full" aria-label="Puzzles">
         <div class="post-list">
 ${list}
         </div>
