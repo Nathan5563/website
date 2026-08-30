@@ -311,7 +311,7 @@ function renderIndex(puzzles) {
         <div>
           <h1 class="page-title">Puzzles</h1>
           <p class="lede">
-            Original problems I've written, mostly combinatorics and games. Solutions are mine alone unless noted.
+            Some fun mathematics problems I've written.
           </p>
         </div>
         ${nav("Puzzles")}
